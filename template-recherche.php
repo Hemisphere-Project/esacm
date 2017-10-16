@@ -126,7 +126,7 @@ get_header(); ?>
 
 
       <div class="vc-titreancre-wrap">
-          <h2 class="vc-titreancre-title title" id="Les-chercheurs2">Les chercheurs 2</h2>
+          <h2 class="vc-titreancre-title title" id="chercheurs2">Les chercheurs 2</h2>
       </div>
 			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
