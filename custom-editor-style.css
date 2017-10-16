@@ -1,0 +1,149 @@
+.mce-content-body {
+    background-color: #e7e7e7;
+}
+
+.half_column{
+	width: 47%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+	background-color: #e7e7e7;
+	border: 1px dashed #b0b0b0;
+	box-sizing: border-box;
+}
+
+.half_column.first_column {
+    margin-right: 3%;
+}
+.half_column.last_column {
+    margin-left: 3%;
+}
+.clearfix {
+    clear: both;
+    height: 0;
+}
+.half_column img{
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+/*--------------------------------------------------------------
+	TYPOS & COLORS
+--------------------------------------------------------------*/
+body.home, body.home a{
+	background-color: #393939;
+	color: white;
+}
+
+
+.typo_alpha{
+	font-family: 'Laborantine';
+	font-size: 26px;
+	line-height: 29px;
+}
+.typo_beta{
+	font-family: 'DiaRegular';
+	font-size: 25px;
+	line-height: 29px;
+}
+.typo_gamma{
+	font-family: 'DiaBold';
+	font-size: 18px;
+	line-height: 22px;
+}
+.typo_delta{
+	font-family: 'DiaBold';
+	font-size: 18px;
+	line-height: 22px;
+}
+.typo_epsilon{
+	font-family: 'DiaRegular';
+	font-size: 18px;
+	line-height: 22px;
+}
+.typo_zeta{
+	font-family: 'DiaRegular';
+	font-size: 14px;
+	line-height: 17px;
+}
+/*DESKTOP*/
+@media only screen and (max-width:1400px){
+	.typo_alpha{
+		font-family: 'Laborantine';
+		font-size: 23px;
+		line-height: 25px;
+	}
+	.typo_beta{
+		font-family: 'DiaRegular';
+		font-size: 23px;
+		line-height: 27px;
+	}
+	.typo_gamma{
+		font-family: 'DiaBold';
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.typo_delta{
+		font-family: 'DiaBold';
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.typo_epsilon{
+		font-family: 'DiaRegular';
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.typo_zeta{
+		font-family: 'DiaRegular';
+		font-size: 12px;
+		line-height: 15px;
+	}
+}
+
+/*TABLET LANDSCAPE*/
+@media only screen and (max-width:1050px){
+	.typo_beta{
+		font-family: 'DiaRegular';
+		font-size: 19px;
+		line-height: 23px;
+	}
+}
+
+/*TABLET PORTRAIT*/
+@media only screen and (max-width:800px){
+	.typo_alpha{
+		font-family: 'Laborantine';
+		font-size: 21px;
+		line-height: 24px;
+	}
+	.typo_beta{
+		font-family: 'DiaRegular';
+		font-size: 19px;
+		line-height: 23px;
+	}
+}
+/*SMARTPHONE*/
+@media only screen and (max-width:600px){
+	.typo_alpha{
+		font-family: 'Laborantine';
+		font-size: 19px;
+		line-height: 23px;
+	}
+}
+
+a {
+    text-decoration: underline;
+}
+a:hover {
+	text-shadow: 0 0 8px 0 rgba(0,0,0,0.75);
+}
+
+hr {
+    background-color: black;
+    border: 0 none;
+    height: 2px;
+    margin: 42px 0 62px;
+}
+
