@@ -141,9 +141,11 @@ function hmsphr_scripts() {
 	}
 	// POSTS NAVIGATION
 	wp_enqueue_script( 'posts_navigation', get_template_directory_uri() . '/js/posts_navigation.js', array('jquery'), '20151215', true );
-
 	// pass Ajax Url to script-navigation.js
 	wp_localize_script('posts_navigation', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+
+	// PAGES NAVIGATION
+	wp_enqueue_script( 'pages_navigation', get_template_directory_uri() . '/js/pages_navigation.js', array('jquery'), '20151215', true );
 
 	// MASONRY
 	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/lib/masonry.pkgd.min.js', array('jquery'), '20151215', true );
