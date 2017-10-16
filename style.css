@@ -473,10 +473,9 @@ table {
 	width: 100%;
 }
 
-=======
 .dashedLine{
 	border: 0 none;
-	border-top: 2px dashed;
+	border-top: 2px dashed black;
 	background: none;
 	height:0;
 }
@@ -1259,7 +1258,7 @@ a:hover {
 }
 
 .annonce{
-	border: 2px solid white;
+	border: 2px solid;
 	padding: 15px 25px 31px 19px;
 }
 .annonceText{
@@ -1275,7 +1274,7 @@ a:hover {
 	margin-right: 0%;
 	width: 45%;
 	text-align: center;
-	border: 2px solid white;
+	border: 2px solid;
 	padding: 14px 0px 11px 0px;
 	white-space: nowrap;
 	overflow: hidden;
