@@ -1682,7 +1682,8 @@ ul.membres_equipe li::before {
   column-count: 2;
 }
 .membres_equipe_recherche .membre{
- margin-bottom:14px;
+	margin-bottom:14px;
+	display: inline-block;
 }
 .membres_equipe_recherche .nom_complet{
  font-weight: bold;
