@@ -24,7 +24,7 @@ function shortcode_etablissements_partenaires( $atts ){
 			foreach($etablissements_erasmus as $etablissement){
 				$localisation = get_post_meta($etablissement->ID, 'wpcf-localisation', true);
 				$lien = get_post_meta($etablissement->ID, 'wpcf-lien', true);
-				$template .= '<li>';
+				$template .= '<li class="membre">';
 				$template .= '<a id="'. $etablissement->ID .'" class="link_professeur nom_complet open_in_popup" href="'.$lien.'">'.$etablissement->post_title.'</a>';
 				$template .= '<span class="localisation">'.$localisation.'</span>';
 				$template .= '</li>';
