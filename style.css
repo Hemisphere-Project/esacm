@@ -1587,6 +1587,7 @@ ul.membres_equipe li::before {
 }
 .titre-categorie {
 	font-weight: bold;
+	margin-left: 30px;
 }
 ul.membres_equipe li.titre-categorie::before {
 	display: none; 
