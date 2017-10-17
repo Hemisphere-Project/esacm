@@ -1585,6 +1585,12 @@ ul.membres_equipe li::before {
     margin-right: 10px;
     margin-top: -4px;
 }
+.titre-categorie {
+	font-weight: bold;
+}
+ul.membres_equipe li.titre-categorie::before {
+	display: none;
+}
 .membres_equipe .nom_complet {
     font-weight: bold;
 }
