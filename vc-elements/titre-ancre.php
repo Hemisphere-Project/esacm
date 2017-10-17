@@ -66,7 +66,7 @@ class vcTitreAncre extends WPBakeryShortCode {
         $html = '
         <div class="vc-titreancre-wrap">
 
-            <h2 class="vc-titreancre-title title" id="' . custom_url_encode(str_replace(' ', '-', $title)) . '">' . $title . '</h2>
+            <h2 class="vc-titreancre-title title typo_alpha" id="' . custom_url_encode(str_replace(' ', '-', $title)) . '">' . $title . '</h2>
 
         </div>';
 
