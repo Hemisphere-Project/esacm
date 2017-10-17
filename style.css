@@ -1684,6 +1684,7 @@ ul.membres_equipe li::before {
 .membres_equipe_recherche .membre{
 	margin-bottom:14px;
 	display: inline-block;
+	width:100%;
 }
 .membres_equipe_recherche .nom_complet{
  font-weight: bold;
