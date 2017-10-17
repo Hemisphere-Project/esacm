@@ -33,7 +33,6 @@ function shortcode_etablissements_partenaires( $atts ){
 		$template .= '</div>';
 	$template .= '</div>';			
 					
-							<
 	return $template;
 }
 add_shortcode( 'etablissements_partenaires', 'shortcode_etablissements_partenaires' );
