@@ -26,7 +26,7 @@ function shortcode_etablissements_partenaires( $atts ){
 				$lien = get_post_meta($etablissement->ID, 'wpcf-lien', true);
 				$template .= '<li class="membre">';
 				$template .= '<a id="'. $etablissement->ID .'" class="link_professeur nom_complet open_in_popup" href="'.$lien.'">'.$etablissement->post_title.'</a>';
-				$template .= '<span class="localisation">'.$localisation.'</span>';
+				$template .= '</br><span class="localisation">'.$localisation.'</span>';
 				$template .= '</li>';
 			}
 			$template .= '</ul>';
