@@ -42,22 +42,22 @@
 		<div class="site-info">
 			<div class="site-info-colonne">
 				<a target="_blank" href="https://www.clermontmetropole.eu/">
-					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-clermontauvergne.png">
+					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo_clermont_metropole_blanc.svg">
 				</a>
 			</div>
 			<div class="site-info-colonne">
 				<a target="_blank" href="https://www.auvergnerhonealpes.fr/">
-					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-region-blanc.svg">
+					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo_region_blanc.svg">
 				</a>
 			</div>
 			<div class="site-info-colonne">
 				<a target="_blank" href="http://www.culturecommunication.gouv.fr/">
-					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ministere.jpg">
+					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo_ministere_blanc.svg">
 				</a>
 			</div>
 			<div class="site-info-colonne">
 				<a target="_blank" href="https://clermont-ferrand.fr/">
-					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-clermont.svg">
+					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo_clermont_blanc.svg">
 				</a>
 			</div>
 		</div>
