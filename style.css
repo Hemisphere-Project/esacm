@@ -1611,7 +1611,7 @@ ul.membres_equipe li::before {
 	    text-transform: lowercase;
 	}
 	#submenu_wrapper > a.current {
-	    font-weight: normal;
+	    font-weight: bold;
 	}
 
 .vc_figure-caption {
