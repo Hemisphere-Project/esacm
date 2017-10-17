@@ -1589,7 +1589,7 @@ ul.membres_equipe li::before {
 	font-weight: bold;
 }
 ul.membres_equipe li.titre-categorie::before {
-	display: none;
+	display: none; 
 }
 .membres_equipe .nom_complet {
     font-weight: bold;
