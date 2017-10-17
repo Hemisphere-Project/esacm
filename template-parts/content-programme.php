@@ -47,39 +47,40 @@
  <div id="post_overlay_under"></div>
 
 	<!-- //////////////////// CONFIG  ////////////////// -->
-	<!-- //////// accueil , recherche , protolab //////// -->
-	<script>
-			var category_Name = "accueil"; // Pour les appels ajax load more; -> JS -> WP_Query
-	</script>
-	<!-- <?php $category_Name = array('accueil', 'recherche', 'protolab') ?> -->
-	<?php $category_Name = array('accudseil', 'recherchse', 'protolsdab') ?>
 	<?php
-	// GET SLUGS OF PAGE
+	// GET KEYWORDS OF PAGE
 	$programme_keywords = wp_get_post_terms($post->ID, 'post_keyword', array("fields" => "all"));
+	$programme_keywords_slugs = array();
 	foreach ($programme_keywords as $keyword) {
-		echo $keyword->slug;
+		array_push($programme_keywords_slugs,$keyword->slug);
 	}
 	?>
-
 	<!-- //////////////////// LOOP  ////////////////// -->
-		 <div class="postsTable">
-			 <div class="grid-sizer"></div>
-			 <div class="gutter-sizer"></div>
+	 <div class="postsTable">
+		 <div class="grid-sizer"></div>
+		 <div class="gutter-sizer"></div>
 
-			<?php
-			 $args = array(
-				'post_type' => array('actu', 'annonce'),
-				'posts_per_page'=> -1,
-				'category_name'=> $category_Name
-			 );
-			 $loop = new WP_Query( $args );
+		<?php
+		 $args = array(
+			'post_type' => array('actu', 'annonce'),
+			'posts_per_page'=> -1,
+			'tax_query' => array(
+				array(
+						'taxonomy' => 'post_keyword',
+						'field' => 'slug',
+						'terms' => $programme_keywords_slugs
+				)
+			)
 
-			 while ( $loop->have_posts() ) : $loop->the_post();
+		 );
+		 $loop = new WP_Query( $args );
 
-				 get_template_part( 'single-actu-and-annonce');
+		 while ( $loop->have_posts() ) : $loop->the_post();
 
-			 endwhile; ?>
-		 </div>
+			 get_template_part( 'single-actu-and-annonce');
+
+		 endwhile; ?>
+	 </div>
 
 
 
