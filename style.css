@@ -1590,7 +1590,7 @@ ul.membres_equipe li::before {
 	margin-left: 30px;
 }
 ul.membres_equipe li.titre-categorie::before {
-	display: none; 
+	display: none;
 }
 .membres_equipe .nom_complet {
     font-weight: bold;
@@ -1677,6 +1677,24 @@ ul.membres_equipe li.titre-categorie::before {
 }
 .vc_tta-panels-container {
     border-bottom: 2px solid black;
+}
+
+.nextButton{
+	cursor: pointer;
+	float: right;
+	margin-right: 2%;
+	width: auto;
+	text-align: center;
+	border: 2px solid;
+	padding: 14px 10px 11px 10px;
+	margin-top: 70px;
+	margin-bottom: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.nextButton a{
+	text-decoration: none;
 }
 
 /*--------------------------------------------------------------

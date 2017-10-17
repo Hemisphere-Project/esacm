@@ -35,6 +35,8 @@
 
 	<h2 class="entry-title title typo_alpha">événements liés au programme</h2>
 
+	<br>
+
 	<!-- ////////////////////////////////////////////// -->
 	<!-- ////////////////// POST OVERLAY ////////////// -->
 	<!-- ////////////////////////////////////////////// -->
@@ -80,6 +82,12 @@
 			 get_template_part( 'single-actu-and-annonce');
 
 		 endwhile; ?>
+	 </div>
+
+	 <div class="spacer shadowedBox"></div>
+
+	 <div class="nextButton shadowedBox typo_beta" >
+		 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Axes et programmes' ) ) ); ?>">← Retour à la liste des programmes</a>
 	 </div>
 
 
