@@ -35,23 +35,30 @@
 
 	<h2 class="entry-title title typo_alpha">événements liés au programme</h2>
 
+	<!-- ////////////////////////////////////////////// -->
+	<!-- ////////////////// POST OVERLAY ////////////// -->
+	<!-- ////////////////////////////////////////////// -->
+
+
+	<div id="post_overlay">
+		<div id="post_overlay_close"><img id="post_overlay_close_img" src="<?php echo get_template_directory_uri(); ?>/img/close_black.svg"> </div>
+		<div id="post_overlay_content"></div>
+ </div>
+ <div id="post_overlay_under"></div>
+
 	<!-- //////////////////// CONFIG  ////////////////// -->
 	<!-- //////// accueil , recherche , protolab //////// -->
 	<script>
 			var category_Name = "accueil"; // Pour les appels ajax load more; -> JS -> WP_Query
 	</script>
-	<?php $category_Name = "accueil" ?>
-
+	<!-- <?php $category_Name = array('accueil', 'recherche', 'protolab') ?> -->
+	<?php $category_Name = array('accudseil', 'recherchse', 'protolsdab') ?>
 	<?php
-	// GET ALL KEYWORDS
-	$keywords = get_terms( 'post_keyword', array(
-	    'hide_empty' => false,
-	));
-	foreach ($keywords as $keyword) {
-		echo $keyword->name;
+	// GET SLUGS OF PAGE
+	$programme_keywords = wp_get_post_terms($post->ID, 'post_keyword', array("fields" => "all"));
+	foreach ($programme_keywords as $keyword) {
+		echo $keyword->slug;
 	}
-	// GET SLUG OF PAGE
-
 	?>
 
 	<!-- //////////////////// LOOP  ////////////////// -->
@@ -66,6 +73,7 @@
 				'category_name'=> $category_Name
 			 );
 			 $loop = new WP_Query( $args );
+
 			 while ( $loop->have_posts() ) : $loop->the_post();
 
 				 get_template_part( 'single-actu-and-annonce');
