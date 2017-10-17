@@ -99,14 +99,19 @@ $(function() {
   $("#post_overlay_under, #post_overlay_close").click(function() {
     history.back(); //This will fire the popstate event
   });
+  $(document).keyup(function(e) {
+     if (e.keyCode == 27) {
+       history.back(); //This will fire the popstate event
+    }
+  });
+
   window.addEventListener("popstate", function(e) {
 
 	// URL location
 	var location = document.location;
 	// state
 	var state = e.state;
-	console.info('state :');
-	console.info(state);
+	console.log('state: '+state);
 	if(state != null && state.open_in_popup){
 		$("a[href='" + location + "']").click();
 	}
