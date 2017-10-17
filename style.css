@@ -1568,12 +1568,10 @@ header .logo a{
 }
 
 .entry-content ul li::before {
-    content: "⦁";
+    content: "●";
     display: inline-block;
-    font-size: 59px;
-    line-height: 28px;
     margin-right: 10px;
-    vertical-align: calc(-13px);
+    vertical-align: calc(2px);
 }
 ul.membres_equipe li::before {
     content: "○";
@@ -1584,6 +1582,9 @@ ul.membres_equipe li::before {
     margin-bottom: 2px;
     margin-right: 10px;
     margin-top: -4px;
+}
+ul.membres_equipe li:hover::before {
+    content: "●";
 }
 .titre-categorie {
 	font-weight: bold;
