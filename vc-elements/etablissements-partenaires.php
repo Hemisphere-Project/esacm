@@ -44,7 +44,7 @@ function shortcode_etablissements_partenaires( $atts ){
 				$template .= '</li>';
 			}
 			$template .= '<li class="titre-categorie">RÉSEAU HORS ERASMUS</li>';
-			foreach($etablissements_non_erasmus as $etablissement){
+			foreach($etablissements_non_erasmus as $etablissement){ 
 				$localisation = get_post_meta($etablissement->ID, 'wpcf-localisation', true);
 				$lien = get_post_meta($etablissement->ID, 'wpcf-lien', true);
 				$template .= '<li class="membre">';
