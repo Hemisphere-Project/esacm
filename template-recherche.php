@@ -96,7 +96,7 @@ get_header(); ?>
 
 
 			<div class="vc-titreancre-wrap">
-					<h2 class="vc-titreancre-title title" id="equipe2">L'équipe 2</h2>
+					<h2 class="vc-titreancre-title title typo_alpha" id="equipe2">L'équipe 2</h2>
 			</div>
 			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
@@ -118,15 +118,13 @@ get_header(); ?>
 							</li>
 						<?php } ?>
 					</ul>
-					</br>
-					</br>
 
 				</div>
 			</div>
 
 
 		        <div class="vc-titreancre-wrap">
-			  	<h2 class="vc-titreancre-title title" id="chercheurs2">Les chercheurs 2</h2>
+			  	<h2 class="vc-titreancre-title title typo_alpha" id="chercheurs2">Les chercheurs 2</h2>
 		        </div>
 			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
