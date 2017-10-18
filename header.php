@@ -49,7 +49,8 @@
 					<br>
 					<?php
 						wp_nav_menu( array(
-							'menu'        => 'english-menu'
+							'menu'        => 'english-menu',
+							'menu_class'     => 'menu nav-menu typo_epsilon'
 						) );
 					?>
 					<br><br>
@@ -68,9 +69,12 @@
 			</div>
 			<div id="other_links_wrapper" class="typo_epsilon">
 				<br>
-				<a href="#">ateliers publics</a>
-				<a href="#">éducation artistique</a>
-				<a href="#">le Protolab</a>
+				<?php
+					wp_nav_menu( array(
+						'menu'        => 'bottom-menu',
+						'menu_class'     => 'menu nav-menu typo_epsilon'
+					) );
+				?>
 			</div>
 		</div>
 	</header><!-- #masthead -->
