@@ -266,6 +266,10 @@ function ajaxLoadFunction() {
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
 		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
 	<?php }
+	elseif(($post_type == "diplome")||($post_type == "diplome_expo")){?>
+		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
+		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
+	<?php }
   	endwhile;
   	endif;
 
@@ -377,7 +381,7 @@ function vc_before_init_actions() {
     require_once( get_template_directory().'/vc-elements/titre-ancre.php' );
     require_once( get_template_directory().'/vc-elements/dotted-hr.php' );
     require_once( get_template_directory().'/vc-elements/exergue.php' );
-    
+
 }
 
 //Require new shortcode

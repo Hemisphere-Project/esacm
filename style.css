@@ -1764,19 +1764,48 @@ font-style: italic;
 
 .programmesTable{
  display:inline-block;
- /*column-count: 4;*/
- 	text-align: justify;
+ 	/*text-align: justify;*/ /* Ne marche pas si ligne pas entière */
+	width:107%;
 }
 .programmeItem{
 	vertical-align:top;
 	display:inline-block;
 	width:20%;
 	margin-bottom: 30px;
+	margin-right:4%;
 }
 .programmeTitle{
 	text-align: left;
 }
 .programmeImage img{
+	width:100%;
+}
+
+/*------------Diplômés--------------*/
+
+/* Solution 1: inline-block / width du container plus grande */
+.diplomesTable{
+	margin-top:10px;
+	display:inline-block;
+	width:107%;
+}
+.diplomeItem{
+	display:inline-block;
+	width:20%;
+	margin-bottom: 30px;
+	margin-right:4%;
+}
+.diplomeExpoItem{
+	display:inline-block;
+	width:45%;
+	margin-bottom: 30px;
+	margin-right:4%;
+}
+
+.diplomeTitle{
+	text-align: left;
+}
+.diplomeImage img{
 	width:100%;
 }
 

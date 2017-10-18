@@ -91,7 +91,7 @@ get_header(); ?>
 
 			<div class="programmesTable">
 				<?php foreach ($programmes_encours as $programme) {?>
-					<a class="programmeItem" id="<?php echo $axe->ID?>" href="<?php echo get_permalink($programme->ID); ?>">
+					<a class="programmeItem" id="<?php echo $programme->ID?>" href="<?php echo get_permalink($programme->ID); ?>">
 						<div class="programmeImage"><?php echo get_the_post_thumbnail($programme->ID) ; ?></div>
 						<div class="programmeTitle typo_delta"><?php echo $programme->post_title ; ?></div>
 					</a>
@@ -103,7 +103,7 @@ get_header(); ?>
 
 			<div class="programmesTable">
 				<?php foreach ($programmes_passes as $programme) {?>
-					<a class="programmeItem" id="<?php echo $axe->ID?>" href="<?php echo get_permalink($programme->ID); ?>">
+					<a class="programmeItem" id="<?php echo $programme->ID?>" href="<?php echo get_permalink($programme->ID); ?>">
 						<div class="programmeImage"><?php echo get_the_post_thumbnail($programme->ID) ; ?></div>
 						<div class="programmeTitle typo_delta"><?php echo $programme->post_title ; ?></div>
 					</a>
