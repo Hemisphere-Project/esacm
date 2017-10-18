@@ -117,6 +117,7 @@ $(function() {
 	}
 	else{
 	      $("#post_overlay, #post_overlay_under").fadeOut(100);
+        $("#post_overlay_content").empty();
 	      postIsOpened=false;
 	}
 
