@@ -63,7 +63,7 @@ class vcSousTitre extends WPBakeryShortCode {
         );
 
         // Fill $html var with data
-        $html = '<h3 class="vc-soustitre-title title typo_gamma shadowed">' . $title . '</h3>';
+        $html = '<h3 class="vc-soustitre-title subtitle typo_gamma shadowed">' . $title . '</h3>';
 
         return $html;
 
