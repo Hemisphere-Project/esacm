@@ -55,27 +55,28 @@
 					?>
 					<br><br>
 				</div>
+				<div id="esacm_logo_wrapper">
+					<a href="<?php echo site_url(); ?>">
+						<?php if( is_home() ){?>
+						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
+						<?php } else{ ?>
+						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">
+						<?php } ?>
+					</a>
+				</div>
+				<div id="other_links_wrapper" class="typo_epsilon">
+					<br>
+					<?php
+						wp_nav_menu( array(
+							'menu'        => 'bottom-menu',
+							'menu_class'     => 'menu nav-menu typo_epsilon'
+						) );
+					?>
+				</div>
 			</nav><!-- #site-navigation -->
 			
 			
-			<div id="esacm_logo_wrapper">
-				<a href="<?php echo site_url(); ?>">
-					<?php if( is_home() ){?>
-					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
-					<?php } else{ ?>
-					<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">
-					<?php } ?>
-				</a>
-			</div>
-			<div id="other_links_wrapper" class="typo_epsilon">
-				<br>
-				<?php
-					wp_nav_menu( array(
-						'menu'        => 'bottom-menu',
-						'menu_class'     => 'menu nav-menu typo_epsilon'
-					) );
-				?>
-			</div>
+			
 		</div>
 	</header><!-- #masthead -->
 
