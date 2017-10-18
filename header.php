@@ -53,7 +53,6 @@
 							'menu_class'     => 'menu nav-menu typo_epsilon'
 						) );
 					?>
-					<a href="<?php echo get_permalink(210); ?>">english</a>
 					<br><br>
 				</div>
 			</nav><!-- #site-navigation -->
