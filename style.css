@@ -1800,13 +1800,15 @@ font-style: italic;
 	margin-bottom: 30px;
 	margin-right:4%;
 }
-.diplomeExpoItem{
-	display:inline-block;
+.diplomeItem.expo{
 	width:45%;
-	margin-bottom: 30px;
-	margin-right:4%;
 }
 
+.diplomeContainer{
+	display:flex;
+	flex-wrap: wrap;
+  /*align-items: baseline;*/
+}
 .diplomeTitle{
 	text-align: left;
 }

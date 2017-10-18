@@ -118,9 +118,12 @@ get_header(); ?>
 							foreach ($annees_de_lexpo as $annee_de_lexpo) {
 								if($annee_de_lexpo->name==$annee){
 									?>
-									<a class="diplomeExpoItem open_in_popup" id="<?php echo $diplomes_expo->ID?>" href="<?php echo get_permalink($diplomes_expo->ID); ?>">
-										<div class="diplomeImage"><?php echo get_the_post_thumbnail($diplomes_expo->ID) ; ?></div>
-										<div class="diplomeTitle typo_delta"><?php echo $diplomes_expo->post_title ; ?></div>
+									<a class="diplomeItem expo open_in_popup" id="<?php echo $diplomes_expo->ID?>" href="<?php echo get_permalink($diplomes_expo->ID); ?>">
+										<div class="diplomeContainer">
+											<div class="diplomeImage"><?php echo get_the_post_thumbnail($diplomes_expo->ID) ; ?></div>
+											<div class="diplomeTitle typo_delta"><?php echo $diplomes_expo->post_title ; ?></div>
+										</div>
+
 									</a>
 									<?php
 								}
@@ -130,8 +133,10 @@ get_header(); ?>
 						foreach ($diplomes_annee as $diplome) {
 							?>
 							<a class="diplomeItem open_in_popup" id="<?php echo $diplome->ID?>" href="<?php echo get_permalink($diplome->ID); ?>">
-								<div class="diplomeImage"><?php echo get_the_post_thumbnail($diplome->ID) ; ?></div>
-								<div class="diplomeTitle typo_delta"><?php echo $diplome->post_title ; ?></div>
+								<div class="diplomeContainer">
+									<div class="diplomeImage"><?php echo get_the_post_thumbnail($diplome->ID) ; ?></div>
+									<div class="diplomeTitle typo_delta"><?php echo $diplome->post_title ; ?></div>
+								</div>
 							</a>
 							<?php
 						}
