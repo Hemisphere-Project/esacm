@@ -44,19 +44,21 @@
 						'menu_class'     => 'menu nav-menu typo_epsilon'
 					) );
 				?>
+				
+				<div id="english_link_wrapper" class="typo_epsilon">
+					<br>
+					<?php
+						wp_nav_menu( array(
+							'menu_id'        => 'english-menu',
+							'menu_class'     => 'menu nav-menu typo_epsilon'
+						) );
+					?>
+					<a href="<?php echo get_permalink(210); ?>">english</a>
+					<br><br>
+				</div>
 			</nav><!-- #site-navigation -->
 			
-			<div id="english_link_wrapper" class="typo_epsilon">
-				<br>
-				<?php
-					wp_nav_menu( array(
-						'menu_id'        => 'english-menu',
-						'menu_class'     => 'menu nav-menu typo_epsilon'
-					) );
-				?>
-				<a href="<?php echo get_permalink(210); ?>">english</a>
-				<br><br>
-			</div>
+			
 			<div id="esacm_logo_wrapper">
 				<a href="<?php echo site_url(); ?>">
 					<?php if( is_home() ){?>
