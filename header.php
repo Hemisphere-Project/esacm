@@ -49,8 +49,7 @@
 					<br>
 					<?php
 						wp_nav_menu( array(
-							'menu'        => 'english-menu',
-							'menu_class'     => 'menu nav-menu typo_epsilon'
+							'menu'        => 'english-menu'
 						) );
 					?>
 					<br><br>
