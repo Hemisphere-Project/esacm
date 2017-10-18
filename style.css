@@ -1206,6 +1206,9 @@ a:hover {
 	/*text-shadow: 0 0 10px;*/
 	/*box-shadow: inset 0 0 4px, 0 0 4px;*/
 }
+.subtitle {
+    text-align: center;
+}
 .actuImage {
 	margin-bottom:10px;
 	-webkit-transition:-webkit-filter .2s ease-in-out;
