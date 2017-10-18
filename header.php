@@ -48,6 +48,12 @@
 			
 			<div id="english_link_wrapper" class="typo_epsilon">
 				<br>
+				<?php
+					wp_nav_menu( array(
+						'menu_id'        => 'english-menu',
+						'menu_class'     => 'menu nav-menu typo_epsilon'
+					) );
+				?>
 				<a href="<?php echo get_permalink(210); ?>">english</a>
 				<br><br>
 			</div>
