@@ -626,7 +626,7 @@ a:hover, a:active {
 		display: none;
 	}
 
-	#primary-menu, #menu-english-menu {
+	#primary-menu, #menu-english-menu, #menu-bottom-menu {
 		display: block;
 	}
 }
