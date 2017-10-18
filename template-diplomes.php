@@ -8,11 +8,22 @@
 ///////// GET DIPLOMES /////////
 /////////////////////////////////
 $args =	array(
-	'post_type'=>'membre-chercheur',
+	'post_type'=>'diplome',
 	'posts_per_page'=> -1,
 	'order' => 'DESC'
 );
-$membres_chercheurs = get_posts($args);
+$diplomes = get_posts($args);
+wp_reset_query();
+
+/////////////////////////////////
+//////////  GET EXPOS  //////////
+/////////////////////////////////
+$args =	array(
+	'post_type'=>'diplome_expo',
+	'posts_per_page'=> -1,
+	'order' => 'DESC'
+);
+$diplomes_expos = get_posts($args);
 wp_reset_query();
 
 /////////////////////////////////
@@ -25,6 +36,15 @@ $annees = get_terms( array(
     'hide_empty' => false,
 ) );
 // MULTIDIM ARRAY [YEAR][CATEGORIE]->CHERCHEUR
+
+$membres_chercheurs_annees = array();
+foreach ($annees as $annee) {
+	foreach ($diplomes as $diplome) {
+		$annees_du_diplome = wp_get_post_terms($diplome->ID, 'annee', array("fields" => "all"));
+
+	}
+}
+
 $membres_chercheurs_annees = array();
 foreach ($annees as $annee) {
 	foreach ($membres_chercheurs as $chercheur) {
@@ -37,6 +57,7 @@ foreach ($annees as $annee) {
 		}
 	}
 }
+
 // SORT
 krsort($membres_chercheurs_annees); //trie par la clé année en reverse order
 foreach ($membres_chercheurs_annees as $key => $value) {
@@ -82,16 +103,6 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
-
-
-
-
-
-		        <div class="vc-titreancre-wrap">
-			  	<h2 class="vc-titreancre-title title typo_alpha" id="chercheurs2">Les chercheurs 2</h2>
-		        </div>
-			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
 
 			<div id="chercheurs_accordeon" class="accordeon">
