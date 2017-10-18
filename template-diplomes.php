@@ -5,18 +5,7 @@
  */
 
 /////////////////////////////////
-///// GET EQUIPE RECHERCHE //////
-/////////////////////////////////
-$args =	array(
-	'post_type'=>'membre-equipe-rech',
-	'posts_per_page'=> -1,
-	'order' => 'DESC'
-);
-$membres_equipe_recherche = get_posts($args);
-wp_reset_query();
-
-/////////////////////////////////
-///// GET EQUIPE CHERCHEURS /////
+///////// GET DIPLOMES /////////
 /////////////////////////////////
 $args =	array(
 	'post_type'=>'membre-chercheur',
@@ -27,7 +16,7 @@ $membres_chercheurs = get_posts($args);
 wp_reset_query();
 
 /////////////////////////////////
-//// SORT EQUIPE CHERCHEURS /////
+//////   SORT DIPLOMES   ////////
 /////////////////////////////////
 
 // YEARS
@@ -95,32 +84,8 @@ get_header(); ?>
 			?>
 
 
-			<div class="vc-titreancre-wrap">
-					<h2 class="vc-titreancre-title title typo_alpha" id="equipe2">L'équipe 2</h2>
-			</div>
-			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
 
-			<div class="columns_wrapper typo_epsilon equipe">
-				<div class="">
-					<ul id="" class="membres_equipe membres_equipe_recherche">
-						<?php foreach($membres_equipe_recherche as $membre){ ?>
-							<li class="membre">
-								<?php if($membre->post_content != ''){ ?>
-									<a id="<?php echo $membre->ID; ?>" class="link_professeur nom_complet open_in_popup" href="<?php echo get_permalink($membre->ID); ?>"><?php echo $membre->post_title; ?></a>
-								<?php } else{ ?>
-									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
-								<?php } ?>
-								<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);
-								if($fonction != ''){?>
-								</br><span class="fonction"><?php echo $fonction; ?></span>
-								<?php }	?>
-							</li>
-						<?php } ?>
-					</ul>
-
-				</div>
-			</div>
 
 
 		        <div class="vc-titreancre-wrap">
