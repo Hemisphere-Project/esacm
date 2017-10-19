@@ -27,7 +27,7 @@ get_header(); ?>
 
 				 <section class="actus">
 
-					 <div class="title typo_alpha">ÉVÈNEMENTS &amp; PUBLICATIONS </div>
+					 <div class="title typo_alpha">Projets &amp; Réalisations </div>
 
 			 <!-- /////////////////// FILTRES  //////////////// -->
 
