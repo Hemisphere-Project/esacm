@@ -1210,6 +1210,7 @@ a:hover {
 .subtitle {
     text-align: center;
     margin-bottom: 34px !important;
+		text-transform: uppercase;
 }
 .actuImage {
 	margin-bottom:10px;
