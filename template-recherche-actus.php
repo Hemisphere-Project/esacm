@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Page Recherche - Evenements
+ * Template Name: Page Recherche - Actus
  * @package hmsphr
  */
 
