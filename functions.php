@@ -378,7 +378,7 @@ add_action( 'vc_before_init', 'vc_before_init_actions' );
 function vc_before_init_actions() {
 
     // Require new custom Element
-    require_once( get_template_directory().'/vc-elements/titre-ancre.php' );
+    require_once( get_template_directory().'/vc-elements/sous-titre.php' );
     require_once( get_template_directory().'/vc-elements/dotted-hr.php' );
     require_once( get_template_directory().'/vc-elements/exergue.php' );
     require_once( get_template_directory().'/vc-elements/titre-ancre.php' );
