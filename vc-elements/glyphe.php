@@ -66,7 +66,7 @@ class vcGlyphe extends WPBakeryShortCode {
          
         // Fill $html var with data
         $html = '
-        <div class="vc-glyphe-wrap">
+        <div class="vc-glyphe-wrap typo_glyphe">
          
             <p class="vc-glyphe-text">' . $text . '</p>
          

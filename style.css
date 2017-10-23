@@ -1096,6 +1096,13 @@ body.home a, body.single-actu a, body.single-annonce a {
 	font-size: 14px;
 	line-height: 17px;
 }
+.typo_glyphe{
+	font-family: 'Laborantine';
+	font-size: 18px;
+	line-height: 22px;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 /*DESKTOP*/
 @media only screen and (max-width:1400px){
 	.typo_alpha, .typo_alpha.vc-exergue-wrap p{
@@ -1702,6 +1709,12 @@ ul.membres_equipe li.titre-categorie::before {
 }
 .nextButton a{
 	text-decoration: none;
+}
+
+/*GLYPHE*/
+
+.vc-glyphe-wrap .vc-glyphe-text {
+    word-break: break-all;
 }
 
 /*--------------------------------------------------------------
