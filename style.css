@@ -1735,7 +1735,7 @@ ul.membres_equipe li.titre-categorie::before {
 .vc-lienpagesuivante {
     text-decoration: none;
     border: 2px solid black;
-    padding: 10px 10px;
+    padding: 10px 10px 10px 15px;
     margin-bottom: 37px;
     display: inline-block;
 }
