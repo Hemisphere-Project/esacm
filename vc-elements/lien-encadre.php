@@ -80,7 +80,7 @@ class vcLienEncadre extends WPBakeryShortCode {
         $html = '
         <div class="vc-lienencadre-wrap">
          
-            <a class="vc-lienencadre" href="'.$url.'">' . $intitule . '</a>
+            <a class="vc-lienencadre" href="'.$url.'">→&nbsp;' . $intitule . '</a>
          
         </div>';      
          
