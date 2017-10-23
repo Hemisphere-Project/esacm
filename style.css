@@ -1107,32 +1107,30 @@ body.home a, body.single-actu a, body.single-annonce a {
 /*DESKTOP*/
 @media only screen and (max-width:1400px){
 	.typo_alpha, .typo_alpha.vc-exergue-wrap p{
-		font-family: 'Laborantine';
 		font-size: 23px;
 		line-height: 25px;
 	}
 	.typo_beta, .entry-content .typo_beta p, .vc_tta-panel-heading {
-		font-family: 'DiaRegular';
 		font-size: 23px;
 		line-height: 27px;
 	}
 	.typo_gamma{
-		font-family: 'DiaBold';
 		font-size: 16px;
 		line-height: 20px;
 	}
 	.typo_delta{
-		font-family: 'DiaBold';
 		font-size: 16px;
 		line-height: 20px;
 	}
 	.typo_epsilon, .entry-content p{
-		font-family: 'DiaRegular';
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.typo_glyphe, .typo_glyphe p{
 		font-size: 16px;
 		line-height: 20px;
 	}
 	.typo_zeta{
-		font-family: 'DiaRegular';
 		font-size: 12px;
 		line-height: 15px;
 	}
@@ -1141,7 +1139,6 @@ body.home a, body.single-actu a, body.single-annonce a {
 /*TABLET LANDSCAPE*/
 @media only screen and (max-width:1050px){
 	.typo_beta, .entry-content .typo_beta p, .vc_tta-panel-heading {
-		font-family: 'DiaRegular';
 		font-size: 19px;
 		line-height: 23px;
 	}
@@ -1150,12 +1147,10 @@ body.home a, body.single-actu a, body.single-annonce a {
 /*TABLET PORTRAIT*/
 @media only screen and (max-width:800px){
 	.typo_alpha, .typo_alpha.vc-exergue-wrap p{
-		font-family: 'Laborantine';
 		font-size: 21px;
 		line-height: 24px;
 	}
 	.typo_beta, .entry-content .typo_beta p, .vc_tta-panel-heading {
-		font-family: 'DiaRegular';
 		font-size: 19px;
 		line-height: 23px;
 	}
@@ -1163,7 +1158,6 @@ body.home a, body.single-actu a, body.single-annonce a {
 /*SMARTPHONE*/
 @media only screen and (max-width:600px){
 	.typo_alpha, .typo_alpha.vc-exergue-wrap p{
-		font-family: 'Laborantine';
 		font-size: 19px;
 		line-height: 23px;
 	}
