@@ -1096,7 +1096,7 @@ body.home a, body.single-actu a, body.single-annonce a {
 	font-size: 14px;
 	line-height: 17px;
 }
-.typo_glyphe{
+.typo_glyphe, .typo_glyphe p{
 	font-family: 'Laborantine';
 	font-size: 18px;
 	line-height: 22px;
