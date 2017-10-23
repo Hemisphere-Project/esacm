@@ -64,6 +64,7 @@ class vcGlyphe extends WPBakeryShortCode {
             )
         );
         
+        echo substr($text, $i ,$i+4);
         //ADD <wbr/> between each letter to avoid chrome not breaking word between slashes.
 	for ($i = 0; $i < strlen($text); $i+=6){
 	    if( substr($text, $i ,$i+4) == "</br>"){
