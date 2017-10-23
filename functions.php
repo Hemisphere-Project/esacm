@@ -384,6 +384,7 @@ function vc_before_init_actions() {
     require_once( get_template_directory().'/vc-elements/titre-ancre.php' );
     require_once( get_template_directory().'/vc-elements/glyphe.php' );
     require_once( get_template_directory().'/vc-elements/lien-encadre.php' );
+    require_once( get_template_directory().'/vc-elements/lien-page-suivante.php' );
     
 }
 
