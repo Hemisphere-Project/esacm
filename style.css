@@ -1728,6 +1728,8 @@ ul.membres_equipe li.titre-categorie::before {
     text-decoration: none;
     border: 2px solid black;
     padding: 10px 20px;
+    margin-bottom: 37px;
+    display: inline-block;
 }
 
 /*--------------------------------------------------------------
