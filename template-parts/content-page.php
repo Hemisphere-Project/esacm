@@ -40,8 +40,8 @@
 			<?php } ?>
 			<!-- ADD ANCRES EQUIPES ET CHERCHEURS A LA MAIN - TROUVER MIEUX -->
 			<?php if($post->post_name=='la-cooperative'){ ?>
-				• <a href="#equipe2">L'équipe 2</a>
-				• <a href="#chercheurs2">Les chercheurs 2</a><?php
+				• <a href="#equipe">L'équipe</a>
+				• <a href="#chercheurs">Les chercheurs</a><?php
 			}?>
 		</div>
 		<div id="submenu_pusher"></div>

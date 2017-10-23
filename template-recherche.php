@@ -96,7 +96,7 @@ get_header(); ?>
 
 
 			<div class="vc-titreancre-wrap">
-					<h2 class="vc-titreancre-title title typo_alpha" id="equipe2">L'équipe 2</h2>
+					<h2 class="vc-titreancre-title title typo_alpha" id="equipe">L'équipe</h2>
 			</div>
 			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
@@ -124,7 +124,7 @@ get_header(); ?>
 
 
 		        <div class="vc-titreancre-wrap">
-			  	<h2 class="vc-titreancre-title title typo_alpha" id="chercheurs2">Les chercheurs 2</h2>
+			  	<h2 class="vc-titreancre-title title typo_alpha" id="chercheurs">Les chercheurs</h2>
 		        </div>
 			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
