@@ -186,6 +186,7 @@ $(function() {
       imagesLoaded: true,
       wrapAround: true,
       setGallerySize: false // calcule la hauteur de la galerie en fonction de l'image la plus haute
+      // arrowShape: {x0: 10,x1: 60, y1: 50,x2: 65, y2: 45,x3: 20}
     });
 
     $('.flickity-viewport').css('padding-bottom', '62%'); // if setGallerySize: false, on set manuellement le ration de hauteur de la galerie
@@ -268,8 +269,8 @@ $(function() {
 
         // OPEN IN POPUP STYLE
         $('.postsTable #'+firstId).nextAll().click(function(event){
-          event.preventDefault();
           if($(this).hasClass('open_in_popup')){
+            event.preventDefault();
             var that = this;
             openInPopup(that);
           }
