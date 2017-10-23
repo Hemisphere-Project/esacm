@@ -78,7 +78,7 @@ class vcLienPageSuivante extends WPBakeryShortCode {
          
         // Fill $html var with data
         $html = '
-        <div class="vc-lienpagesuivante-wrap">
+        <div class="vc-lienpagesuivante-wrap typo_beta"">
          
             <a class="vc-lienpagesuivante" href="'.$url.'">→&nbsp;' . $intitule . '</a>
          
