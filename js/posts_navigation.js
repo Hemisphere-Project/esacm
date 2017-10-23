@@ -71,7 +71,6 @@ $(function() {
 
           // APPLY CAROUSEL ONCE IMG LOADED
           $('#post_overlay_content').imagesLoaded().then(function(){
-            console.log('IMG LOADED');
             launchCarousel();
           });
 
