@@ -63,6 +63,10 @@ class vcGlyphe extends WPBakeryShortCode {
                 $atts
             )
         );
+        
+	for ($i = 0; $i < strlen($text); $i+=6){
+	    $text = substr($text,0,$i)."<wbr>".substr($text, $i);
+	}
          
         // Fill $html var with data
         $html = '
