@@ -69,8 +69,8 @@ class vcLienEncadre extends WPBakeryShortCode {
         extract(
             shortcode_atts(
                 array(
-                    'title'   => '',
-                    'text' => '',
+                    'intitule'   => '',
+                    'url' => '',
                 ), 
                 $atts
             )
