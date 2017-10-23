@@ -1719,7 +1719,7 @@ ul.membres_equipe li.titre-categorie::before {
 
 /*GLYPHE*/
 
-.vc-glyphe-wrap .vc-glyphe-text {
+.vc-glyphe-wrap .vc-glyphe-text, .vc-glyphe-wrap p {
     word-break: break-all;
 }
 
