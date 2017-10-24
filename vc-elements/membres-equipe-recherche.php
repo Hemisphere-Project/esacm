@@ -1,6 +1,6 @@
 <?php
 /*
-Shortcode pour afficher les membres de l'équipe
+Shortcode pour afficher les membres de l'équipe recherche
 */
 function shortcode_membres_equipe_recherche( $atts ){
   	

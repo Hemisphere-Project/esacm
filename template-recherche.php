@@ -171,12 +171,12 @@ get_header(); ?>
 						</ul>
 					</div>
 					<?php
-				}?>
-			</div>
-			<?php
+					}?>
+				</div>
+				<?php
 				}
 				?>
-		</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
