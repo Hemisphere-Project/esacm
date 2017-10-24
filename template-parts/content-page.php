@@ -38,11 +38,6 @@
 			<?php foreach($submenu_items as $submenu){?>
 			  • <a href="#<?php echo custom_url_encode(str_replace(' ', '-', $submenu)); ?>"><?php echo $submenu; ?></a>
 			<?php } ?>
-			<!-- ADD ANCRES EQUIPES ET CHERCHEURS A LA MAIN - TROUVER MIEUX -->
-			<?php if($post->post_name=='la-cooperative'){ ?>
-				• <a href="#equipe">L'équipe</a>
-				• <a href="#chercheurs">Les chercheurs</a><?php
-			}?>
 		</div>
 		<div id="submenu_pusher"></div>
 	<?php }
