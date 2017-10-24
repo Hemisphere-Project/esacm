@@ -390,6 +390,7 @@ function vc_before_init_actions() {
 
 //Require new shortcode
 require_once( get_template_directory().'/vc-elements/etablissements-partenaires.php' );
+require_once( get_template_directory().'/vc-elements/membres-equipe.php' );
 
 /*----------------------------------------*\
 	STICKY POSTS
