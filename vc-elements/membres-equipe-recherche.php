@@ -27,7 +27,7 @@ function shortcode_membres_equipe_recherche( $atts ){
 						} 
 						$fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);
 						if($fonction != ''){
-						$template .= '</br><span class="fonction">'.$fonction'.</span>';
+							$template .= '</br><span class="fonction">'.$fonction.'</span>';
 						}
 					$template .= '</li>';
 				}
