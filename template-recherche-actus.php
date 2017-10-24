@@ -34,8 +34,6 @@ get_header(); ?>
 
 			<section class="actus">
 
-				 <div class="title typo_alpha">ÉVÈNEMENTS &amp; PUBLICATIONS </div>
-
 			<!-- /////////////////// FILTRES  //////////////// -->
 
 				 <div class="filterTitle typo_zeta">filtrer par type</div>
