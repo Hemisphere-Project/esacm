@@ -2,7 +2,7 @@
 /*
 Shortcode pour afficher les membres de l'équipe
 */
-function shortcode_etablissements_partenaires( $atts ){
+function shortcode_membres_equipe( $atts ){
   	
   	//GET ADMINISTRATION MEMBERS
 	$args =	array(
@@ -126,6 +126,5 @@ function shortcode_etablissements_partenaires( $atts ){
 	return $template;
 }
 add_shortcode( 'membres_equipe', 'shortcode_membres_equipe' );
-
 
 ?>
