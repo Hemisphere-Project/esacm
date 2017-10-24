@@ -1391,6 +1391,7 @@ a:hover {
 	left: 20px;
 }
 #post_overlay_content{
+	visibility: hidden;
 	color: #000000;
 	height: 100%;
 }
