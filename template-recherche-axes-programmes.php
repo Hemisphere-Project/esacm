@@ -131,7 +131,7 @@ get_header(); ?>
 					<div class="vc_column-inner ">
 						<div class="wpb_wrapper">
 						        <div class="vc-lienpagesuivante-wrap typo_beta" "="">
-								<a class="vc-lienpagesuivante" href="<?php get_permalink(89); //Page évènements et publications ?>">→&nbsp;évènements et publications</a>
+								<a class="vc-lienpagesuivante" href="<?php echo get_permalink(94); //Page évènements et publications ?>">→&nbsp;évènements et publications</a>
 							</div>
 						</div>
 					</div>
