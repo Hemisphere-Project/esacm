@@ -69,10 +69,15 @@ $(function() {
           //ADD PREVIOUS URL TO CLOSE BUTTON ATTRIBUTES
           $("#post_overlay_close").attr('previous_url', previous_url);
 
+          // APPLY CAROUSEL ONCE IMG LOADED
+          $('#post_overlay_content').imagesLoaded().then(function(){
+            launchCarousel();
+          });
+
           // APPLY CAROUSEL
-          launchCarousel();
+          // launchCarousel();
           // RESIZE once gallery is loaded - sinon bug de positions et d'affichage de flickity
-          $('.gallery').fadeOut(0).fadeIn(500,function(){$('.gallery').flickity('resize');});
+          // $('.gallery').fadeOut(0).fadeIn(500,function(){$('.gallery').flickity('resize');});
 
           // WRAPPER FOR VIDEO embeds (vimeo, youtube)
           $('iframe').wrap('<div class="videoWrapper" />');
@@ -173,15 +178,37 @@ $(function() {
   ////////////////  FLICKITY CAROUSEL /////////////////
   /////////////////////////////////////////////////////
   function launchCarousel(){
-    $('.gallery').flickity({
+
+    var $gallery = $('.gallery').flickity({
       // options
       cellAlign: 'left',
+      pageDots: false,
       imagesLoaded: true,
       wrapAround: true,
-      setGallerySize: false // WHAT IT DOES - calcule la hauteur de la
-      // adaptiveHeight: true, // WHAT - change la hauteur de la galerie en fonction de l'image courante
+      setGallerySize: false // calcule la hauteur de la galerie en fonction de l'image la plus haute
+      // arrowShape: {x0: 10,x1: 60, y1: 50,x2: 65, y2: 45,x3: 20}
     });
-    $('.flickity-viewport').css('padding-bottom', '70%');
+
+    $('.flickity-viewport').css('padding-bottom', '62%'); // if setGallerySize: false, on set manuellement le ration de hauteur de la galerie
+
+    // LEGEND
+    $('.gallery').append('<div class="gallery-mycaption">My caption</div><div class="gallery-status"></div>');
+    var $galleryStatus = $('.gallery-status');
+    var $galleryMyCaption = $('.gallery-mycaption');
+    var flkty = $gallery.data('flickity');
+    function updateStatus() {
+      // number
+      var cellNumber = flkty.selectedIndex + 1;
+      $galleryStatus.text( cellNumber + '/' + flkty.slides.length );
+      // Caption
+      var captionText = $(flkty.selectedElement).children('.gallery-caption').text();
+      $galleryMyCaption.fadeOut(100,function(){
+        $galleryMyCaption.text(captionText);
+        $galleryMyCaption.fadeIn(100)
+      });
+    }
+    // updateStatus();
+    $gallery.on( 'select.flickity', updateStatus );
 
   }
 
@@ -242,8 +269,8 @@ $(function() {
 
         // OPEN IN POPUP STYLE
         $('.postsTable #'+firstId).nextAll().click(function(event){
-          event.preventDefault();
           if($(this).hasClass('open_in_popup')){
+            event.preventDefault();
             var that = this;
             openInPopup(that);
           }

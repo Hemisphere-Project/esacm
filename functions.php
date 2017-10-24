@@ -385,7 +385,7 @@ function vc_before_init_actions() {
     require_once( get_template_directory().'/vc-elements/glyphe.php' );
     require_once( get_template_directory().'/vc-elements/lien-encadre.php' );
     require_once( get_template_directory().'/vc-elements/lien-page-suivante.php' );
-    
+
 }
 
 //Require new shortcode
@@ -430,14 +430,15 @@ add_filter( 'the_posts', 'filter_loop' );
 /*----------------------------------------*\
 	NO IMAGE LINK (remove links surrounding images)
 \*----------------------------------------*/
-
-
 function attachment_image_link_remove_filter($content){
         $content = preg_replace(array('{<a[^>]*><img}', '{/></a>}'), array('<img', '/>'), $content);
         return $content;
 }
+add_filter('the_content', 'attachment_image_link_remove_filter', 12);
+// 3e argument: 12: pour filtrer le content après l'execution des shortcodes
+// http://infoheap.com/wordpress-content-filter-after-shortcodes/
 
-add_filter('the_content', 'attachment_image_link_remove_filter');
+
 
 function custom_url_encode($str) {
     $str = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $str);

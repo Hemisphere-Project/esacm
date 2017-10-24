@@ -1465,7 +1465,7 @@ a:hover {
  	GALLERY FLICKITY
 --------------------------------------------------------------*/
 
-.gallery{
+/*.gallery{
   height: 100%;
 	margin-bottom:50px;
 }
@@ -1480,13 +1480,29 @@ a:hover {
 .gallery-item img {
 	display: flex;
   justify-content: center;
-}
+}*/
+
 
 .gallery-caption{
-	position: absolute;
-	bottom: 13px;
-	width: 100%;
+	display:none;
 }
+
+.gallery-mycaption{
+	float:left;
+	text-align:center;
+	font-style: italic;
+	width:100%;
+	min-height:22px; /* if caption empty, la caption a une hauteur -> le texte en dessous ne remonte pas */
+
+}
+.gallery-status{
+	position:absolute;
+	right:0;
+	font-style: italic;
+}
+
+
+
 
 /*--------------------------------------------------------------
 	FOOTER
