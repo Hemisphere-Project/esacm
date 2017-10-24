@@ -50,7 +50,7 @@ function shortcode_chercheurs( $atts ){
 					$template .= '<div class="anneeTitle typo_beta shadowed">';
 
 						$template .= '<div class="arrow arrowLeft">→</div>';
-						echo $annee;
+						$template .= $annee;
 						$template .= '<div class="arrow arrowRight">←</div>';
 					$template .= '</div>';
 					$template .= '<div class="anneeContent">';
@@ -58,9 +58,9 @@ function shortcode_chercheurs( $atts ){
 					foreach ($chercheurs_annees as $category => $chercheur_categories) {
 						$template .= '<div class="categoryContent">';
 							$template .= '<div class="categoryTitle typo_gamma">';
-								if($category==1){echo 'RÉSIDENTS CHERCHEURS';}
-								elseif($category==2) {echo 'ÉTUDIANTS CHERCHEURS';}
-								elseif($category==3) {echo 'CHERCHEURS ASSOCIÉS';}
+							if($category==1){ $template .= 'RÉSIDENTS CHERCHEURS'; }
+							elseif($category==2) { $template .= 'ÉTUDIANTS CHERCHEURS'; }
+							elseif($category==3) { $template .= 'CHERCHEURS ASSOCIÉS'; }
 							$template .= '</div>';
 							$template .= '<ul id="" class="membres_equipe chercheursList">';
 							foreach ($chercheur_categories as $chercheur) {
