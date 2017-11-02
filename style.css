@@ -1075,7 +1075,7 @@ body.home a, body.single-actu a, body.single-annonce a {
 }
 
 /*ECOLE SECTION WHITE BACKGROUND*/
-body.parent-ecole {
+body.parent-ecole, .parent-ecole #submenu_wrapper {
 	background-color: white;
 	color: black;
 }
