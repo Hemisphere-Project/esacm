@@ -19,7 +19,7 @@ wp_reset_query();
 //////////  GET EXPOS  //////////
 /////////////////////////////////
 $args =	array(
-	'post_type'=>'diplome_expo',
+	'post_type'=>'diplome-expo',
 	'posts_per_page'=> -1,
 	'order' => 'DESC'
 );

@@ -266,7 +266,7 @@ function ajaxLoadFunction() {
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
 		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
 	<?php }
-	elseif(($post_type == "diplome")||($post_type == "diplome_expo")){?>
+	elseif(($post_type == "diplome")||($post_type == "diplome-expo")){?>
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
 		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
 	<?php }
