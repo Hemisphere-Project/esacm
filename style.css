@@ -1117,6 +1117,24 @@ body.parent-international, .parent-international #submenu_wrapper {
 	color: black;
 }
 
+/*DIPLOMES SECTION DARK GREY BACKGROUND*/
+body.parent-diplomes, .parent-diplomes #submenu_wrapper {
+	background-color: #393939;
+	color: white;
+}
+.parent-diplomes #post_overlay, .parent-diplomes #post_overlay_content, .single-diplome #post_overlay, .single-diplome #post_overlay_content {
+	background-color: #393939;
+	color: white;
+}
+.parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle {
+	border-color: white;
+}
+.parent-diplomes #post_overlay_close, .single-diplome #post_overlay_close {
+	background-image: url('img/croix-blanche-fermeture.svg');
+}
+
+
+
 
 
 
