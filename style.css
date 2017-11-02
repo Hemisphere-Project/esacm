@@ -1061,6 +1061,10 @@ body.home, body.single-actu, body.single-annonce {
 	background-color: #393939;
 	color: white;
 }
+body.parent-ecole{
+	background-color: white;
+	color: black;
+}
 body.home a, body.single-actu a, body.single-annonce a {
 	color: white;
 }
