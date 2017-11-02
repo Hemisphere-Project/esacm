@@ -1111,6 +1111,10 @@ body.parent-admissions, .parent-admissions #submenu_wrapper {
 .parent-admissions .vc_separator .vc_sep_holder .vc_sep_line {
 	box-shadow: 0 0 3px 0 #71FFBF;
 }
+.parent-admissions .vc-lienencadre{
+	box-shadow: 0 0 3px 0 #71FFBF;
+	text-shadow: 0 0 3px #71FFBF;
+}
 
 /*LA RECHERCHE SECTION GREY BACKGROUND*/
 body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-programme {
