@@ -446,3 +446,19 @@ function custom_url_encode($str) {
     $str = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $str);
     return urlencode( strtr(utf8_decode($str), utf8_decode("àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'"), 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY-') );
 }
+
+//Add parent page slug to body classes
+add_filter('body_class','body_class_section');
+function body_class_section($classes) {
+    global $wpdb, $post;
+    if (is_page()) {
+        if ($post->post_parent) {
+            $parent  = end(get_post_ancestors($current_page_id));
+        } else {
+            $parent = $post->ID;
+        }
+        $post_data = get_post($parent, ARRAY_A);
+        $classes[] = 'parent-' . $post_data['post_name'];
+    }
+    return $classes;
+}
