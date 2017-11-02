@@ -1055,7 +1055,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-	TYPOS & COLORS
+	COLORS
 --------------------------------------------------------------*/
 body.home, body.single-actu, body.single-annonce {
 	background-color: #393939;
@@ -1132,6 +1132,9 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 
 
 
+/*--------------------------------------------------------------
+	TYPOS 
+--------------------------------------------------------------*/
 .typo_alpha, .typo_alpha.vc-exergue-wrap p{
 	font-family: 'Laborantine';
 	font-size: 26px;
