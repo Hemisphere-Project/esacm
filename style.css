@@ -1075,24 +1075,29 @@ body.home a, body.single-actu a, body.single-annonce a {
 }
 
 /*ECOLE SECTION WHITE BACKGROUND*/
-body.parent-ecole{
+body.parent-ecole {
 	background-color: white;
 	color: black;
 }
-.parent-ecole #post_overlay, .parent-ecole #post_overlay_content, .single-membre-equipe #post_overlay, .single-membre-equipe #post_overlay_content{
+.parent-ecole #post_overlay, .parent-ecole #post_overlay_content, .single-membre-equipe #post_overlay, .single-membre-equipe #post_overlay_content {
 	background-color: #393939;
 	color: white;
 }
-.parent-ecole .actuOpenedTitle, .single-membre-equipe .actuOpenedTitle{
+.parent-ecole .actuOpenedTitle, .single-membre-equipe .actuOpenedTitle {
 	border-color: white;
 }
-.parent-ecole #post_overlay_close, .single-membre-equipe #post_overlay_close{
+.parent-ecole #post_overlay_close, .single-membre-equipe #post_overlay_close {
 	background-image: url('img/croix-blanche-fermeture.svg');
 }
 
 /*ADMISSIONS SECTION GREEN BACKGROUND*/
-body.parent-admissions{
+body.parent-admissions {
 	background-color: #DDFFF0;
+	color: black;
+}
+/*LA RECHERCHE SECTION GREY BACKGROUND*/
+body.parent-la-recherche {
+	background-color: #AFAFAF;
 	color: black;
 }
 
