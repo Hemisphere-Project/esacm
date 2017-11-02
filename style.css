@@ -1373,7 +1373,7 @@ a:hover {
 	z-index:11;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
 }
-#post_overlay_under, #false_popup_overlay_under{
+#post_overlay_under {
 	background-color: blue;
 	opacity: 0;
 	position:fixed;
@@ -1383,6 +1383,16 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	z-index: 10;
+}
+#false_popup_overlay_under{
+	opacity: 0;
+	position:fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: block;
 }
 #post_overlay_close, #post_overlay_close_and_redirect{
 	cursor: pointer;
