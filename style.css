@@ -1724,7 +1724,7 @@ header .logo a{
 	font-weight: bold;
 }
 .menu .current-menu-item a, .menu .current-menu-ancestor > a, #english_link_wrapper .current-menu-ancestor > a, #other_links_wrapper .current-menu-ancestor > a {
-	text-decoration: underline !important;
+	text-decoration: underline ;
 }
 .menu .current-menu-item .sub-menu a {
     text-decoration: none;
