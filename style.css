@@ -1081,7 +1081,7 @@ body.home a, body.single-actu a, body.single-annonce a {
 	width: 25px;
 }
 
-/*ECOLE SECTION WHITE BACKGROUND*/
+/*ECOLE & ETUDES SECTION WHITE BACKGROUND*/
 body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-etudes #submenu_wrapper {
 	background-color: white;
 	color: black;
