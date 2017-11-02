@@ -1096,7 +1096,7 @@ body.parent-admissions, .parent-admissions #submenu_wrapper {
 	color: black;
 }
 /*LA RECHERCHE SECTION GREY BACKGROUND*/
-body.parent-la-recherche, .parent-la-recherche #submenu_wrapper {
+body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-programme {
 	background-color: #AFAFAF;
 	color: black;
 }
