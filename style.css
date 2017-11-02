@@ -1096,6 +1096,9 @@ body.parent-ecole, .parent-ecole #submenu_wrapper {
 .parent-ecole #post_overlay_close, .single-membre-equipe #post_overlay_close {
 	background-image: url('img/croix-blanche-fermeture.svg');
 }
+.parent-ecole .vc_separator .vc_sep_holder .vc_sep_line {
+	background-color: black;
+}
 
 /*ADMISSIONS SECTION GREEN BACKGROUND*/
 body.parent-admissions, .parent-admissions #submenu_wrapper {
