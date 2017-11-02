@@ -80,7 +80,7 @@ get_header(); ?>
 
 
 			 <div id="post_overlay">
-				 <div id="post_overlay_close"><img id="post_overlay_close_img" src="<?php echo get_template_directory_uri(); ?>/img/close_black.svg"> </div>
+				 <div id="post_overlay_close"></div>
 				 <div id="post_overlay_content"></div>
 			</div>
 			<div id="post_overlay_under"></div>
