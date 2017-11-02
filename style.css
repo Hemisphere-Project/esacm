@@ -1100,6 +1100,17 @@ body.parent-la-recherche, .parent-la-recherche #submenu_wrapper {
 	background-color: #AFAFAF;
 	color: black;
 }
+.parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content {
+	background-color: #393939;
+	color: white;
+}
+.parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle {
+	border-color: white;
+}
+.parent-la-recherche #post_overlay_close, .single-axe #post_overlay_close {
+	background-image: url('img/croix-blanche-fermeture.svg');
+}
+
 
 
 
