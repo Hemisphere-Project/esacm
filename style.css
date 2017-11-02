@@ -1069,6 +1069,13 @@ body.home a, body.single-actu a, body.single-annonce a {
 	color: white;
 }
 
+#post_overlay{
+	background-color: white;
+}
+.parent-ecole #post_overlay {
+	background-color: #393939;
+	color: white;
+}
 
 .typo_alpha, .typo_alpha.vc-exergue-wrap p{
 	font-family: 'Laborantine';
@@ -1366,7 +1373,6 @@ a:hover {
 	overflow-y: hidden;
 }
 #post_overlay{
-	background-color: white;
 	position:absolute;
 	visibility: hidden;
 	text-align: center;
