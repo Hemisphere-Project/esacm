@@ -1091,12 +1091,12 @@ body.parent-ecole {
 }
 
 /*ADMISSIONS SECTION GREEN BACKGROUND*/
-body.parent-admissions {
+body.parent-admissions, .parent-admissions #submenu_wrapper {
 	background-color: #DDFFF0;
 	color: black;
 }
 /*LA RECHERCHE SECTION GREY BACKGROUND*/
-body.parent-la-recherche {
+body.parent-la-recherche, .parent-la-recherche #submenu_wrapper {
 	background-color: #AFAFAF;
 	color: black;
 }
