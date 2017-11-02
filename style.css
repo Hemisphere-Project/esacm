@@ -1073,7 +1073,7 @@ body.home a, body.single-actu a, body.single-annonce a {
 	background-color: white;
 }
 #post_overlay_close{
-	background-image: url('/img/close_black.svg');
+	background-image: url('img/close_black.svg');
 	height: 25px;
 	width: 25px;
 }
