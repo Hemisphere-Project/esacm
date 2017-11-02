@@ -1091,7 +1091,7 @@ body.parent-ecole, .parent-ecole #submenu_wrapper {
 }
 
 /*ADMISSIONS SECTION GREEN BACKGROUND*/
-body.parent-admissions, .parent-admissions #submenu_wrapper {
+body.parent-admissions, .parent-admissions #submenu_wrapper, body.parent-english, .parent-english #submenu_wrapper {
 	background-color: #DDFFF0;
 	color: black;
 }
