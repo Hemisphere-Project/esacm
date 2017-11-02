@@ -1129,12 +1129,6 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 .parent-diplomes .page .title, .parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle, .single-diplome-expo .actuOpenedTitle {
 	border-color: white;
 }
-.parent-diplomes #post_overlay_close, .single-diplome #post_overlay_close, .single-diplome-expo #post_overlay_close {
-	background-image: url('img/croix-blanche-fermeture.svg');
-}
-
-
-
 
 
 
