@@ -1116,6 +1116,9 @@ body.parent-admissions, .parent-admissions #submenu_wrapper {
 	box-shadow: 0 0 3px 0 #71FFBF;
 	text-shadow: 0 0 3px #71FFBF;
 }
+.parent-admissions .shadowed{
+	text-shadow: 0 0 7px #71FFBF;
+}
 
 /*LA RECHERCHE SECTION GREY BACKGROUND*/
 body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-programme {
@@ -1149,6 +1152,10 @@ body.parent-international, .parent-international #submenu_wrapper, body.parent-e
 	box-shadow: 0 0 3px 0 #FF9B62;
 	text-shadow: 0 0 3px #FF9B62;
 }
+.parent-international .shadowed {
+    text-shadow: 0 0 7px #FF9B62;
+}
+
 
 /*DIPLOMES SECTION DARK GREY BACKGROUND*/
 body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo {
@@ -1182,6 +1189,9 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 .parent-ateliers-publics .vc-lienencadre, .parent-le-protolab .vc-lienencadre, .parent-education-artistique .vc-lienencadre{
 	box-shadow: 0 0 3px 0 #008BC2;
 	text-shadow: 0 0 3px #008BC2;
+}
+.parent-ateliers-publics .shadowed, .parent-le-protolab .shadowed, .parent-education-artistique .shadowed {
+    text-shadow: 0 0 7px #008BC2;
 }
 
 
