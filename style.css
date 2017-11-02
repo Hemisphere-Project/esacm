@@ -1130,6 +1130,20 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 	border-color: white;
 }
 
+/*THREE LAST MENUS SECTION BLUE BACKGROUND*/
+body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent-ateliers-publics a, body.parent-le-protolab, .parent-le-protolab #submenu_wrapper, .parent-le-protolab a, body.parent-education-artistique, .parent-education-artistique #submenu_wrapper, .parent-education-artistique a {
+	background-color: #D0EAEF;
+	color: black;
+}
+.parent-ateliers-publics #post_overlay, .parent-ateliers-publics #post_overlay_content, .parent-le-protolab #post_overlay, .parent-le-protolab #post_overlay_content, , .parent-education-artistique #post_overlay, .parent-education-artistique #post_overlay_content {
+	background-color: white;
+	color: black;
+}
+
+
+
+
+
 
 
 /*--------------------------------------------------------------
