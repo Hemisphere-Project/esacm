@@ -1322,7 +1322,7 @@ a:hover {
 	margin-top: 32px;
 	margin-bottom: 63px;
 	text-transform: uppercase;
-	text-shadow: 0 0 2px;
+	text-shadow: 0 0 3px;
 	box-shadow: inset 0 0 3px, 0 0 3px;
 }
 .subtitle {
