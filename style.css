@@ -1250,7 +1250,7 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 	font-family: 'Laborantine';
 	font-size: 18px;
 	line-height: 22px;
-	color: #E7E7E7;
+	color: transparent;
 	-webkit-text-stroke: 1px black;
 	letter-spacing: 1px;
 }
