@@ -1084,6 +1084,9 @@ body.home a, body.single-actu a, body.single-annonce a {
 .parent-ecole .actuOpenedTitle{
 	border-color: white;
 }
+.parent-ecole #post_overlay_close{
+	background-image: url('img/croix-blanche-fermeture.svg');
+}
 
 .typo_alpha, .typo_alpha.vc-exergue-wrap p{
 	font-family: 'Laborantine';
