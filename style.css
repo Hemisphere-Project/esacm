@@ -1100,14 +1100,14 @@ body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-pro
 	background-color: #AFAFAF;
 	color: black;
 }
-.parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content {
+.parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content, .single-programme #post_overlay, .single-programme #post_overlay_content {
 	background-color: #393939;
 	color: white;
 }
-.parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle {
+.parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle, .single-programme .actuOpenedTitle {
 	border-color: white;
 }
-.parent-la-recherche #post_overlay_close, .single-axe #post_overlay_close {
+.parent-la-recherche #post_overlay_close, .single-axe #post_overlay_close, .single-programme #post_overlay_close {
 	background-image: url('img/croix-blanche-fermeture.svg');
 }
 
