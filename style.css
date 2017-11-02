@@ -1118,18 +1118,18 @@ body.parent-international, .parent-international #submenu_wrapper {
 }
 
 /*DIPLOMES SECTION DARK GREY BACKGROUND*/
-body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a {
+body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo {
 	background-color: #393939;
 	color: white;
 }
-.parent-diplomes #post_overlay, .parent-diplomes #post_overlay_content, .single-diplome #post_overlay, .single-diplome #post_overlay_content {
+.parent-diplomes #post_overlay, .parent-diplomes #post_overlay_content, .single-diplome #post_overlay, .single-diplome #post_overlay_content, , .single-diplome-expo #post_overlay, .single-diplome-expo #post_overlay_content {
 	background-color: #393939;
 	color: white;
 }
-.parent-diplomes .page .title, .parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle {
+.parent-diplomes .page .title, .parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle, .single-diplome-expo .actuOpenedTitle {
 	border-color: white;
 }
-.parent-diplomes #post_overlay_close, .single-diplome #post_overlay_close {
+.parent-diplomes #post_overlay_close, .single-diplome #post_overlay_close, .single-diplome-expo #post_overlay_close {
 	background-image: url('img/croix-blanche-fermeture.svg');
 }
 
