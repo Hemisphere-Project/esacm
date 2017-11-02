@@ -18,6 +18,6 @@
 			<?php the_content(); ?>
 		</div>
 
-</article><!-- #post-<?php the_ID(); ?> -->
-<a id="false_popup_overlay_under" href="<?php echo site_url(); ?>#actu"></div>
+</div><!-- #post-<?php the_ID(); ?> -->
+<a id="false_popup_overlay_under" href="<?php echo site_url(); ?>#actu"></a>
 
