@@ -416,9 +416,10 @@ hr {
 	margin-bottom: 1.5em;
 }
 .vc_separator .vc_sep_holder .vc_sep_line {
-    background-color: black;
-    height: 3px !important;
-    top: 0 !important;
+	height: 3px !important;
+	top: 0 !important;
+	box-shadow: 0 0 3px 0;
+	border-top: 0px;
 }
 .vc_separator {
     margin-bottom: 62px !important;
@@ -1062,10 +1063,16 @@ body.home, body.single-actu, body.single-annonce {
 	color: white;
 }
 body.home a, body.single-actu a, body.single-annonce a {
-	color: white;
+	color: black;
+}
+.vc_separator .vc_sep_holder .vc_sep_line {
+	background-color: black;
 }
 
 #post_overlay{
+	background-color: white;
+}
+#post_overlay .vc_separator .vc_sep_holder .vc_sep_line {
 	background-color: white;
 }
 #post_overlay_close{
