@@ -1126,7 +1126,7 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper {
 	background-color: #393939;
 	color: white;
 }
-.parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle {
+.parent-diplomes .page .title, .parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle {
 	border-color: white;
 }
 .parent-diplomes #post_overlay_close, .single-diplome #post_overlay_close {
