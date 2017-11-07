@@ -1063,7 +1063,7 @@ body.home, body.single-actu, body.single-annonce {
 	color: white;
 }
 body.home a, body.single-actu a, body.single-annonce a {
-	color: black;
+	color: white;
 }
 .vc_separator .vc_sep_holder .vc_sep_line {
 	background-color: black;
