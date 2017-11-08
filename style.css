@@ -2082,7 +2082,6 @@ font-style: italic;
 }
 
 .search_result {
-	float: left;
 	display: table;
 	padding-left: 30px;
 }
