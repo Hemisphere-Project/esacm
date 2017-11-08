@@ -2103,6 +2103,9 @@ font-style: italic;
 .search_result h2{
 	margin-bottom: 0;
 }
+.search_result p {
+    margin-top: 0;
+}
 
 .footer_search_form{
 	margin: 57px 0 0;
