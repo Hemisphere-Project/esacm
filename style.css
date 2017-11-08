@@ -2049,6 +2049,22 @@ font-style: italic;
 }
 
 /*-------SEARCHIN-----------*/
+.searchform input {
+	width: 100%;
+	border-radius: 25.5px;
+	border: 2px solid #000000;
+	box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.5), inset 0 0 7px 0 rgba(0,0,0,0.5);
+	padding: 15px 77px;
+}
+.searchform .search-submit {
+	color: transparent;
+	background-color: red;
+	border: 0;
+	box-shadow: none !important;
+	float: left;
+	background-image: url('images/loupe-recherche.svg');
+}
+
 .search_result {
 	float: left;
 	display: table;
