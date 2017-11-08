@@ -2049,7 +2049,17 @@ font-style: italic;
 }
 
 /*-------SEARCHIN-----------*/
-
-.search_result h2 {
-	margin-bottom: 0 !important;
+.search_result {
+	float: left;
+	display: table;
+	padding-left: 30px;
+}
+.search_result h2::before {
+	content: "⦁";
+	float: left;
+	margin-right: 0;
+	display: block;
+	width: 20px;
+	display: table-cell;
+	margin-left: -30px;
 }
