@@ -1087,6 +1087,7 @@ body.home .searchform input {
 }
 body.home .searchform .search-submit {
 	color: transparent;
+	background-image: url('img/loupe-recherche-blanche.svg');
 }
 
 /*ECOLE & ETUDES SECTION WHITE BACKGROUND*/
@@ -1195,7 +1196,9 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 }
 .parent-international .searchform .search-submit {
 	color: transparent;
+	background-image: url('img/loupe-recherche-blanche.svg');
 }
+
 
 
 /*THREE LAST MENUS SECTION BLUE BACKGROUND*/
