@@ -1100,8 +1100,8 @@ body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-e
 	background-color: black;
 }
 
-/*ADMISSIONS SECTION GREEN BACKGROUND*/
-body.parent-admissions, .parent-admissions #submenu_wrapper {
+/*ADMISSIONS SECTION & SEARCH RESULTS : GREEN BACKGROUND*/
+body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results {
 	background-color: #DDFFF0;
 	color: black;
 }
