@@ -2047,3 +2047,9 @@ font-style: italic;
 	cursor:pointer;
 	text-decoration:underline;
 }
+
+/*-------SEARCHIN-----------*/
+
+.search_result h2 {
+	margin-bottom: 0 !important;
+}
