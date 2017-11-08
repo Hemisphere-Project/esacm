@@ -2095,6 +2095,9 @@ font-style: italic;
 	display: table-cell;
 	margin-left: -30px;
 }
+.search_result h2:hover::before {
+    content: "○";
+}	
 .search_result h2{
 	margin-bottom: 0;
 }
