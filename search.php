@@ -12,7 +12,7 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 		
-			<form class="searchform" role="search" method="get" class="search-form" action="http://lab.airlab.fr/esacm/">
+			<form class="searchform typo_beta" role="search" method="get" class="search-form" action="http://lab.airlab.fr/esacm/">
 				<label>
 					<input class="search-field" placeholder="Recherche…" value="<?php echo get_search_query(); ?>" name="s" type="search">
 				</label>
