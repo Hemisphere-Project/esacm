@@ -1192,12 +1192,12 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 .parent-diplomes .page .title, .parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle, .single-diplome-expo .actuOpenedTitle {
 	border-color: white;
 }
-.parent-international .searchform input {
+.parent-diplomes .searchform input {
 	border-color: white;
 	box-shadow: inset 0 0 3px 0 rgba(255,255,255,0.5), inset 0 0 7px 0 rgba(255,255,255,0.5);
 	color: white;
 }
-.parent-international .searchform .search-submit {
+.parent-diplomes .searchform .search-submit {
 	color: transparent;
 	background-image: url('img/loupe-recherche-blanche.svg');
 }
