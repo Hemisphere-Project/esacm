@@ -2052,6 +2052,7 @@ font-style: italic;
 .searchform {
 	position: relative;
 	margin-top: 41px;
+	margin-bottom: 60px;
 }
 .searchform input {
 	width: 100%;
