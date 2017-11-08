@@ -1384,7 +1384,7 @@ a:hover {
  	filter: grayscale(100%);
 }
 .actus{
-	display: block;
+	display: inline-block;
 }
 .post{
 	margin-bottom: 50px;
@@ -1448,6 +1448,7 @@ a:hover {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	margin-bottom: 47px;
 }
 .loader p {
   text-align: center;
