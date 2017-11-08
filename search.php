@@ -11,10 +11,17 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+		
+			<form class="searchform" role="search" method="get" class="search-form" action="http://lab.airlab.fr/esacm/">
+				<label>
+					<input class="search-field" placeholder="Recherche…" value="<?php get_search_query(); ?>" name="s" type="search">
+				</label>
+				<input class="search-submit" value="Rechercher" type="submit">
+			</form>
+		
 		<?php
 		if ( have_posts() ) : ?>
-
+			
 			<header class="page-header">
 				<h1 class="page-title"><?php
 					/* translators: %s: search query. */
