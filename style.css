@@ -2067,7 +2067,7 @@ font-style: italic;
 }
 .searchform .search-submit {
 	color: transparent;
-	background-color: red;
+	background-color: transparent;
 	border: 0;
 	box-shadow: none !important;
 	float: left;
