@@ -2085,6 +2085,9 @@ font-style: italic;
 	box-sizing: border-box;
 	background-color: transparent;
 }
+.searchform input::placeholder {
+    opacity: 1;
+}
 .searchform .search-submit {
 	color: transparent;
 	background-color: transparent;
