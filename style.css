@@ -2062,7 +2062,7 @@ font-style: italic;
 	border: 0;
 	box-shadow: none !important;
 	float: left;
-	background-image: url('images/loupe-recherche.svg');
+	background-image: url('img/loupe-recherche.svg');
 }
 
 .search_result {
