@@ -2087,7 +2087,7 @@ font-style: italic;
 	padding-left: 30px;
 }
 .search_result h2::before {
-	content: "⦁";
+	content: "●";
 	float: left;
 	margin-right: 0;
 	display: block;
