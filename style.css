@@ -1110,30 +1110,30 @@ body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-e
 }
 
 
-/*ADMISSIONS SECTION & SEARCH RESULTS : GREEN BACKGROUND*/
-body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results {
+/*ADMISSIONS SECTION & ENGLISH SECTION & SEARCH RESULTS : GREEN BACKGROUND*/
+body.parent-admissions, .parent-admissions #submenu_wrapper, body.parent-english, .parent-english #submenu_wrapper, body.search-results {
 	background-color: #DDFFF0;
 	color: black;
 }
-.parent-admissions .title {
+.parent-admissions .title, .parent-english .title {
 	box-shadow: inset 0 0 3px #71FFBF, 0 0 3px #71FFBF;
 	text-shadow: 0 0 3px #71FFBF;
 }
-.parent-admissions .vc_separator .vc_sep_holder .vc_sep_line {
+.parent-admissions .vc_separator .vc_sep_holder .vc_sep_line, .parent-english .vc_separator .vc_sep_holder .vc_sep_line {
 	box-shadow: 0 0 3px 0 #71FFBF;
 }
-.parent-admissions .vc-lienencadre{
+.parent-admissions .vc-lienencadre, .parent-english .vc-lienencadre{
 	box-shadow: 0 0 3px 0 #71FFBF;
 	text-shadow: 0 0 3px #71FFBF;
 }
-.parent-admissions .shadowed{
+.parent-admissions .shadowed, .parent-english .shadowed{
 	text-shadow: 0 0 7px #71FFBF;
 }
-.parent-admissions .shadowedBox {
+.parent-admissions .shadowedBox, .parent-english .shadowedBox {
     text-shadow: 0 0 10px #71FFBF;
     box-shadow: inset 0 0 4px #71FFBF, 0 0 4px #71FFBF;
 }
-.parent-admissions .searchform input {
+.parent-admissions .searchform input, .parent-english .searchform input {
 	box-shadow: inset 0 0 3px 0 #71FFBF, inset 0 0 7px 0 #71FFBF;
 }
 
