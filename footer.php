@@ -15,7 +15,7 @@
 	
 	<?php if(!is_search()){ ?>	
 
-	<hr>
+	<div class="spacer shadowedBox"></div>
 	
 	<form class="searchform typo_beta" role="search" method="get" class="search-form" action="http://lab.airlab.fr/esacm/">
 		<label>
