@@ -10,6 +10,22 @@
  */
 
 ?>
+	
+	
+	
+	<?php if(!is_search()){ ?>	
+
+	<hr>
+	
+	<form class="searchform typo_beta" role="search" method="get" class="search-form" action="http://lab.airlab.fr/esacm/">
+		<label>
+			<input class="search-field" placeholder="Recherche…" value="<?php echo get_search_query(); ?>" name="s" type="search">
+		</label>
+		<input class="search-submit" value="Rechercher" type="submit">
+	</form>
+	
+	<?php } ?>
+	
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
