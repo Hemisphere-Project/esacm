@@ -2192,6 +2192,10 @@ font-style: italic;
 	width: 100%;
 	margin-top: -16px;
 }
+.menu-menu-1-container {
+    clear: both;
+    padding-top: 20px;
+}
 
 
 }
