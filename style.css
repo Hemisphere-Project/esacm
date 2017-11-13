@@ -2180,6 +2180,7 @@ font-style: italic;
     width: 25px;
     height: 20px;
     float: left;
+    border-radius: 0;
 }
 #esacm_logo_wrapper_mobile {
 	text-align: center;
