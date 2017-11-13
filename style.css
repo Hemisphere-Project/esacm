@@ -2246,6 +2246,9 @@ font-style: italic;
 #submenu_pusher {
     display: none;
 }
+.membres_equipe_recherche {
+    column-count: 1;
+}
 
 
 }       
