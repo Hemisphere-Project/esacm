@@ -2208,5 +2208,13 @@ font-style: italic;
 .loadMore {
 	width: 100%;
 }
+.site-info {
+    margin-bottom: 0;
+}
+.site-info-colonne {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+}
 
 }       
