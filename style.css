@@ -2205,5 +2205,8 @@ font-style: italic;
 #site-navigation {
 	margin-top: 17px;
 }
+.loadMore {
+	width: 100%;
+}
 
 }       
