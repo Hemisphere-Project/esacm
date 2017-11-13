@@ -1903,7 +1903,7 @@ ul.membres_equipe li.titre-categorie::before {
 .vc_tta-panel-heading h4 a {
     color: black !important;
     padding-left: 0 !important;
-    padding-right: 0;
+    padding-right: 0 !important;
     text-align: center;
     font-weight: normal;
 }
