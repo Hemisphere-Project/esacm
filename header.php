@@ -37,6 +37,15 @@
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hmsphr' ); ?></button>
+				<div id="esacm_logo_wrapper_mobile" class="only_mobile">
+					<a href="<?php echo site_url(); ?>">
+						<?php if( is_home() ){?>
+						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
+						<?php } else{ ?>
+						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">
+						<?php } ?>
+					</a>
+				</div>
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -44,6 +53,7 @@
 						'menu_class'     => 'menu nav-menu typo_epsilon'
 					) );
 				?>
+				
 
 				<div id="english_link_wrapper" class="typo_epsilon">
 					<br>
@@ -55,7 +65,7 @@
 					?>
 					<br>
 				</div>
-				<div id="esacm_logo_wrapper">
+				<div id="esacm_logo_wrapper" class="not_mobile">
 					<a href="<?php echo site_url(); ?>">
 						<?php if( is_home() ){?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">

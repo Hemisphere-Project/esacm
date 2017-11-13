@@ -1246,9 +1246,6 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 }
 
 
-
-
-
 /*--------------------------------------------------------------
 	TYPOS
 --------------------------------------------------------------*/
@@ -1906,6 +1903,7 @@ ul.membres_equipe li.titre-categorie::before {
 .vc_tta-panel-heading h4 a {
     color: black !important;
     padding-left: 0 !important;
+    padding-right: 0 !important;
     text-align: center;
     font-weight: normal;
 }
@@ -2162,3 +2160,88 @@ font-style: italic;
 .footer_search_form{
 	margin: 57px 0 0;
 }
+
+
+/*************************
+       RESPONSIVE
+*************************/
+.only_mobile{
+	display: none;
+}
+/*TABLET*/
+@media only screen and (max-width:800px){
+.not_mobile{
+	display: none;
+}
+.only_mobile{
+	display: block;
+}
+.menu-toggle {
+    background-image: url('img/hamburger-white.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    color: transparent;
+    width: 25px;
+    height: 20px;
+    float: left;
+    border-radius: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.parent-ecole .menu-toggle, .parent-admissions .menu-toggle, .parent-la-recherche .menu-toggle, .parent-international .menu-toggle, .parent-ateliers-publics .menu-toggle{
+    background-image: url('img/hamburger-black.svg');
+}
+
+#esacm_logo_wrapper_mobile {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	width: 100%;
+	margin-top: -16px;
+}
+.menu-menu-1-container {
+    clear: both;
+    padding-top: 20px;
+}
+
+#english_link_wrapper, #other_links_wrapper{
+	display: none;
+}
+
+
+}
+/*SMARTPHONE*/
+@media only screen and (max-width:600px){
+
+#site-navigation {
+    margin-top: 30px !important;
+}
+.loadMore {
+	width: 100%;
+}
+.site-info {
+    margin-bottom: 0;
+}
+.site-info-colonne {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+}
+#post_overlay {
+	width: 86%;
+	left: 7%;
+	padding: 70px 7%;
+}
+#submenu_wrapper {
+    position: relative;
+    width: 100%;
+}
+#submenu_pusher {
+    display: none;
+}
+
+
+}       
