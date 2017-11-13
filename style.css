@@ -1970,6 +1970,9 @@ ul.membres_equipe li.titre-categorie::before {
 
 /*LIEN EDIT PAGE*/
 .post-edit-link{
+	display:none;
+}
+.entry-footer{
 	top: 10px;
 	right: 10px;
 	position: fixed;
@@ -2258,4 +2261,4 @@ font-style: italic;
 }
 
 
-}       
+}
