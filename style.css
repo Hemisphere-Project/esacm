@@ -1246,9 +1246,6 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 }
 
 
-
-
-
 /*--------------------------------------------------------------
 	TYPOS
 --------------------------------------------------------------*/
@@ -2184,6 +2181,11 @@ font-style: italic;
     position: relative;
     z-index: 10;
 }
+
+.parent-ecole .menu-toggle, .parent-admissions .menu-toggle, .parent-la-recherche .menu-toggle, .parent-international .menu-toggle, .parent-ateliers-publics .menu-toggle{
+    background-image: url('img/hamburger-black.svg');
+}
+
 #esacm_logo_wrapper_mobile {
 	text-align: center;
 	margin-left: auto;
