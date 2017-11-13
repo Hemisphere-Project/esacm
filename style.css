@@ -2172,7 +2172,7 @@ font-style: italic;
 	display: block;
 }
 .menu-toggle {
-    background-image: url('img/hamburger-black.svg');
+    background-image: url('img/hamburger-white.svg');
     background-repeat: no-repeat;
     background-color: transparent;
     border: 0;
