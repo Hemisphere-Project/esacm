@@ -37,13 +37,6 @@
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hmsphr' ); ?></button>
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'menu_class'     => 'menu nav-menu typo_epsilon'
-					) );
-				?>
 				<div id="esacm_logo_wrapper_mobile" class="only_mobile">
 					<a href="<?php echo site_url(); ?>">
 						<?php if( is_home() ){?>
@@ -53,6 +46,14 @@
 						<?php } ?>
 					</a>
 				</div>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class'     => 'menu nav-menu typo_epsilon'
+					) );
+				?>
+				
 
 				<div id="english_link_wrapper" class="typo_epsilon">
 					<br>
