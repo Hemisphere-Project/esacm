@@ -2227,6 +2227,13 @@ font-style: italic;
 	left: 7%;
 	padding: 70px 7%;
 }
+#submenu_wrapper {
+    position: relative;
+    width: 100%;
+}
+#submenu_pusher {
+    display: none;
+}
 
 
 }       
