@@ -2253,6 +2253,9 @@ font-style: italic;
     display: block;
     margin-bottom: 1.5em;
 }
+.categoryTitle, .chercheursList {
+    width: 100%;
+}
 
 
 }       
