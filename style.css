@@ -1907,6 +1907,10 @@ ul.membres_equipe li.titre-categorie::before {
     text-align: center;
     font-weight: normal;
 }
+.vc_tta-title-text {
+    max-width: calc(100% - 50px);
+    display: inline-block;
+}
 .vc_tta-container .vc_tta-controls-icon {
     display: none !important;
 }
