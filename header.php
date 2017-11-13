@@ -44,7 +44,7 @@
 						'menu_class'     => 'menu nav-menu typo_epsilon'
 					) );
 				?>
-				
+
 				<div id="english_link_wrapper" class="typo_epsilon">
 					<br>
 					<?php
@@ -53,7 +53,7 @@
 							'menu_class'     => 'menu nav-menu typo_epsilon'
 						) );
 					?>
-					<br><br>
+					<br>
 				</div>
 				<div id="esacm_logo_wrapper">
 					<a href="<?php echo site_url(); ?>">
@@ -74,9 +74,9 @@
 					?>
 				</div>
 			</nav><!-- #site-navigation -->
-			
-			
-			
+
+
+
 		</div>
 	</header><!-- #masthead -->
 

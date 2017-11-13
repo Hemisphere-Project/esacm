@@ -1462,7 +1462,7 @@ a:hover {
 
 .annonce{
 	border: 2px solid;
-	padding: 15px 25px 31px 19px;
+	padding: 15px 25px 24px 19px;
 }
 .annonceText{
 	margin-bottom: 20px;
@@ -1478,7 +1478,7 @@ a:hover {
 	width: 45%;
 	text-align: center;
 	border: 2px solid;
-	padding: 14px 0px 11px 0px;
+	padding: 14px 0px 14px 0px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -1521,6 +1521,9 @@ a:hover {
 	font-size: 32px;
 	display: inline;
 	vertical-align: sub;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
 }
 .filterText{
 	display: inline;
@@ -1781,6 +1784,10 @@ header .logo a{
 .sub-menu .current_page_item a{
 	text-decoration: none;
 	/*text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #000000 , 0 0 70px #000000 , 0 0 80px #000000 , 0 0 100px # ;*/
+}
+
+#esacm_logo_wrapper img{
+	margin-top:4px;
 }
 
 
