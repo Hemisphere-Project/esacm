@@ -2163,9 +2163,15 @@ font-style: italic;
 /*TABLET*/
 @media only screen and (max-width:800px){
 
-.menu-toggle{
-	background-image: url('img/hamburger-black.svg');
-	background-repeat: no-repeat;
+.menu-toggle {
+    background-image: url('img/hamburger-black.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    color: transparent;
+    width: 25px;
+    height: 20px;
+    float: left;
 }
 
 }
