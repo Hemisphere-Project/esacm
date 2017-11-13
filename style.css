@@ -2209,7 +2209,7 @@ font-style: italic;
 @media only screen and (max-width:600px){
 
 #site-navigation {
-	margin-top: 17px;
+    margin-top: 30px !important;
 }
 .loadMore {
 	width: 100%;
