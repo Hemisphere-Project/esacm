@@ -44,6 +44,15 @@
 						'menu_class'     => 'menu nav-menu typo_epsilon'
 					) );
 				?>
+				<div id="esacm_logo_wrapper_mobile" class="only_mobile">
+					<a href="<?php echo site_url(); ?>">
+						<?php if( is_home() ){?>
+						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
+						<?php } else{ ?>
+						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">
+						<?php } ?>
+					</a>
+				</div>
 
 				<div id="english_link_wrapper" class="typo_epsilon">
 					<br>
@@ -55,7 +64,7 @@
 					?>
 					<br>
 				</div>
-				<div id="esacm_logo_wrapper">
+				<div id="esacm_logo_wrapper" class="not_mobile">
 					<a href="<?php echo site_url(); ?>">
 						<?php if( is_home() ){?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">

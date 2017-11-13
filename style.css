@@ -2160,9 +2160,17 @@ font-style: italic;
 /*************************
        RESPONSIVE
 *************************/
+.only_mobile{
+	display: none;
+}
 /*TABLET*/
 @media only screen and (max-width:800px){
-
+.not_mobile{
+	display: none;
+}
+.only_mobile{
+	display: block;
+}
 .menu-toggle {
     background-image: url('img/hamburger-black.svg');
     background-repeat: no-repeat;
@@ -2173,6 +2181,7 @@ font-style: italic;
     height: 20px;
     float: left;
 }
+
 
 }
 /*SMARTPHONE*/
