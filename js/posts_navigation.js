@@ -225,7 +225,7 @@ $(function() {
     $('.flickity-viewport').css('padding-bottom', '62%'); // if setGallerySize: false, on set manuellement le ration de hauteur de la galerie
 
     // LEGEND
-    $('.gallery').append('<div class="gallery-mycaption">My caption</div><div class="gallery-status"></div>');
+    $('.gallery').append('<div class="gallery-mycaption typo_zeta">My caption</div><div class="gallery-status typo_zeta"></div>');
     var $galleryStatus = $('.gallery-status');
     var $galleryMyCaption = $('.gallery-mycaption');
     var flkty = $gallery.data('flickity');

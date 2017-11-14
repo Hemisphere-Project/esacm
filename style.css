@@ -1690,15 +1690,15 @@ a:hover {
 .gallery-mycaption{
 	float:left;
 	text-align:center;
-	font-style: italic;
 	width:100%;
 	min-height:22px; /* if caption empty, la caption a une hauteur -> le texte en dessous ne remonte pas */
+  margin-top: 10px;
 
 }
 .gallery-status{
 	position:absolute;
 	right:0;
-	font-style: italic;
+  margin-top: 10px;
 }
 
 
