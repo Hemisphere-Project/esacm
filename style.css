@@ -913,11 +913,13 @@ object {
  	GRID
 --------------------------------------------------------------*/
 #page {
-	padding: 0 8% 0 2%;
+	/*padding: 0 8% 0 2%;*/
+	padding: 0; /* ADDED GRID CORRECTION */
 }
 #masthead {
 	width: 18%;
 	float: left;
+	margin-left: 2%; /* ADDED GRID CORRECTION */
 	margin-right: 4%;
 	min-height: 1px;
 }
@@ -933,7 +935,8 @@ object {
 	margin-bottom: 10px;
 }
 #submenu_wrapper {
-    width: 61.2%;
+  width: 68.5%;
+	margin-left:-3px;
 }
 #sidebar_fixed_wrapper{
 	position: fixed;
@@ -1550,7 +1553,7 @@ a:hover {
 	position:absolute;
 	visibility: hidden;
 	text-align: center;
-	width: 74%;
+	width: 79%;
 	top: 25px;
 	left: 15%;
 	padding: 20px 10% 80px;
