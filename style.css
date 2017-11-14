@@ -931,7 +931,8 @@ object {
 #colophon{
 	float: left;
 	width: 68%;
-  margin-left: 22%;
+	/*margin-left: 22%;*/
+  margin-left: 24%; /* ADDED GRID CORRECTION */
 	margin-bottom: 10px;
 }
 #submenu_wrapper {
