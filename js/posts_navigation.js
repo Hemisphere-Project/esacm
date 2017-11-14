@@ -58,11 +58,11 @@ $(function() {
 
           // ADJUST TOP POSITION (fonction de scrollTop)
           var scrollTop = $(window).scrollTop();
-          // $("#post_overlay").css('top',scrollTop+25);
+          $("#post_overlay").css('top',scrollTop+25);
 
           // SCROLL INSIDE OVERLAY NOT BODY // DONT WORK
           $("#post_overlay_under").css('overflow-y', 'overlay');
-          // $("body").css('overflow-y', 'hidden');
+          $("body").css('overflow-y', 'hidden');
 
           // Content
           $("#post_overlay_content").empty();
