@@ -1616,6 +1616,8 @@ a:hover {
 	text-align: center;
 	border: 2px solid #000000;
 	padding: 10px 10px 4px 10px;
+	margin-top: 32px;
+  margin-bottom: 36px;
 	text-transform: uppercase;
 	box-shadow: inset 0 0 2px, 0 0 2px;
 	text-shadow: 0 0 3px;
@@ -1767,7 +1769,6 @@ header .logo a{
 .menu .sub-menu a {
 	color: #000000;
 }
-
 .sub-menu a:before {
   content: "☐";
   display: inline-block;
@@ -1778,6 +1779,12 @@ header .logo a{
   display: inline-block;
   margin-right: 10px;
 }
+
+.sub-menu a:visited:before {
+  content: "☑︎";
+}
+
+
 .sub-menu .current_page_item a{
 	text-decoration: none;
 	/*text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #000000 , 0 0 70px #000000 , 0 0 80px #000000 , 0 0 100px # ;*/

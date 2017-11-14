@@ -28,8 +28,8 @@
 		<div id="sidebar_fixed_wrapper">
 			<div class="site-branding typo_alpha">
 				<?php if ( is_home() or is_singular( 'actu' ) or is_singular( 'annonce' )){ ?>
-			 		<h1 class="logo">
-		 				<a class="typo_alpha" title="ESACM" href="<?php echo site_url(); ?>">ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE</a>
+			 		<h1 class="logo typo_alpha">
+		 				<a class="" title="ESACM" href="<?php echo site_url(); ?>">ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE</a>
 			 		</h1>
 			 	<?php }?>
 
@@ -53,7 +53,7 @@
 						'menu_class'     => 'menu nav-menu typo_epsilon'
 					) );
 				?>
-				
+
 
 				<div id="english_link_wrapper" class="typo_epsilon">
 					<br>

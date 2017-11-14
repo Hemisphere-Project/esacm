@@ -237,38 +237,37 @@ function ajaxLoadFunction() {
 	$ajax_query = new WP_Query($args);
 
   	if ( $ajax_query->have_posts() ) : while ( $ajax_query->have_posts() ) : $ajax_query->the_post();
-    	// TO DO - Mettre le contenu html dans single_actu.php
-    	// get_template_part( 'single_actu );
 	$post_type = get_post_type($id);
 	if($post_type == "actu" or $post_type == "annonce"){
 	?>
-		<div class="title typo_alpha"><?php echo the_title() ; ?></div>
-		<div class="actuOpenedSubtitle typo_epsilon"><?php echo types_render_field("subtitle"); ?></div>
-		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
+		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
+		<div class="actuOpenedSubtitle typo_beta"><?php echo types_render_field("subtitle"); ?></div>
+		<div class="actuOpenedContent typo_beta"><?php echo the_content() ; ?></div>
 	<?php
+	// get_template_part( 'template-parts/content-actu'); // DON'T WORK
 	}
 	elseif($post_type == "membre-equipe"){?>
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
-		<div class="actuOpenedSubtitle typo_epsilon"><?php echo get_post_meta($id, 'wpcf-fonction', true); ?></div>
-		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
+		<div class="actuOpenedSubtitle typo_beta"><?php echo get_post_meta($id, 'wpcf-fonction', true); ?></div>
+		<div class="actuOpenedContent typo_beta"><?php echo the_content() ; ?></div>
 	<?php }
 	elseif($post_type == "membre-equipe-rech"){?>
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
-		<div class="actuOpenedSubtitle typo_epsilon"><?php echo get_post_meta($id, 'wpcf-fonction-recherche', true); ?></div>
-		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
+		<div class="actuOpenedSubtitle typo_beta"><?php echo get_post_meta($id, 'wpcf-fonction-recherche', true); ?></div>
+		<div class="actuOpenedContent typo_beta"><?php echo the_content() ; ?></div>
 	<?php }
 	elseif($post_type == "membre-chercheur"){?>
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
-		<div class="actuOpenedSubtitle typo_epsilon"><?php echo get_post_meta($id, 'wpcf-fonction-chercheur', true); ?></div>
-		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
+		<div class="actuOpenedSubtitle typo_beta"><?php echo get_post_meta($id, 'wpcf-fonction-chercheur', true); ?></div>
+		<div class="actuOpenedContent typo_beta"><?php echo the_content() ; ?></div>
 	<?php }
 	elseif($post_type == "axe"){?>
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
-		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
+		<div class="actuOpenedContent typo_beta"><?php echo the_content() ; ?></div>
 	<?php }
 	elseif(($post_type == "diplome")||($post_type == "diplome-expo")){?>
 		<div class="actuOpenedTitle typo_alpha"><?php echo the_title() ; ?></div>
-		<div class="actuOpenedContent typo_epsilon"><?php echo the_content() ; ?></div>
+		<div class="actuOpenedContent typo_beta"><?php echo the_content() ; ?></div>
 	<?php }
   	endwhile;
   	endif;
