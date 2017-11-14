@@ -2125,7 +2125,12 @@ font-style: italic;
 	height: 53px;
 	box-sizing: border-box;
 	background-color: transparent;
+ 	-webkit-appearance: none;
 }
+.searchform input:focus {
+    outline:none;
+}
+
 .searchform input::placeholder {
     opacity: 1;
 }
