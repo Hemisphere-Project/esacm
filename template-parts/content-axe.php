@@ -8,7 +8,7 @@
  */
 ?>
 
-<div id="post_overlay" style="top: 50px; display: block; visibility: visible;">
+<div id="post_overlay" style="top: 25px; display: block; visibility: visible;">
 	 <div id="post_overlay_close_and_redirect"><a href="<?php echo get_permalink(93); //Page Axes et programmes ?>"><img src="http://lab.airlab.fr/esacm/wp-content/themes/esacm/img/croix-blanche-fermeture.svg" id="post_overlay_close_img"></a></div>
 	 <div id="post_overlay_content">
 	 	<h1 class="actuOpenedTitle typo_alpha"><?php echo get_the_title(); ?></h1>
