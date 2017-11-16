@@ -1820,7 +1820,7 @@ header .logo a{
 }
 
 .sub-menu a:visited:before {
-  content: "☑︎";
+  content: "☑︎" !important;
 }
 
 
