@@ -129,7 +129,7 @@ get_header(); ?>
 			<div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
 
 
-			<div id="chercheurs_accordeon" class="accordeon">
+			<div id="chercheurs_accordeon" class="accordeon typo_epsilon">
 				<?php
 				foreach ($membres_chercheurs_annees as $annee => $chercheurs_annees) {?>
 					<div class="spacer shadowedBox"></div>
