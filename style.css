@@ -932,6 +932,9 @@ object {
 	margin-right: 4%;
 	min-height: 1px;
 }
+#sidebar_fixed_wrapper{
+	width: 18%;
+}
 #content {
 	float: left;
 	width: 68%;
