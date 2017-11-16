@@ -422,13 +422,14 @@ hr {
 	border-top: 0px !important;
 }
 .vc_separator {
-    margin-bottom: 62px !important;
+    margin-bottom: 42px !important;
     margin-top: 28px;
 }
 hr.vc-dottedhr {
     background-color: transparent;
     border-top: 2px dashed black;
     height: 0;
+    margin-bottom: 42px;
 }
 
 ul, ol {
