@@ -1565,6 +1565,13 @@ a:hover {
 .filterText{
 	display: inline;
 }
+.filterText:hover{
+	text-shadow: 0 0 7px;
+	-webkit-transition: text-shadow .5s ease;
+	-moz-transition: text-shadow .5s ease;
+	-o-transition: text-shadow .5s ease;
+	transition: text-shadow .5s ease;
+}
 .inline{
 	display: inline;
 }
