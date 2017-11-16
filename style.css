@@ -1558,9 +1558,10 @@ a:hover {
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
 }
-.filterDiv:hover .filterCircle{
+.filterDiv:hover .filterCircle, .filterCircle.active_filter{
 	font-feature-settings: "ss00";
 }
+
 .filterText{
 	display: inline;
 }
