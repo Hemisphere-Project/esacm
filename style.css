@@ -1536,6 +1536,7 @@ a:hover {
 	font-feature-settings: "kern" 1, "ss01" 1;
 	font-size: 16px;
 	display: inline;
+	vertical-align: top;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
