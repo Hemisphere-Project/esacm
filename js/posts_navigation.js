@@ -61,8 +61,8 @@ $(function() {
           $("#post_overlay").css('top',scrollTop+25);
 
           // SCROLL INSIDE OVERLAY NOT BODY // DONT WORK
-          $("#post_overlay_under").css('overflow-y', 'overlay');
-          $("body").css('overflow-y', 'hidden');
+          // $("#post_overlay_under").css('overflow-y', 'overlay');
+          // $("body").css('overflow-y', 'hidden');
 
           // Content
           $("#post_overlay_content").empty();
@@ -175,9 +175,10 @@ $(function() {
     //style
     $('.filterText').removeClass('shadowed');
     $('.filterCircle').html('○');
+    // $('.filterCircle').css('font-feature-settings', '"kern" 1, "ss01" 1');
     $(this).children('.filterText').addClass('shadowed');
     $(this).children('.filterCircle').addClass('active_filter');//.html('●');
-    //
+
     keywordSelected = $(this).attr("slug").trim();
     $(".post").fadeOut(200).promise().done(function(){
       $('.post').each(function(index,div){
