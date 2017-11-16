@@ -1532,7 +1532,9 @@ a:hover {
 	cursor:pointer;
 }
 .filterCircle{
-	font-size: 32px;
+	content: "⦁";
+	font-feature-settings: "kern" 1, "ss01" 1;
+	font-size: 16px;
 	display: inline;
 	vertical-align: sub;
 	-webkit-font-smoothing: antialiased;
