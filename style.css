@@ -1518,7 +1518,6 @@ a:hover {
 }
 .loader p {
   text-align: center;
-  color: white;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
