@@ -1003,6 +1003,7 @@ object {
 	}
 	#sidebar_fixed_wrapper {
 	    position: relative;
+	    width: 100%;
 	}
 		.site-branding{
 			display: none;
