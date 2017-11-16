@@ -1769,6 +1769,7 @@ header .logo a{
 }
 .menu .current-menu-item .sub-menu a {
     text-decoration: none;
+    font-weight: normal;
 }
 .menu .sub-menu a {
 	color: #000000;
