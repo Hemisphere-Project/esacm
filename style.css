@@ -1281,14 +1281,16 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 	line-height: 29px;
 }
 .typo_gamma{
-	font-family: 'DiaBold';
+	font-family: 'DiaRegular';
 	font-size: 18px;
 	line-height: 22px;
+	font-weight: bold;
 }
 .typo_delta{
-	font-family: 'DiaBold';
+	font-family: 'DiaRegular';
 	font-size: 18px;
 	line-height: 22px;
+	font-weight: bold;
 }
 .typo_epsilon, .entry-content p, .entry-content li, .typo_epsilon h2{
 	font-family: 'DiaRegular';
@@ -1321,14 +1323,16 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 		line-height: 27px;
 	}
 	.typo_gamma{
-		font-family: 'DiaBold';
+		font-family: 'DiaRegular';
 		font-size: 16px;
 		line-height: 20px;
+		font-weight: bold;
 	}
 	.typo_delta{
-		font-family: 'DiaBold';
+		font-family: 'DiaRegular';
 		font-size: 16px;
 		line-height: 20px;
+		font-weight: bold;
 	}
 	.typo_epsilon, .entry-content p{
 		font-family: 'DiaRegular';
