@@ -621,6 +621,9 @@ a:hover, a:active {
 #other_links_wrapper .current-menu-item > a, #other_links_wrapper .current-menu-ancestor > a{
     font-weight: bold;
 }
+#other_links_wrapper .sub-menu .current-menu-item > a, #other_links_wrapper .sub-menu .current-menu-ancestor > a{
+    font-weight: normal;
+}
 
 /* Small menu. */
 .menu-toggle,
