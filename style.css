@@ -1534,7 +1534,8 @@ a:hover {
 
 .filterTitle{
 	margin-top: 32px;
-	font-family: 'DiaRegularItalic';
+	font-family: 'DiaRegular';
+	font-style: italic;
 	text-align: center;
 }
 .filterList{
