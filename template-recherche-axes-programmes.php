@@ -49,11 +49,12 @@ get_header(); ?>
 			 <!-- ////////////////////////////////////////////// -->
 
 
-			 <div id="post_overlay">
-				 <div id="post_overlay_close"></div>
-				 <div id="post_overlay_content"></div>
-			</div>
-			<div id="post_overlay_under"></div>
+			 <div id="post_overlay_under">
+			   <div id="post_overlay">
+			  	 <div id="post_overlay_close"></div>
+			  	 <div id="post_overlay_content"></div>
+			  </div>
+			 </div>
 
 			 <!-- ////////////////////////////////////////////// -->
 			 <!-- /////////////////// THE LOOP //////////////// -->
@@ -109,7 +110,7 @@ get_header(); ?>
 					</a>
 				<?php } ?>
 			</div>
-			
+
 			<div class="wpb_column vc_column_container vc_col-sm-12">
 				<div class="vc_column-inner ">
 					<div class="wpb_wrapper">
