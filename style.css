@@ -1275,7 +1275,7 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 	line-height: 29px;
 	font-weight: 400;
 }
-.typo_beta, .entry-content .typo_beta p, .vc_tta-panel-heading {
+.typo_beta, .entry-content .typo_beta p, .entry-content.typo_beta p, .vc_tta-panel-heading {
 	font-family: 'DiaRegular';
 	font-size: 25px;
 	line-height: 29px;
