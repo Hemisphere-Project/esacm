@@ -1836,7 +1836,7 @@ header .logo a{
     vertical-align: calc(2px);
 }
 ul.membres_equipe li::before {
-	content: "•";
+	content: "◦";
 	display: block;
 	float: left;
 	font-size: 94px;
