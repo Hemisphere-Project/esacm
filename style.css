@@ -1535,9 +1535,7 @@ a:hover {
 	content: "⦁";
 	font-feature-settings: "kern" 1, "ss01" 1;
 	font-size: 16px;
-	margin-top: -4px;
 	display: inline;
-	vertical-align: sub;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
