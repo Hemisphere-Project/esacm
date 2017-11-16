@@ -1830,13 +1830,13 @@ header .logo a{
 }
 
 .entry-content ul li::before {
-    content: "●";
+    content: "•";
     display: inline-block;
     margin-right: 10px;
     vertical-align: calc(2px);
 }
 ul.membres_equipe li::before {
-    content: "○";
+    content: "◦";
     display: block;
     float: left;
     font-size: 23px;
@@ -1846,7 +1846,7 @@ ul.membres_equipe li::before {
     margin-top: -4px;
 }
 ul.membres_equipe li:hover::before {
-    content: "●";
+    content: "•";
 }
 .titre-categorie {
 	font-weight: bold;
