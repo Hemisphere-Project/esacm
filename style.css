@@ -2066,7 +2066,7 @@ font-style: italic;
 	width: 42%;
 }
 .chercheursList .membre{
-	margin-bottom: 10px;
+	margin-bottom: 10px !important;
 }
 .chercheursList .fonction{
 	font-style: italic;
