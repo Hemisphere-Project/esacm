@@ -1846,10 +1846,8 @@ ul.membres_equipe li::before {
     display: block;
     float: left;
     font-size: 16px;
-    line-height: 27px;
     margin-bottom: 2px;
     margin-right: 10px;
-    margin-top: -4px;
 }
 ul.membres_equipe li:hover::before {
     content: "⦁";
