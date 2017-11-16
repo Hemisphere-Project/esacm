@@ -176,7 +176,7 @@ $(function() {
     $('.filterText').removeClass('shadowed');
     $('.filterCircle').html('○');
     $(this).children('.filterText').addClass('shadowed');
-    $(this).children('.filterCircle').html('●');
+    $(this).children('.filterCircle').addClass('active_filter');//.html('●');
     //
     keywordSelected = $(this).attr("slug").trim();
     $(".post").fadeOut(200).promise().done(function(){
