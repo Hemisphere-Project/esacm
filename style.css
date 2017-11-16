@@ -2182,19 +2182,19 @@ font-style: italic;
 	padding-left: 30px;
 }
 .search_result h2::before {
-	content: "●";
+	content: "⦁";
+	font-feature-settings: "kern" 1, "ss01" 1;
+	display: inline-block;
 	float: left;
-	margin-right: 0;
-	display: block;
-	width: 20px;
-	display: table-cell;
+	font-size: 18px;
+	margin-right: 10px;
+	vertical-align: bottom;
 	margin-left: -30px;
-	font-size: 23px;
-	margin-top: -3px;
 	text-shadow: 0 0 3px rgba(0,0,0,0.57), 0 0 7px rgba(0,0,0,0.4);
 }
 .search_result h2:hover::before {
-    content: "○";
+    content: "⦁";
+    font-feature-settings: "ss00";
 }
 .search_result h2{
 	margin-bottom: 0;
