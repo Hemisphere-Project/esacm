@@ -1848,14 +1848,14 @@ ul.membres_equipe li::before {
 	font-size: 18px;
 	margin-right: 10px;
 	vertical-align: bottom;
-	margin-left: -35px;
+	margin-left: -30px;
 }
 ul.membres_equipe li:hover::before {
     content: "⦁";
     font-feature-settings: "ss00";
 }
 ul.membres_equipe li {
-    padding-left: 35px;
+    padding-left: 30px;
 }
 .titre-categorie {
 	font-weight: bold;
