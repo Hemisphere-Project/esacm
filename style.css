@@ -1454,6 +1454,7 @@ a:hover {
 }
 .actus{
 	display: inline-block;
+	width: 100%;
 }
 .post{
 	margin-bottom: 50px;
