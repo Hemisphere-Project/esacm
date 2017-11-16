@@ -174,7 +174,7 @@ $(function() {
   $(".filterDiv").click(function(){
     //style
     $('.filterText').removeClass('shadowed');
-    $('.filterCircle').html('○');
+    //$('.filterCircle').html('○');
     $('.filterCircle').removeClass('active_filter');
     // $('.filterCircle').css('font-feature-settings', '"kern" 1, "ss01" 1');
     $(this).children('.filterText').addClass('shadowed');
