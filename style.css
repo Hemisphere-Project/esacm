@@ -1830,25 +1830,23 @@ header .logo a{
 }
 
 .entry-content ul li::before {
-    content: "•";
+    content: "●";
     display: inline-block;
     margin-right: 10px;
     vertical-align: calc(2px);
 }
 ul.membres_equipe li::before {
-	content: "◦";
-	display: block;
-	float: left;
-	font-size: 94px;
-	line-height: 26px;
-	margin-bottom: 30px;
-	margin-right: 3px;
-	margin-top: -7px;
-	text-align: left;
-	margin-left: -8px;
+    content: "○";
+    display: block;
+    float: left;
+    font-size: 23px;
+    line-height: 27px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-top: -4px;
 }
 ul.membres_equipe li:hover::before {
-    content: "•";
+    content: "●";
 }
 .titre-categorie {
 	font-weight: bold;
