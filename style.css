@@ -2213,6 +2213,9 @@ font-style: italic;
 .only_mobile{
 	display: block;
 }
+#site-navigation {
+    margin-top: 30px !important;
+}
 .menu-toggle {
     background-image: url('img/hamburger-white.svg');
     background-repeat: no-repeat;
@@ -2253,9 +2256,6 @@ font-style: italic;
 /*SMARTPHONE*/
 @media only screen and (max-width:600px){
 
-#site-navigation {
-    margin-top: 30px !important;
-}
 .loadMore {
 	width: 100%;
 }
