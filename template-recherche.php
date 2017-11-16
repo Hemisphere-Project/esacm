@@ -144,14 +144,14 @@ get_header(); ?>
 					<?php
 					foreach ($chercheurs_annees as $category => $chercheur_categories) { ?>
 						<div class="categoryContent">
-							<div class="categoryTitle typo_gamma">
+							<div class="half_column typo_gamma">
 								<?php
 								if($category==1){echo 'RÉSIDENTS CHERCHEURS';}
 								elseif($category==2) {echo 'ÉTUDIANTS CHERCHEURS';}
 								elseif($category==3) {echo 'CHERCHEURS ASSOCIÉS';}
 								?>
 							</div>
-							<ul id="" class="membres_equipe chercheursList">
+							<ul id="" class="membres_equipe chercheursList half_column">
 							<?php
 							foreach ($chercheur_categories as $chercheur) {?>
 								<li class="membre">

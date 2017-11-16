@@ -2062,9 +2062,6 @@ font-style: italic;
 .categoryContent{
 	display:flex;
 }
-.categoryTitle{
-	width: 55%;
-}
 .chercheursList{
 	width: 42%;
 }
