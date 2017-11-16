@@ -980,6 +980,15 @@ object {
     width: 47% !important;
 }
 
+.vc_row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.vc_column_container > .vc_column-inner {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 /*TABLET PORTRAIT*/
 @media only screen and (max-width:800px){
 	#page {
