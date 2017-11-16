@@ -1025,7 +1025,8 @@ object {
 	}
 	.vc_col-sm-6 {
 	    margin-right: 3.5%;
-	    width: 46.5%;
+	    width: 46.5% !important;
+	    float: left;
 	}
 	.post, .grid-sizer {width: 46.5%}
 	.gutter-sizer { width: 3.5%}
