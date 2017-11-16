@@ -174,11 +174,11 @@ $(function() {
   $(".filterDiv").click(function(){
     //style
     $('.filterText').removeClass('shadowed');
-    // $('.filterCircle').html('○');
-    $('.filterCircle').css('font-feature-settings', '"kern" 1, "ss01" 1');
+    $('.filterCircle').html('○');
+    // $('.filterCircle').css('font-feature-settings', '"kern" 1, "ss01" 1');
     $(this).children('.filterText').addClass('shadowed');
-    // $(this).children('.filterCircle').html('●');
-    $(this).children('.filterCircle').css('font-feature-settings', 'ss00');
+    $(this).children('.filterCircle').html('●');
+    // $(this).children('.filterCircle').css('font-feature-settings', 'ss00');
     //
     keywordSelected = $(this).attr("slug").trim();
     $(".post").fadeOut(200).promise().done(function(){
