@@ -1911,6 +1911,12 @@ ul.membres_equipe li.titre-categorie::before {
 	    font-weight: bold;
 	    text-shadow: 0 0 3px;
 	}
+	#submenu_wrapper > a:active {
+			text-shadow: 0 0 3px;
+	}
+	#submenu_wrapper > a:hover {
+			text-shadow: 0 0 3px;
+	}
 
 .vc_figure-caption {
     text-align: center;

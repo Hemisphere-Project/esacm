@@ -61,9 +61,8 @@ $(function() {
           $("#post_overlay").css('top',scrollTop+25);
 
           // SCROLL INSIDE OVERLAY NOT BODY // DONT WORK
-          // $("#post_overlay_under").css('overflow-y', 'overlay');
-          $("body").css('overflow-y', 'hidden');
-          $("#post_overlay_under").css('overflow-y', 'overlay');
+          // $("body").css('overflow', 'hidden');
+            // $("#post_overlay").scrollTop = 0;
 
           // Content
           $("#post_overlay_content").empty();
