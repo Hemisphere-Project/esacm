@@ -616,7 +616,7 @@ a:hover, a:active {
 	text-decoration: none;
 }
 #other_links_wrapper a {
-    font-weight: normal;
+    font-weight: normal !important;
 }
 #other_links_wrapper .current-menu-item > a, #other_links_wrapper .current-menu-ancestor > a{
     font-weight: bold;
