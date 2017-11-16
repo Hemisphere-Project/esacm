@@ -286,7 +286,7 @@ th {
        url('fonts/DiaBold.woff') format('woff'),
        url('fonts/DiaBold.ttf') format('truetype'),
        url('fonts/DiaBold.svg#DiaBold') format('svg');
-	font-weight:normal;
+	font-weight:bold;
 	font-style:normal;
 }
 @font-face {
@@ -297,7 +297,7 @@ th {
        url('fonts/DiaBoldItalic.woff') format('woff'),
        url('fonts/DiaBoldItalic.ttf') format('truetype'),
        url('fonts/DiaBoldItalic.svg#DiaBoldItalic') format('svg');
-	font-weight:normal;
+	font-weight:bold;
 	font-style:normal;
 }
 @font-face {
