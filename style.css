@@ -981,8 +981,8 @@ object {
 }
 
 .vc_row {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .vc_column_container > .vc_column-inner {
 	padding-left: 0 !important;
