@@ -58,7 +58,11 @@ $(function() {
 
           // ADJUST TOP POSITION (fonction de scrollTop)
           var scrollTop = $(window).scrollTop();
-          $("#post_overlay").css('top',scrollTop+50);
+          $("#post_overlay").css('top',scrollTop+25);
+
+          // SCROLL INSIDE OVERLAY NOT BODY // DONT WORK
+          $("#post_overlay_under").css('overflow-y', 'overlay');
+          $("body").css('overflow-y', 'hidden');
 
           // Content
           $("#post_overlay_content").empty();
@@ -151,7 +155,7 @@ $(function() {
        // IMAGE ORIENTATION
        $("#post_overlay_content img").each(function(index,div) {
          var h = $(div).height(); var w = $(div).width();
-         console.log(w+'  '+h);
+        //  console.log(w+'  '+h);
          if(w<h){ $(div).css('width', '50%');}
        });
 
@@ -225,7 +229,7 @@ $(function() {
     $('.flickity-viewport').css('padding-bottom', '62%'); // if setGallerySize: false, on set manuellement le ration de hauteur de la galerie
 
     // LEGEND
-    $('.gallery').append('<div class="gallery-mycaption">My caption</div><div class="gallery-status"></div>');
+    $('.gallery').append('<div class="gallery-mycaption typo_zeta">My caption</div><div class="gallery-status typo_zeta"></div>');
     var $galleryStatus = $('.gallery-status');
     var $galleryMyCaption = $('.gallery-mycaption');
     var flkty = $gallery.data('flickity');
