@@ -43,7 +43,7 @@ function shortcode_chercheurs( $atts ){
 		ksort($membres_chercheurs_annees[$key]); //trie par la clé categorie
 	}
   	
-	$template = '<div id="chercheurs_accordeon" class="accordeon">';
+	$template = '<div id="chercheurs_accordeon" class="accordeon typo_epsilon">';
 		$template .= '<div class="">';
 				foreach ($membres_chercheurs_annees as $annee => $chercheurs_annees) {
 					$template .= '<div class="spacer shadowedBox"></div>';
