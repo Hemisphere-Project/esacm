@@ -1883,40 +1883,44 @@ ul.membres_equipe li.titre-categorie::before {
 	display: none;
 }
 .membres_equipe .nom_complet {
-    font-weight: bold;
+  font-weight: bold;
 }
 .equipe h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #google_map {
-    height: 437px;
-    width: 100%;
+  height: 437px;
+  width: 100%;
 }
 
 #submenu_pusher {
-    height: 75px;
+  height: 75px;
 }
 #submenu_wrapper {
-    padding: 23px 0;
-    text-align: center;
-    position: fixed;
-    z-index: 5;
+	padding: 23px 0;
+	text-align: center;
+	position: fixed;
+	z-index: 5;
 }
-	#submenu_wrapper > a {
-	    text-decoration: none;
-	    text-transform: lowercase;
-	}
-	#submenu_wrapper > a.current {
-	    font-weight: bold;
-	    text-shadow: 0 0 3px;
-	}
-	#submenu_wrapper > a:active {
-			text-shadow: 0 0 3px;
-	}
-	#submenu_wrapper > a:hover {
-			text-shadow: 0 0 3px;
-	}
+#submenu_wrapper > a {
+  text-decoration: none;
+  text-transform: lowercase;
+}
+#submenu_wrapper > a.current {
+  font-weight: bold;
+  text-shadow: 0 0 3px;
+}
+#submenu_wrapper > a:active {
+	text-shadow: 0 0 3px;
+}
+#submenu_wrapper > a:hover {
+	text-shadow: 0 0 3px;
+	-webkit-transition: text-shadow .1s ease;
+	-moz-transition: text-shadow .1s ease;
+	-o-transition: text-shadow .1s ease;
+	transition: text-shadow .1s ease;
+}
 
 .vc_figure-caption {
     text-align: center;
