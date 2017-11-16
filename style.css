@@ -615,6 +615,12 @@ a:hover, a:active {
 	display: block;
 	text-decoration: none;
 }
+#other_links_wrapper a {
+    font-weight: normal;
+}
+#other_links_wrapper .current-menu-item a, #other_links_wrapper .current-menu-ancestor a{
+    font-weight: bold;
+}
 
 /* Small menu. */
 .menu-toggle,
