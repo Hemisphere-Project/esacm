@@ -43,7 +43,7 @@ function shortcode_chercheurs( $atts ){
 		ksort($membres_chercheurs_annees[$key]); //trie par la clé categorie
 	}
   	
-	$template = '<div id="chercheurs_accordeon" class="accordeon">';
+	$template = '<div id="chercheurs_accordeon" class="accordeon typo_epsilon">';
 		$template .= '<div class="">';
 				foreach ($membres_chercheurs_annees as $annee => $chercheurs_annees) {
 					$template .= '<div class="spacer shadowedBox"></div>';
@@ -57,12 +57,12 @@ function shortcode_chercheurs( $atts ){
 					$template .= '<div class="anneeContentPadding"></div>';
 					foreach ($chercheurs_annees as $category => $chercheur_categories) {
 						$template .= '<div class="categoryContent">';
-							$template .= '<div class="categoryTitle typo_gamma">';
+							$template .= '<div class="half_column typo_gamma">';
 							if($category==1){ $template .= 'RÉSIDENTS CHERCHEURS'; }
 							elseif($category==2) { $template .= 'ÉTUDIANTS CHERCHEURS'; }
 							elseif($category==3) { $template .= 'CHERCHEURS ASSOCIÉS'; }
 							$template .= '</div>';
-							$template .= '<ul id="" class="membres_equipe chercheursList">';
+							$template .= '<ul id="" class="half_column membres_equipe chercheursList">';
 							foreach ($chercheur_categories as $chercheur) {
 								$template .= '<li class="membre">';
 									if($chercheur->post_content != ''){

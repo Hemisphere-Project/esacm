@@ -14,11 +14,12 @@ get_header(); ?>
 			 <!-- ////////////////////////////////////////////// -->
 
 
-			 <div id="post_overlay">
-				 <div id="post_overlay_close"></div>
-				 <div id="post_overlay_content"></div>
-			</div>
-			<div id="post_overlay_under"></div>
+			 <div id="post_overlay_under">
+			   <div id="post_overlay">
+			  	 <div id="post_overlay_close"></div>
+			  	 <div id="post_overlay_content"></div>
+			  </div>
+			 </div>
 
 
 			 <!-- ////////////////////////////////////////////// -->
@@ -34,7 +35,7 @@ get_header(); ?>
 					 <div class="filterTitle typo_zeta">filtrer par type</div>
 					 <div class="filterList typo_epsilon">
 						 <div class='filterDiv' slug="all" >
-							 <div class="filterCircle">○</div>
+							 <div class="filterCircle">⦁</div>
 							 <div class="filterText">Tout afficher</div>
 						 </div>
 						 <?php
@@ -47,7 +48,7 @@ get_header(); ?>
 							 foreach ($keyword_list as $keyword) {
 								// if($keyword->parent==0){ // N'affiche pas ceux qui ont un parent
 									?><div class='filterDiv' slug="<?php echo $keyword->slug ?> " >
-											<div class="filterCircle">○</div>
+											<div class="filterCircle">⦁</div>
 											<div class="filterText"><?php echo $keyword->name ?></div>
 									</div> <?php
 								// }

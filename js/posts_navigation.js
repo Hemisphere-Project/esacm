@@ -56,9 +56,16 @@ $(function() {
         success: function( result ) {
           postIsOpened=true;
 
-          // ADJUST TOP POSITION (fonction de scrollTop)
-          var scrollTop = $(window).scrollTop();
-          $("#post_overlay").css('top',scrollTop+50);
+          // ADJUST TOP POSITION (fonction de scrollTop) (inutile depuis que post_overlay se trouve dans post_overlay_under)
+          // var scrollTop = $(window).scrollTop();
+          // $("#post_overlay").css('top',scrollTop+25);
+
+          // SCROLL INSIDE OVERLAY NOT BODY
+          $("body").css('overflow-y', 'hidden');
+          // qd on enlève le scroll le scroll sur le body, la scrollbar disparait -> body plus large, changement proportions
+          // solution: on calcule la width de la scrollbar, qu'on rajoute en margin-right au body
+          var scW = scrollbarWidth()+'px';
+          $("body").css('margin-right', scW);
 
           // Content
           $("#post_overlay_content").empty();
@@ -101,10 +108,19 @@ $(function() {
       });
     }
   }
-  // CLOSE POST
-  $("#post_overlay_under, #post_overlay_close").click(function() {
-    history.back(); //This will fire the popstate event
+
+  // CLOSE POST NEW STYLE
+  $("#post_overlay_under, #post_overlay_close").click(function(e) {
+      if (e.target == this){
+         history.back(); //This will fire the popstate event
+      }
   });
+
+  // CLOSE POST
+  // $("#post_overlay_under, #post_overlay_close").click(function() {
+  //   history.back(); //This will fire the popstate event
+  // });
+
   $(document).keyup(function(e) {
      if (e.keyCode == 27) {
        history.back(); //This will fire the popstate event
@@ -124,6 +140,8 @@ $(function() {
 	else{
 	      $("#post_overlay, #post_overlay_under").fadeOut(100);
         $("#post_overlay_content").empty();
+        $("body").css('overflow-y', 'scroll');
+        $("body").css('margin-right', "0px");
 	      postIsOpened=false;
 	}
 
@@ -151,7 +169,7 @@ $(function() {
        // IMAGE ORIENTATION
        $("#post_overlay_content img").each(function(index,div) {
          var h = $(div).height(); var w = $(div).width();
-         console.log(w+'  '+h);
+        //  console.log(w+'  '+h);
          if(w<h){ $(div).css('width', '50%');}
        });
 
@@ -170,10 +188,12 @@ $(function() {
   $(".filterDiv").click(function(){
     //style
     $('.filterText').removeClass('shadowed');
-    $('.filterCircle').html('○');
+    //$('.filterCircle').html('○');
+    $('.filterCircle').removeClass('active_filter');
     $(this).children('.filterText').addClass('shadowed');
-    $(this).children('.filterCircle').html('●');
-    //
+    // $(this).children('.filterCircle').html('●');
+    $(this).children('.filterCircle').addClass('active_filter');
+
     keywordSelected = $(this).attr("slug").trim();
     $(".post").fadeOut(200).promise().done(function(){
       $('.post').each(function(index,div){
@@ -225,7 +245,7 @@ $(function() {
     $('.flickity-viewport').css('padding-bottom', '62%'); // if setGallerySize: false, on set manuellement le ration de hauteur de la galerie
 
     // LEGEND
-    $('.gallery').append('<div class="gallery-mycaption">My caption</div><div class="gallery-status"></div>');
+    $('.gallery').append('<div class="gallery-mycaption typo_zeta">My caption</div><div class="gallery-status typo_zeta"></div>');
     var $galleryStatus = $('.gallery-status');
     var $galleryMyCaption = $('.gallery-mycaption');
     var flkty = $gallery.data('flickity');
@@ -337,6 +357,21 @@ $(function() {
       // IE - when all the images are loaded
       return $.when.apply($,dfds);
   }
+
+  /////////////////////////////////////////////////////
+  ///////////// CALCULATE SCROLLBAR WIDTH /////////////
+  /////////////////////////////////////////////////////
+
+  function scrollbarWidth() {
+    var div = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
+    // Append our div, do our calculation and then remove it
+    $('body').append(div);
+    var w1 = $('div', div).innerWidth();
+    div.css('overflow-y', 'scroll');
+    var w2 = $('div', div).innerWidth();
+    $(div).remove();
+    return (w1 - w2);
+}
 
 
 

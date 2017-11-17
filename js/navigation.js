@@ -111,31 +111,31 @@
 ********************************/
 $(document).ready(function(){
 	var $root = $('html, body');
-	
+
 	$(window).resize(function(){
 		$("#submenu_pusher").height( $("#submenu_wrapper").outerHeight() );
 	});
 	$("#submenu_pusher").height( $("#submenu_wrapper").outerHeight() );
-	
-	
+
+
 	$("#submenu_wrapper a").click(function(event){
-		
+
 		event.preventDefault();
-		
-		$("#submenu_wrapper a").removeClass("current");
-		$(this).addClass("current");
+
+		// $("#submenu_wrapper a").removeClass("current");
+		// $(this).addClass("current"); // on n'applique la classe current qu'au scroll, plus smooth
 		var href = $.attr(this, 'href');
-	    
+
 		$root.animate({
 			scrollTop: $(href).offset().top - $("#submenu_wrapper").outerHeight()
 		}, 500, function () {
 			history.pushState(null, null, href);
 		});
 	});
-	
-	//Direct link to anchor 
+
+	//Direct link to anchor
 	if ($("#submenu_wrapper").length ) {
-	
+
 		hash = window.location.hash;
 		if(hash==""){
 			$('#submenu_wrapper a[href="#presentation"]').addClass("current");
@@ -146,7 +146,7 @@ $(document).ready(function(){
 				scrollTop: $(hash).offset().top - $("#submenu_wrapper").outerHeight()
 			}, 500);
 		}
-			
+
 		//Update submenu current class on scroll
 		$submenu_items = $("#submenu_wrapper a");
 		$subtitles = $("#presentation, .vc-titreancre-title");
@@ -162,7 +162,7 @@ $(document).ready(function(){
 					$current_subtitle = $(this);
 				}
 			});
-			
+
 			if($current_subtitle!=''){
 				//GET Associated submenu item
 				hash = "#" + $current_subtitle.attr('id');
@@ -178,9 +178,7 @@ $(document).ready(function(){
 			}
 		});
 	}
-	
-	
-	
-});
-	
 
+
+
+});

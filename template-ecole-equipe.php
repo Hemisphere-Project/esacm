@@ -70,11 +70,12 @@ get_header(); ?>
 			 <!-- ////////////////////////////////////////////// -->
 
 
-			 <div id="post_overlay">
-				 <div id="post_overlay_close"></div>
-				 <div id="post_overlay_content"></div>
-			</div>
-			<div id="post_overlay_under"></div>
+			 <div id="post_overlay_under">
+		 	  <div id="post_overlay">
+		 	 	 <div id="post_overlay_close"></div>
+		 	 	 <div id="post_overlay_content"></div>
+		 	 </div>
+		 	</div>
 			 <!-- ////////////////////////////////////////////// -->
 			 <!-- /////////////////// THE LOOP //////////////// -->
 			 <!-- ////////////////////////////////////////////// -->

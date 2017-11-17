@@ -45,7 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: DiaRegular;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
@@ -268,7 +268,7 @@ th {
 	font-style:normal;
 }
 @font-face {
-	font-family: 'DiaRegularItalic';
+	font-family: 'DiaRegular';
 	src: url('fonts/DiaRegularItalic.eot');
 	src: url('fonts/DiaRegularItalic.eot') format('embedded-opentype'),
 	     url('fonts/DiaRegularItalic.woff2') format('woff2'),
@@ -276,29 +276,29 @@ th {
 	     url('fonts/DiaRegularItalic.ttf') format('truetype'),
 	     url('fonts/DiaRegularItalic.svg#DiaRegularItalic') format('svg');
 	font-weight:normal;
-	font-style:normal;
+	font-style:italic;
 }
 @font-face {
-  font-family: 'DiaBold';
+  font-family: 'DiaRegular';
   src: url('fonts/DiaBold.eot');
   src: url('fonts/DiaBold.eot') format('embedded-opentype'),
        url('fonts/DiaBold.woff2') format('woff2'),
        url('fonts/DiaBold.woff') format('woff'),
        url('fonts/DiaBold.ttf') format('truetype'),
        url('fonts/DiaBold.svg#DiaBold') format('svg');
-	font-weight:normal;
+	font-weight:bold;
 	font-style:normal;
 }
 @font-face {
-  font-family: 'DiaBoldItalic';
+  font-family: 'DiaRegular';
   src: url('fonts/DiaBoldItalic.eot');
   src: url('fonts/DiaBoldItalic.eot') format('embedded-opentype'),
        url('fonts/DiaBoldItalic.woff2') format('woff2'),
        url('fonts/DiaBoldItalic.woff') format('woff'),
        url('fonts/DiaBoldItalic.ttf') format('truetype'),
        url('fonts/DiaBoldItalic.svg#DiaBoldItalic') format('svg');
-	font-weight:normal;
-	font-style:normal;
+	font-weight:bold;
+	font-style:italic;
 }
 @font-face {
 	font-family: 'Laborantine';
@@ -422,13 +422,14 @@ hr {
 	border-top: 0px !important;
 }
 .vc_separator {
-    margin-bottom: 62px !important;
+    margin-bottom: 42px !important;
     margin-top: 28px;
 }
 hr.vc-dottedhr {
     background-color: transparent;
     border-top: 2px dashed black;
     height: 0;
+    margin-bottom: 42px;
 }
 
 ul, ol {
@@ -614,6 +615,15 @@ a:hover, a:active {
 .main-navigation a, #english_link_wrapper a, #other_links_wrapper a {
 	display: block;
 	text-decoration: none;
+}
+#other_links_wrapper a {
+    font-weight: normal !important;
+}
+#other_links_wrapper .current-menu-item > a, #other_links_wrapper .current-menu-ancestor > a{
+    font-weight: bold !important;
+}
+#other_links_wrapper .sub-menu .current-menu-item > a, #other_links_wrapper .sub-menu .current-menu-ancestor > a{
+    font-weight: normal !important;
 }
 
 /* Small menu. */
@@ -842,7 +852,9 @@ object {
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
-	font-family: 'DiaRegularItalic';
+	font-family: 'DiaRegular';
+	font-size: 14px;
+	line-height: 17px;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -913,13 +925,18 @@ object {
  	GRID
 --------------------------------------------------------------*/
 #page {
-	padding: 0 8% 0 2%;
+	/*padding: 0 8% 0 2%;*/
+	padding: 0; /* ADDED GRID CORRECTION */
 }
 #masthead {
 	width: 18%;
 	float: left;
+	margin-left: 2%; /* ADDED GRID CORRECTION */
 	margin-right: 4%;
 	min-height: 1px;
+}
+#sidebar_fixed_wrapper{
+	width: 18%;
 }
 #content {
 	float: left;
@@ -929,11 +946,13 @@ object {
 #colophon{
 	float: left;
 	width: 68%;
-  	margin-left: 22%;
+	/*margin-left: 22%;*/
+  margin-left: 24%; /* ADDED GRID CORRECTION */
 	margin-bottom: 10px;
 }
 #submenu_wrapper {
-    width: 61.2%;
+  width: 68.5%;
+	margin-left:-3px;
 }
 #sidebar_fixed_wrapper{
 	position: fixed;
@@ -963,6 +982,15 @@ object {
     width: 47% !important;
 }
 
+.vc_row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.vc_column_container > .vc_column-inner {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
 /*TABLET PORTRAIT*/
 @media only screen and (max-width:800px){
 	#page {
@@ -972,6 +1000,7 @@ object {
 		width: 100%;
 		float: none;
 		margin-right: 0;
+		margin-left: 0;
 	}
 	#content {
 		float: none;
@@ -987,6 +1016,7 @@ object {
 	}
 	#sidebar_fixed_wrapper {
 	    position: relative;
+	    width: 100%;
 	}
 		.site-branding{
 			display: none;
@@ -1008,7 +1038,8 @@ object {
 	}
 	.vc_col-sm-6 {
 	    margin-right: 3.5%;
-	    width: 46.5%;
+	    width: 46.5% !important;
+	    float: left;
 	}
 	.post, .grid-sizer {width: 46.5%}
 	.gutter-sizer { width: 3.5%}
@@ -1255,22 +1286,24 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 	line-height: 29px;
 	font-weight: 400;
 }
-.typo_beta, .entry-content .typo_beta p, .vc_tta-panel-heading {
+.typo_beta, .entry-content .typo_beta p, .entry-content.typo_beta p, .vc_tta-panel-heading {
 	font-family: 'DiaRegular';
 	font-size: 25px;
 	line-height: 29px;
 }
 .typo_gamma{
-	font-family: 'DiaBold';
+	font-family: 'DiaRegular';
 	font-size: 18px;
 	line-height: 22px;
+	font-weight: bold;
 }
 .typo_delta{
-	font-family: 'DiaBold';
+	font-family: 'DiaRegular';
 	font-size: 18px;
 	line-height: 22px;
+	font-weight: bold;
 }
-.typo_epsilon, .entry-content p, .typo_epsilon h2{
+.typo_epsilon, .entry-content p, .entry-content li, .typo_epsilon h2{
 	font-family: 'DiaRegular';
 	font-size: 18px;
 	line-height: 22px;
@@ -1301,14 +1334,16 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 		line-height: 27px;
 	}
 	.typo_gamma{
-		font-family: 'DiaBold';
+		font-family: 'DiaRegular';
 		font-size: 16px;
 		line-height: 20px;
+		font-weight: bold;
 	}
 	.typo_delta{
-		font-family: 'DiaBold';
+		font-family: 'DiaRegular';
 		font-size: 16px;
 		line-height: 20px;
+		font-weight: bold;
 	}
 	.typo_epsilon, .entry-content p{
 		font-family: 'DiaRegular';
@@ -1419,6 +1454,7 @@ a:hover {
 }
 .actus{
 	display: inline-block;
+	width: 100%;
 }
 .post{
 	margin-bottom: 50px;
@@ -1483,7 +1519,6 @@ a:hover {
 }
 .loader p {
   text-align: center;
-  color: white;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
@@ -1501,7 +1536,8 @@ a:hover {
 
 .filterTitle{
 	margin-top: 32px;
-	font-family: 'DiaRegularItalic';
+	font-family: 'DiaRegular';
+	font-style: italic;
 	text-align: center;
 }
 .filterList{
@@ -1515,15 +1551,28 @@ a:hover {
 	cursor:pointer;
 }
 .filterCircle{
-	font-size: 32px;
+	content: "⦁";
+	font-feature-settings: "kern" 1, "ss01" 1;
+	font-size: 16px;
 	display: inline;
-	vertical-align: sub;
+	vertical-align: top;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
 }
+.filterDiv:hover .filterCircle, .filterCircle.active_filter{
+	font-feature-settings: "ss00";
+}
+
 .filterText{
 	display: inline;
+}
+.filterText:hover{
+	text-shadow: 0 0 7px;
+	-webkit-transition: text-shadow .5s ease;
+	-moz-transition: text-shadow .5s ease;
+	-o-transition: text-shadow .5s ease;
+	transition: text-shadow .5s ease;
 }
 .inline{
 	display: inline;
@@ -1550,16 +1599,20 @@ a:hover {
 	position:absolute;
 	visibility: hidden;
 	text-align: center;
-	width: 74%;
-	top: 50px;
+	width: 79%;
+	top: 25px;
 	left: 15%;
 	padding: 20px 10% 80px;
 	z-index:11;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
+
+	margin-bottom: 100px;
+
 }
 #post_overlay_under {
-	background-color: blue;
-	opacity: 0;
+	/*background-color: blue;*/
+  background-color: rgba(0, 0, 0, 0);
+	/*opacity: 0;*/
 	position:fixed;
 	left: 0;
 	top: 0;
@@ -1567,6 +1620,8 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	z-index: 10;
+
+	overflow-y: scroll;
 }
 #false_popup_overlay_under{
 	opacity: 0;
@@ -1616,6 +1671,8 @@ a:hover {
 	text-align: center;
 	border: 2px solid #000000;
 	padding: 10px 10px 4px 10px;
+	margin-top: 32px;
+  margin-bottom: 36px;
 	text-transform: uppercase;
 	box-shadow: inset 0 0 2px, 0 0 2px;
 	text-shadow: 0 0 3px;
@@ -1688,15 +1745,15 @@ a:hover {
 .gallery-mycaption{
 	float:left;
 	text-align:center;
-	font-style: italic;
 	width:100%;
 	min-height:22px; /* if caption empty, la caption a une hauteur -> le texte en dessous ne remonte pas */
+  margin-top: 10px;
 
 }
 .gallery-status{
 	position:absolute;
 	right:0;
-	font-style: italic;
+  margin-top: 10px;
 }
 
 
@@ -1763,11 +1820,12 @@ header .logo a{
 }
 .menu .current-menu-item .sub-menu a {
     text-decoration: none;
+    font-weight: normal;
 }
 .menu .sub-menu a {
 	color: #000000;
+	font-weight: normal;
 }
-
 .sub-menu a:before {
   content: "☐";
   display: inline-block;
@@ -1778,6 +1836,12 @@ header .logo a{
   display: inline-block;
   margin-right: 10px;
 }
+
+.sub-menu a:visited:before {
+  content: "☑︎" !important;
+}
+
+
 .sub-menu .current_page_item a{
 	text-decoration: none;
 	/*text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #000000 , 0 0 70px #000000 , 0 0 80px #000000 , 0 0 100px # ;*/
@@ -1805,23 +1869,26 @@ header .logo a{
 }
 
 .entry-content ul li::before {
-    content: "●";
+    content: "⦁";
     display: inline-block;
     margin-right: 10px;
-    vertical-align: calc(2px);
 }
 ul.membres_equipe li::before {
-    content: "○";
-    display: block;
-    float: left;
-    font-size: 23px;
-    line-height: 27px;
-    margin-bottom: 2px;
-    margin-right: 10px;
-    margin-top: -4px;
+	content: "⦁";
+	font-feature-settings: "kern" 1, "ss01" 1;
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	margin-right: 10px;
+	vertical-align: bottom;
+	margin-left: -30px;
 }
 ul.membres_equipe li:hover::before {
-    content: "●";
+    content: "⦁";
+    font-feature-settings: "ss00";
+}
+ul.membres_equipe li {
+    padding-left: 30px;
 }
 .titre-categorie {
 	font-weight: bold;
@@ -1831,34 +1898,44 @@ ul.membres_equipe li.titre-categorie::before {
 	display: none;
 }
 .membres_equipe .nom_complet {
-    font-weight: bold;
+  font-weight: bold;
 }
 .equipe h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #google_map {
-    height: 437px;
-    width: 100%;
+  height: 437px;
+  width: 100%;
 }
 
 #submenu_pusher {
-    height: 75px;
+  height: 75px;
 }
 #submenu_wrapper {
-    padding: 23px 0;
-    text-align: center;
-    position: fixed;
-    z-index: 5;
+	padding: 23px 0;
+	text-align: center;
+	position: fixed;
+	z-index: 5;
 }
-	#submenu_wrapper > a {
-	    text-decoration: none;
-	    text-transform: lowercase;
-	}
-	#submenu_wrapper > a.current {
-	    font-weight: bold;
-	    text-shadow: 0 0 3px;
-	}
+#submenu_wrapper > a {
+  text-decoration: none;
+  text-transform: lowercase;
+}
+#submenu_wrapper > a.current {
+  font-weight: bold;
+  text-shadow: 0 0 3px;
+}
+#submenu_wrapper > a:active {
+	text-shadow: 0 0 3px;
+}
+#submenu_wrapper > a:hover {
+	text-shadow: 0 0 3px;
+	-webkit-transition: text-shadow .1s ease;
+	-moz-transition: text-shadow .1s ease;
+	-o-transition: text-shadow .1s ease;
+	transition: text-shadow .1s ease;
+}
 
 .vc_figure-caption {
     text-align: center;
@@ -2028,14 +2105,11 @@ font-style: italic;
 .categoryContent{
 	display:flex;
 }
-.categoryTitle{
-	width: 55%;
-}
 .chercheursList{
 	width: 42%;
 }
 .chercheursList .membre{
-	margin-bottom: 10px;
+	margin-bottom: 10px !important;
 }
 .chercheursList .fonction{
 	font-style: italic;
@@ -2118,7 +2192,12 @@ font-style: italic;
 	height: 53px;
 	box-sizing: border-box;
 	background-color: transparent;
+ 	-webkit-appearance: none;
 }
+.searchform input:focus {
+    outline:none;
+}
+
 .searchform input::placeholder {
     opacity: 1;
 }
@@ -2143,19 +2222,19 @@ font-style: italic;
 	padding-left: 30px;
 }
 .search_result h2::before {
-	content: "●";
+	content: "⦁";
+	font-feature-settings: "kern" 1, "ss01" 1;
+	display: inline-block;
 	float: left;
-	margin-right: 0;
-	display: block;
-	width: 20px;
-	display: table-cell;
+	font-size: 18px;
+	margin-right: 10px;
+	vertical-align: bottom;
 	margin-left: -30px;
-	font-size: 23px;
-	margin-top: -3px;
 	text-shadow: 0 0 3px rgba(0,0,0,0.57), 0 0 7px rgba(0,0,0,0.4);
 }
 .search_result h2:hover::before {
-    content: "○";
+    content: "⦁";
+    font-feature-settings: "ss00";
 }
 .search_result h2{
 	margin-bottom: 0;
@@ -2182,6 +2261,9 @@ font-style: italic;
 }
 .only_mobile{
 	display: block;
+}
+#site-navigation {
+    margin-top: 30px !important;
 }
 .menu-toggle {
     background-image: url('img/hamburger-white.svg');
@@ -2223,9 +2305,6 @@ font-style: italic;
 /*SMARTPHONE*/
 @media only screen and (max-width:600px){
 
-#site-navigation {
-    margin-top: 30px !important;
-}
 .loadMore {
 	width: 100%;
 }
