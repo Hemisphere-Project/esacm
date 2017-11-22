@@ -1572,13 +1572,21 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 .filterText{
 	display: inline;
 }
-.filterText:hover{
+/*.filterText:hover{
 	text-shadow: 0 0 7px;
 	-webkit-transition: text-shadow .5s ease;
 	-moz-transition: text-shadow .5s ease;
 	-o-transition: text-shadow .5s ease;
 	transition: text-shadow .5s ease;
+}*/
+
+.filterDiv:hover{
+	text-shadow: 0 0 3px;
 }
+.filterDiv:active{
+	text-shadow: 0 0 3px;
+}
+
 .inline{
 	display: inline;
 }
