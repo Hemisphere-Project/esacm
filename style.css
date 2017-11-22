@@ -1580,11 +1580,24 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	transition: text-shadow .5s ease;
 }*/
 
+/*Filter Divs hover*/
 .filterDiv:hover{
-	text-shadow: 0 0 3px;
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
 }
 .filterDiv:active{
-	text-shadow: 0 0 3px;
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
+}
+.parent-la-recherche .filterDiv:hover{
+	text-shadow: 0 0 3px #000000, 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-la-recherche .filterDiv:active{
+	text-shadow: 0 0 3px #000000, 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-le-protolab .filterDiv:hover{
+	text-shadow: 0 0 3px #008BC2, 0 0 7px rgba(0, 139, 194, 0.50);
+}
+.parent-le-protolab .filterDiv:active{
+	text-shadow: 0 0 3px #008BC2, 0 0 7px rgba(0, 139, 194, 0.50);
 }
 
 .inline{
