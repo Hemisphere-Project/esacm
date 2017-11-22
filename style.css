@@ -1853,6 +1853,9 @@ header .logo a{
 .parent-international .sub-menu .menu-item a, .parent-english .sub-menu .menu-item a:hover{
 	text-shadow: 0 0 3px #FF9B62;
 }
+.parent-le-protolab .sub-menu .menu-item a:hover{
+	text-shadow: 0 0 3px #008BC2;
+}
 /*-----------*/
 
 
