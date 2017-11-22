@@ -1849,8 +1849,10 @@ header .logo a{
 	text-decoration: none;
 	text-shadow: 0 0 3px;
 }
-
-.parent-international .sub-menu .menu-item a, .parent-english .sub-menu .menu-item a:hover{
+.parent-admissions .sub-menu .menu-item a:hover{
+	text-shadow: 0 0 3px #71FFBF;
+}
+.parent-international .sub-menu .menu-item a:hover, .parent-english .sub-menu .menu-item a:hover{
 	text-shadow: 0 0 3px #FF9B62;
 }
 .parent-le-protolab .sub-menu .menu-item a:hover{
