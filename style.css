@@ -1412,8 +1412,13 @@ a:hover {
 	z-index:10;
 }
 .image_popup img{
-	/*box-shadow: 0 0 8px 0 rgba(0,0,0,0.7);*/
 	filter: drop-shadow(0 0 8px rgba(0,0,0,0.7));
+}
+.image_popup img:hover, .text_popup:hover {
+filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.9));
+}
+.image_popup img:active, .text_popup:active {
+filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }
 .text_popup{
 	font-size: 24px;	font-weight: bold;	line-height: 36px;	text-align: center;
