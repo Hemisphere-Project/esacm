@@ -1841,6 +1841,20 @@ header .logo a{
   content: "☑︎" !important;
 }
 
+/*MENU HOVER*/
+.menu .menu-item a:hover {
+	text-decoration: underline;
+}
+.sub-menu .menu-item a:hover {
+	text-decoration: none;
+	text-shadow: 0 0 3px;
+}
+
+.parent-international .sub-menu .menu-item a, .parent-eglish .sub-menu .menu-item a:hover{
+	text-shadow: 0 0 3px #FF9B62;
+}
+/*-----------*/
+
 
 .sub-menu .current_page_item a{
 	text-decoration: none;
