@@ -1599,6 +1599,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 .parent-le-protolab .filterDiv:active{
 	text-shadow: 0 0 3px #008BC2, 0 0 7px rgba(0, 139, 194, 0.50);
 }
+/*-----------------*/
 
 .inline{
 	display: inline;
