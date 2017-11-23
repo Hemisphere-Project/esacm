@@ -1245,7 +1245,7 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 	background-color: #393939;
 	color: white;
 }
-.parent-diplomes .page .title, .parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle, .single-diplome-expo .actuOpenedTitle {
+.parent-diplomes .page .title {
 	border-color: white;
 }
 .parent-diplomes .searchform input {
