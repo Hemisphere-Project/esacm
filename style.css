@@ -385,6 +385,11 @@ big {
   background: #EDEDED; /* Gecko Browsers */
 }
 
+.home{
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
