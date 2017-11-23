@@ -1947,28 +1947,23 @@ header .logo a{
   content: "☑︎" !important;
 }
 
-/*MENU HOVER*/
+/*MENU HOVER FOR ALL COLORS*/
 .menu .menu-item a:hover {
 	text-decoration: underline;
 }
-.sub-menu .menu-item a:hover {
+.sub-menu .current_page_item, .sub-menu .menu-item a:hover {
 	text-decoration: none;
 	text-shadow: 0 0 3px;
 }
-
-
 .parent-la-recherche .sub-menu .current_page_item, .parent-la-recherche .sub-menu a:hover {
 text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-
 .parent-admissions .sub-menu .current_page_item, .parent-admissions .sub-menu .menu-item a:hover{
 	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-
 .parent-international .sub-menu .current_page_item, .parent-english .sub-menu .current_page_item, .parent-international .sub-menu .menu-item a:hover, .parent-english .sub-menu .menu-item a:hover{
 	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-
 .parent-le-protolab .sub-menu .current_page_item, .parent-le-protolab .sub-menu .menu-item a:hover{
 	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
