@@ -38,7 +38,7 @@ get_header(); ?>
 		if(!$picture && $text){ $post_type='text_popup'; }
 
 		if($post_type=='image_popup'){?> <div class="popup image_popup"><?php echo types_render_field( "picture");?> </div> <?php }
- 		elseif($post_type=='text_popup'){?> <div class="popup text_popup"><?php echo types_render_field( "text");?> </div> <?php } ?>
+ 		elseif($post_type=='text_popup'){?> <div class="popup text_popup typo_beta"><?php echo types_render_field( "text");?> </div> <?php } ?>
 
 	 <?php endwhile; ?>
  </div>
