@@ -1159,15 +1159,15 @@ body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results
 	color: black;
 }
 .parent-admissions .title {
-	box-shadow: inset 0 0 3px #71FFBF, 0 0 3px #71FFBF;
-	text-shadow: 0 0 3px #71FFBF;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(113, 255, 191, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(113, 255, 191, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(113, 255, 191, 0.7);
 }
 .parent-admissions .vc_separator .vc_sep_holder .vc_sep_line {
 	box-shadow: 0 0 3px 0 #71FFBF;
 }
 .parent-admissions .vc-lienencadre{
-	box-shadow: 0 0 3px 0 #71FFBF;
-	text-shadow: 0 0 3px #71FFBF;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(113, 255, 191, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(113, 255, 191, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(113, 255, 191, 0.7);
 }
 .parent-admissions .shadowed{
 	text-shadow: 0 0 7px #71FFBF;
@@ -1186,6 +1186,10 @@ body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-pro
 	background-color: #AFAFAF;
 	color: black;
 }
+.parent-la-recherche .title{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.40), inset 0 0 7px rgba(0, 0, 0, 0.40), 0 0 3px rgba(0, 0, 0, 0.40), 0 0 7px rgba(0, 0, 0, 0.40);
+}
 .parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content, .single-programme #post_overlay, .single-programme #post_overlay_content {
 	background-color: #393939;
 	color: white;
@@ -1203,8 +1207,8 @@ body.parent-international, .parent-international #submenu_wrapper, body.parent-e
 	color: black;
 }
 .parent-international .title, .parent-english .title {
-	box-shadow: inset 0 0 3px #FF9B62, 0 0 3px #FF9B62;
-	text-shadow: 0 0 3px #FF9B62;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 155, 98, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(255, 155, 98, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(255, 155, 98, 0.7);
 }
 .parent-international .vc_separator .vc_sep_holder .vc_sep_line, .parent-english .vc_separator .vc_sep_holder .vc_sep_line {
 	box-shadow: 0 0 3px 0 #FF9B62;
@@ -1260,8 +1264,8 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 	color: black;
 }
 .parent-ateliers-publics .title, .parent-le-protolab .title, .parent-education-artistique .title {
-	box-shadow: inset 0 0 3px #008BC2, 0 0 3px #008BC2;
-	text-shadow: 0 0 3px #008BC2;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.8);
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(0, 139, 194, 0.6), 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.6);
 }
 .parent-ateliers-publics .vc_separator .vc_sep_holder .vc_sep_line, .parent-le-protolab .vc_separator .vc_sep_holder .vc_sep_line, .parent-education-artistique .vc_separator .vc_sep_holder .vc_sep_line {
 	box-shadow: 0 0 3px 0 #008BC2;
@@ -1448,9 +1452,13 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	margin-top: 32px;
 	margin-bottom: 36px;
 	text-transform: uppercase;
-	text-shadow: 0 0 3px;
-	box-shadow: inset 0 0 3px, 0 0 3px;
+	/*text-shadow: 0 0 3px;
+	box-shadow: inset 0 0 3px, 0 0 3px;*/
 	letter-spacing: 1.2px
+}
+.home .title, .parent-diplomes .title{
+	box-shadow: inset 0 0 6px 0 rgba(255,255,255,0.50), 0 0 6px 0 rgba(255,255,255,0.50), inset 0 0 2px 0 #FFFFFF , 0 0 2px 0 #FFFFFF;
+	text-shadow: 0 0 2px #FFFFFF, 0 0 6px rgba(255,255,255,0.50);
 }
 .subtitle {
     text-align: center;
