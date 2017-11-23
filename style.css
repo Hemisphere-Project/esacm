@@ -1450,6 +1450,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	text-transform: uppercase;
 	text-shadow: 0 0 3px;
 	box-shadow: inset 0 0 3px, 0 0 3px;
+	letter-spacing: 1.2px
 }
 .subtitle {
     text-align: center;
@@ -1500,7 +1501,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	margin:0px;
 }
 .actuOpen{
-	text-decoration: underline;
+	opacity: 0.5;
 }
 
 .annonce{
@@ -1509,6 +1510,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }
 .annonceText{
 	margin-bottom: 20px;
+	font-weight: bold;
 }
 .annonceLink{
  text-decoration: none;
@@ -1576,7 +1578,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }
 .filterList{
 	text-align: center;
-	margin-top: 14px;
+	margin-top: 8px;
 	margin-bottom: 52px;
   line-height: 25px;
 }
