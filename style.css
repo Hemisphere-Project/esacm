@@ -1523,10 +1523,10 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
 	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
 }
-.parent-la-recherche .actu:hover {
+.parent-la-recherche .actu:hover, .single-programme .actu:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-.parent-la-recherche .actu:hover img{
+.parent-la-recherche .actu:hover,  .single-programme .actu:hover img{
 	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
 	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
 }
@@ -1735,7 +1735,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	text-transform: uppercase;
 	box-shadow: inset 0 0 2px, 0 0 2px;
 	text-shadow: 0 0 3px;
-	letter-spacing: 1px;
+	letter-spacing: 1.2px;
 }
 .actuOpenedSubtitle{
 	margin-top: 40px;
@@ -2014,7 +2014,6 @@ ul.membres_equipe li.titre-categorie::before {
 	-o-transition: text-shadow .1s ease;
 	transition: text-shadow .1s ease;
 }
-
 .vc_figure-caption {
     text-align: center;
 }
