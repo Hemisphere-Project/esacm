@@ -39,7 +39,7 @@
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hmsphr' ); ?></button>
 				<div id="esacm_logo_wrapper_mobile" class="only_mobile">
 					<a href="<?php echo site_url(); ?>">
-						<?php if( is_home() ){?>
+						<?php if( is_home()||(basename(get_permalink())=='diplomes') ){?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
 						<?php } else{ ?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">
@@ -67,7 +67,7 @@
 				</div>
 				<div id="esacm_logo_wrapper" class="not_mobile">
 					<a href="<?php echo site_url(); ?>">
-						<?php if( is_home() ){?>
+						<?php if( is_home()||(basename(get_permalink())=='diplomes') ){?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
 						<?php } else{ ?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">
