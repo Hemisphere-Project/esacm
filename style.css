@@ -408,11 +408,50 @@ p, .actuExcerpt{
 
 /*TRANSITION GENERALE*/
 *{
-	-webkit-transition: all .4s ease;
+	/*-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	-o-transition: all .4s ease;
-	transition: all .4s ease;
+	transition: all .4s ease;*/
+
+	/*-webkit-transition: filter .4s, text-shadow .4s;*/
+
+	/*
+	Bug1
+	apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow
+	Bug2
+	les transition sur les textes des posts actus se font les unes après les autres
+	*/
+
+	/*-webkit-transition: text-shadow .4s ease-in-out;*/
+
+	/*transition: filter .2s ease-in-out;
+	transition: text-shadow .2s ease-in-out;*/
+
 }
+
+/*TRANSITIONS DES IMAGES*/
+/*Bug: apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow*/
+.actuImage img{
+	transition: filter .2s ease-in-out;
+}
+#esacm_logo_wrapper img{
+	transition: filter .2s ease-in-out;
+}
+
+/*TRANSITIONS DES TEXT SHADOWS*/
+.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv{
+	transition: text-shadow .3s ease-in-out;
+}
+.menu-item a, .site-footer a{
+	transition: text-shadow .3s ease-in-out;
+}
+#submenu_wrapper a{
+	transition: text-shadow .3s ease-in-out;
+}
+.entry-content a{
+	transition: text-shadow .3s ease-in-out;
+}
+
 
 /*--------------------------------------------------------------
 # Elements
@@ -1510,7 +1549,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }
 .actuImage {
 	margin-bottom:10px;
-	-webkit-transition:-webkit-filter .2s ease-in-out;
+	/*-webkit-transition:-webkit-filter .2s ease-in-out;*/
 }
 .grey {
 	-webkit-filter: grayscale(1);
@@ -2152,10 +2191,6 @@ ul.membres_equipe li.titre-categorie::before {
 }
 #submenu_wrapper > a:hover {
 	text-shadow: 0 0 3px;
-	/*-webkit-transition: text-shadow .1s ease;
-	-moz-transition: text-shadow .1s ease;
-	-o-transition: text-shadow .1s ease;
-	transition: text-shadow .1s ease;*/
 }
 
 .vc_figure-caption {
