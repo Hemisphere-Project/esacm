@@ -1236,7 +1236,7 @@ body.parent-international, .parent-international #submenu_wrapper, body.parent-e
 	box-shadow: 0 0 3px 0 #FF9B62;
 	text-shadow: 0 0 3px #FF9B62;
 }
-.parent-international #submenu_wrapper > a.current, .parent-international #submenu_wrapper > a:active, .parent-international #submenu_wrapper > a:hover{
+.parent-international #submenu_wrapper > a.current, .parent-international #submenu_wrapper > a:active, .parent-international #submenu_wrapper > a:hover,.parent-english #submenu_wrapper > a.current, .parent-english #submenu_wrapper > a:active, .parent-english #submenu_wrapper > a:hover{
 	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 .parent-international .shadowed, .parent-english .shadowed {
