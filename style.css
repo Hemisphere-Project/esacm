@@ -406,40 +406,22 @@ p, .actuExcerpt{
 	hyphenate-limit-chars: 6 3 3;
 }
 
-/*TRANSITION GENERALE*/
-*{
-	/*-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	-o-transition: all .4s ease;
-	transition: all .4s ease;*/
-
-	/*-webkit-transition: filter .4s, text-shadow .4s;*/
-
-	/*
-	Bug1
-	apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow
-	Bug2
-	les transition sur les textes des posts actus se font les unes après les autres
-	*/
-
-	/*-webkit-transition: text-shadow .4s ease-in-out;*/
-
-	/*transition: filter .2s ease-in-out;
-	transition: text-shadow .2s ease-in-out;*/
-
-}
+/*TRANSITIONS DES SURVOLS*/
 
 /*TRANSITIONS DES IMAGES*/
-/*Bug: apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow*/
-.actuImage img{
+/*Bug: apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow
+bug disparait si on passe par le popup*/
+.actuImage img, .diplomeImage img{
 	transition: filter .2s ease-in-out;
+	overflow-y:hidden;
 }
 #esacm_logo_wrapper img{
 	transition: filter .2s ease-in-out;
+	overflow-y:hidden;
 }
 
 /*TRANSITIONS DES TEXT SHADOWS*/
-.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv{
+.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle{
 	transition: text-shadow .3s ease-in-out;
 }
 .menu-item a, .site-footer a{

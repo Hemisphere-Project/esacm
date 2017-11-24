@@ -47,7 +47,6 @@ $(function() {
         var moveX = Math.abs(initDragX-event.clientX);
         var moveY = Math.abs(initDragY-event.clientY);
         if((moveX<4)&&(moveY<4)){
-          console.log('tas voulu cliquer mais en fait tas draggé? on sen occupe');
           $(this).click();
         }
       }
@@ -66,11 +65,11 @@ $(function() {
 
     // DISAPPEAR ALL (CLICK MENU OR ACTU)
     $('.actu,.filterDiv').click(function(){
-        
+      
         $('.popup').fadeOut(150,function(){
           $('.popup').remove();
           $(".actuImage").removeClass('grey');
-          //window.location.hash = 'actu';  
+          //window.location.hash = 'actu';
         });
     });
 
