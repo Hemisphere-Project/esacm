@@ -1909,6 +1909,28 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	border:1px solid;
 }
 
+.home .site-footer a:hover, .parent-diplomes .site-footer a:hover, {
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
+}
+.parent-ecole .site-footer a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-etudes .site-footer a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-admissions .site-footer a:hover{
+	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.parent-la-recherche .site-footer a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-english .site-footer a:hover, .parent-international .site-footer a:hover {
+	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.parent-ateliers-publics .site-footer a:hover, .parent-education-artistique .site-footer a:hover,  .parent-le-protolab .site-footer a:hover {
+	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
 /***************************************************************
 	HEADER & MENU
 ****************************************************************/
