@@ -2010,7 +2010,7 @@ header .logo a{
 }
 
 /*MENU HOVER FOR ALL COLORS*/
-.menu .menu-item a:hover {
+.menu-item a:hover {
 	text-decoration: underline;
 }
 .sub-menu .current_page_item, .sub-menu .menu-item a:hover {
@@ -2047,7 +2047,7 @@ text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 	margin-top:4px;
 }
 
-#esacm_logo_wrapper a:hover{
+#esacm_logo_wrapper img:hover{
 -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
 filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
 }
