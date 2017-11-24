@@ -1747,9 +1747,8 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	padding: 20px 10% 80px;
 	z-index:11;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
-
 	margin-bottom: 100px;
-
+	cursor:auto;
 }
 #post_overlay_under {
 	/*background-color: blue;*/
@@ -1762,7 +1761,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	width: 100%;
 	height: 100%;
 	z-index: 10;
-
+	cursor:pointer;
 	overflow-y: scroll;
 }
 #false_popup_overlay_under{
