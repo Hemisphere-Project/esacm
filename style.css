@@ -2444,7 +2444,13 @@ font-style: italic;
 
 .searchform input::placeholder {
     opacity: 1;
+		color:rgba(0,0,0,0.5);
 }
+.home .searchform input::placeholder, .parent-diplomes .searchform input::placeholder{
+	color: rgba(255,255,255,0.5)
+}
+
+
 .searchform .search-submit {
 	color: transparent;
 	background-color: transparent;
