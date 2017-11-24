@@ -2010,7 +2010,7 @@ header .logo a{
 }
 
 /*MENU HOVER FOR ALL COLORS*/
-.menu-item a:hover {
+.menu .menu-item a:hover, #menu-bottom-menu a:hover, #menu-english-menu a:hover {
 	text-decoration: underline;
 }
 .sub-menu .current_page_item, .sub-menu .menu-item a:hover {
