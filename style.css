@@ -406,6 +406,14 @@ p, .actuExcerpt{
 	hyphenate-limit-chars: 6 3 3;
 }
 
+/*TRANSITION GENERALE*/
+*{
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1687,13 +1695,6 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 .filterText{
 	display: inline;
 }
-/*.filterText:hover{
-	text-shadow: 0 0 7px;
-	-webkit-transition: text-shadow .5s ease;
-	-moz-transition: text-shadow .5s ease;
-	-o-transition: text-shadow .5s ease;
-	transition: text-shadow .5s ease;
-}*/
 
 /*Filter Divs hover*/
 .filterDiv:hover{
@@ -2151,10 +2152,10 @@ ul.membres_equipe li.titre-categorie::before {
 }
 #submenu_wrapper > a:hover {
 	text-shadow: 0 0 3px;
-	-webkit-transition: text-shadow .1s ease;
+	/*-webkit-transition: text-shadow .1s ease;
 	-moz-transition: text-shadow .1s ease;
 	-o-transition: text-shadow .1s ease;
-	transition: text-shadow .1s ease;
+	transition: text-shadow .1s ease;*/
 }
 
 .vc_figure-caption {
