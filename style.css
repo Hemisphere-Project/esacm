@@ -412,12 +412,10 @@ p, .actuExcerpt{
 /*Bug: apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow
 bug disparait si on passe par le popup*/
 .actuImage img, .diplomeImage img{
-	transition: filter .2s ease-in-out;
-	overflow-y:hidden;
+	/*transition: filter .2s ease-in-out;*/
 }
 #esacm_logo_wrapper img{
-	transition: filter .2s ease-in-out;
-	overflow-y:hidden;
+	/*transition: filter .2s ease-in-out;*/
 }
 
 /*TRANSITIONS DES TEXT SHADOWS*/
