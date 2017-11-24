@@ -2060,7 +2060,7 @@ filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.5)) drop-shadow(0 0 7px rgba(25
 	-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(113, 255, 191, 0.5));
 	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(113, 255, 191, 0.5));
 }
-.parent-international #esacm_logo_wrapper img:hover,.parent-english #esacm_logo_wrapper img:hover, {
+.parent-international #esacm_logo_wrapper img:hover,.parent-english #esacm_logo_wrapper img:hover {
 	-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(255, 155, 98,0.5));
 	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(255, 155, 98, 0.5));
 }
