@@ -91,13 +91,25 @@ get_header(); ?>
 					<ul id="membres_administration" class="membres_equipe">
 						<?php foreach($membres_administration as $membre){ ?>
 							<li class="membre">
-								<span class="nom_complet"><?php echo $membre->post_title; ?></span>
-								<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
-								if($fonction != ''){?>
-								</br><span class="fonction"><?php echo $fonction; ?></span>
-								<?php }	?>
-
-								</br></br>
+								<!-- CONTENT -->
+								<?php if($membre->post_content != ''){ ?>
+									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
+										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
+										<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+										if($fonction != ''){?>
+										<div class="fonction"><?php echo $fonction; ?></div>
+										<?php }	?>
+									</div>
+								<!-- NO CONTENT -->
+								<?php } else{ ?>
+									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
+									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+									if($fonction != ''){?>
+									</br><span class="fonction"><?php echo $fonction; ?></span>
+									<?php }	?>
+									</br>
+								<?php } ?>
+								</br>
 							</li>
 						<?php } ?>
 					</ul>
@@ -118,17 +130,25 @@ get_header(); ?>
 					<ul id="membres_administration" class="membres_equipe">
 						<?php foreach($professeurs as $membre){ ?>
 							<li class="membre">
+								<!-- CONTENT -->
 								<?php if($membre->post_content != ''){ ?>
-									<a id="<?php echo $membre->ID; ?>" class="link_professeur nom_complet open_in_popup" href="<?php echo get_permalink($membre->ID); ?>"><?php echo $membre->post_title; ?></a>
+									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
+										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
+										<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+										if($fonction != ''){?>
+										<div class="fonction"><?php echo $fonction; ?></div>
+										<?php }	?>
+									</div>
+								<!-- NO CONTENT -->
 								<?php } else{ ?>
 									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
+									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+									if($fonction != ''){?>
+									</br><span class="fonction"><?php echo $fonction; ?></span>
+									<?php }	?>
+								</br>
 								<?php } ?>
-								<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
-								if($fonction != ''){?>
-								</br><span class="fonction"><?php echo $fonction; ?></span>
-								<?php }	?>
-
-								</br></br>
+								</br>
 							</li>
 						<?php } ?>
 					</ul>
@@ -138,13 +158,25 @@ get_header(); ?>
 					<ul id="assistants" class="membres_equipe">
 						<?php foreach($assistants as $membre){ ?>
 							<li class="membre">
-								<span class="nom_complet"><?php echo $membre->post_title; ?></span>
-								<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
-								if($fonction != ''){?>
-								</br><span class="fonction"><?php echo $fonction; ?></span>
-								<?php }	?>
-
-								</br></br>
+								<!-- CONTENT -->
+								<?php if($membre->post_content != ''){ ?>
+									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
+										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
+										<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+										if($fonction != ''){?>
+										<div class="fonction"><?php echo $fonction; ?></div>
+										<?php }	?>
+									</div>
+								<!-- NO CONTENT -->
+								<?php } else{ ?>
+									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
+									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+									if($fonction != ''){?>
+									</br><span class="fonction"><?php echo $fonction; ?></span>
+									<?php }	?>
+								</br>
+								<?php } ?>
+								</br>
 							</li>
 						<?php } ?>
 					</ul>

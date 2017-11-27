@@ -419,7 +419,7 @@ bug disparait si on passe par le popup*/
 }
 
 /*TRANSITIONS DES TEXT SHADOWS*/
-.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle{
+.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle, .link_professeur{
 	transition: text-shadow .3s ease-in-out;
 }
 .menu-item a, .site-footer a{
@@ -999,8 +999,8 @@ object {
 	margin-bottom: 10px;
 }
 #submenu_wrapper {
-  width: 68.5%;
-	margin-left:-3px;
+  width: 68.7%;
+	margin-left:-4px;
 }
 #sidebar_fixed_wrapper{
 	position: fixed;
@@ -2304,11 +2304,18 @@ ul.membres_equipe li.titre-categorie::before {
 	display: inline-block;
 	width:100%;
 }
-.membres_equipe_recherche .nom_complet{
- font-weight: bold;
+
+.membres_equipe .open_in_popup .nom_complet{
+text-decoration: underline;
 }
-.membres_equipe_recherche .fonction{
-font-style: italic;
+.link_professeur{
+	cursor:pointer;
+}
+.link_professeur:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.fonction{
+	font-style: italic;
 }
 
 .anneeTitle{

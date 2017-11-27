@@ -107,15 +107,19 @@ get_header(); ?>
 					<ul id="" class="membres_equipe membres_equipe_recherche">
 						<?php foreach($membres_equipe_recherche as $membre){ ?>
 							<li class="membre">
+								<!-- IF CONTENT : URL -->
 								<?php if($membre->post_content != ''){ ?>
-									<a id="<?php echo $membre->ID; ?>" class="link_professeur nom_complet open_in_popup" href="<?php echo get_permalink($membre->ID); ?>"><?php echo $membre->post_title; ?></a>
+									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
+										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
+										<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);?>
+										<div class="fonction"><?php echo $fonction; ?></div>
+									</div>
 								<?php } else{ ?>
+									<!-- NO CONTENT : TXT -->
 									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
+									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);?>
+									</br><span class="fonction"><?php echo $fonction; ?></span>
 								<?php } ?>
-								<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);
-								if($fonction != ''){?>
-								</br><span class="fonction"><?php echo $fonction; ?></span>
-								<?php }	?>
 							</li>
 						<?php } ?>
 					</ul>
@@ -156,16 +160,19 @@ get_header(); ?>
 							<?php
 							foreach ($chercheur_categories as $chercheur) {?>
 								<li class="membre">
+									<!-- IF CONTENT : URL -->
 									<?php if($chercheur->post_content != ''){ ?>
-										<a id="<?php echo $chercheur->ID; ?>" class="link_professeur nom_complet open_in_popup" href="<?php echo get_permalink($chercheur->ID); ?>"><?php echo $chercheur->post_title; ?></a><br>
+										<div id="<?php echo $chercheur->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($chercheur->ID); ?>">
+											<div class="nom_complet"><?php echo $chercheur->post_title; ?></div>
+											<?php $fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);?>
+											<div class="fonction"><?php echo $fonction; ?></div>
+										</div>
+									<!-- NO CONTENT : TXT -->
 									<?php } else{ ?>
 										<span class="nom_complet"><?php echo $chercheur->post_title; ?></span><br>
-									<?php } ?>
-									<?php $fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);
-									if($fonction != ''){?>
+										<?php $fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);?>
 										<span class="fonction"><?php echo $fonction; ?></span>
 									<?php } ?>
-
 								</li>
 							<?php
 						} ?>
