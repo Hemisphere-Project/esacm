@@ -1169,7 +1169,6 @@ body.home a, body.single-actu a, body.single-annonce a {
 body.home .searchform input {
 	border-color: white;
 	box-shadow: inset 0 0 3px 0 rgba(255,255,255,0.5), inset 0 0 7px 0 rgba(255,255,255,0.5);
-	color: white;
 }
 body.home .searchform .search-submit {
 	color: transparent;
@@ -2442,13 +2441,13 @@ font-style: italic;
     outline:none;
 }
 
-.searchform input::placeholder {
-    opacity: 1;
-		color:rgba(0,0,0,0.5);
+.searchform input, .searchform input:focus, .searchform input::placeholder {
+	color: rgba(0,0,0,0.5);
 }
-.home .searchform input::placeholder, .parent-diplomes .searchform input::placeholder{
-	color: rgba(255,255,255,0.5)
+.home .searchform input,.home .searchform input:focus, .home .searchform input::placeholder, .parent-diplomes .searchform input,.parent-diplomes .searchform input:focus, .parent-diplomes .searchform input::placeholder {
+color: rgba(255,255,255,0.5);
 }
+
 
 
 .searchform .search-submit {
