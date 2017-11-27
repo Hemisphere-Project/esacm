@@ -673,8 +673,10 @@ a:hover, a:active {
 #other_links_wrapper .sub-menu .current-menu-item > a, #other_links_wrapper .sub-menu .current-menu-ancestor > a{
     font-weight: normal !important;
 }
-#english_link_wrapper .sub-menu .current-menu-item > a, #english_link_wrapper .sub-menu .current-menu-ancestor > a{
+
+#english_link_wrapper  .current-menu-item > a, #english_link_wrapper .current-menu-ancestor > a{
     font-weight: normal !important;
+		color:red;
 }
 
 /* Small menu. */
