@@ -94,7 +94,7 @@ get_header(); ?>
 								<!-- CONTENT -->
 								<?php if($membre->post_content != ''){ ?>
 									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
-										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
+										<div class="nom_complet">YOYOYOYO<?php echo $membre->post_title; ?></div>
 										<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
 										if($fonction != ''){?>
 										<div class="fonction"><?php echo $fonction; ?></div>
@@ -102,7 +102,7 @@ get_header(); ?>
 									</div>
 								<!-- NO CONTENT -->
 								<?php } else{ ?>
-									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
+									<span class="nom_complet">YOYOYOYO<?php echo $membre->post_title; ?></span>
 									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
 									if($fonction != ''){?>
 									</br><span class="fonction"><?php echo $fonction; ?></span>
