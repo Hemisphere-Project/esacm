@@ -3,7 +3,7 @@
 Shortcode pour afficher les membres de l'équipe
 */
 function shortcode_chercheurs( $atts ){
-  	
+
   	/////////////////////////////////
 	///// GET EQUIPE CHERCHEURS /////
 	/////////////////////////////////
@@ -42,7 +42,7 @@ function shortcode_chercheurs( $atts ){
 	foreach ($membres_chercheurs_annees as $key => $value) {
 		ksort($membres_chercheurs_annees[$key]); //trie par la clé categorie
 	}
-  	
+
 	$template = '<div id="chercheurs_accordeon" class="accordeon typo_epsilon">';
 		$template .= '<div class="">';
 				foreach ($membres_chercheurs_annees as $annee => $chercheurs_annees) {
@@ -65,15 +65,30 @@ function shortcode_chercheurs( $atts ){
 							$template .= '<ul id="" class="half_column membres_equipe chercheursList">';
 							foreach ($chercheur_categories as $chercheur) {
 								$template .= '<li class="membre">';
-									if($chercheur->post_content != ''){
-										$template .= '<a id="'.$chercheur->ID.'" class="link_professeur nom_complet open_in_popup" href="'.get_permalink($chercheur->ID).'">'.$chercheur->post_title.'</a><br>';
-									} else{
-										$template .= '<span class="nom_complet">'.$chercheur->post_title.'</span><br>';
-									}
-									$fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);
-									if($fonction != ''){
-										$template .= '<span class="fonction">'.$fonction.'</span>';
-									}
+                // IF CONTENT : open_in_popup
+                if($chercheur->post_content != ''){
+                  $template .='<div id="'.$chercheur->ID.'" class="link_professeur open_in_popup" href="'.get_permalink($chercheur->ID).'">';
+                  $template .='<div class="nom_complet">'.$chercheur->post_title.'</div>';
+                  $fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);
+                  $template .='div class="fonction">'.$fonction.'</div>';
+                  $template .='</div>';
+                } else{
+                // NO CONTENT : TXT
+                  $template .='<span class="nom_complet">'.$chercheur->post_title.'</span></br>';
+                  $fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);
+                  if($fonction != ''){
+                    $template .='<span class="fonction">'.$fonction.'</span>';
+                  }
+                }
+								// if($chercheur->post_content != ''){
+								// 	$template .= '<a id="'.$chercheur->ID.'" class="link_professeur nom_complet open_in_popup" href="'.get_permalink($chercheur->ID).'">'.$chercheur->post_title.'</a><br>';
+								// } else{
+								// 	$template .= '<span class="nom_complet">'.$chercheur->post_title.'</span><br>';
+								// }
+								// $fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);
+								// if($fonction != ''){
+								// 	$template .= '<span class="fonction">'.$fonction.'</span>';
+								// }
 								$template .= '</li>';
 						}
 						$template .= '</ul>';
@@ -82,7 +97,7 @@ function shortcode_chercheurs( $atts ){
 				$template .= '</div>';
 				}
 			$template .= '</div>';
-		
+
 	return $template;
 }
 add_shortcode( 'chercheurs', 'shortcode_chercheurs' );

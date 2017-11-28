@@ -107,7 +107,7 @@ get_header(); ?>
 					<ul id="" class="membres_equipe membres_equipe_recherche">
 						<?php foreach($membres_equipe_recherche as $membre){ ?>
 							<li class="membre">
-								<!-- IF CONTENT : URL -->
+								<!-- IF CONTENT : open_in_popup -->
 								<?php if($membre->post_content != ''){ ?>
 									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
 										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
@@ -116,9 +116,11 @@ get_header(); ?>
 									</div>
 								<?php } else{ ?>
 									<!-- NO CONTENT : TXT -->
-									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
+									<span class="nom_complet"><?php echo $membre->post_title; ?></span><br>
 									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);?>
-									</br><span class="fonction"><?php echo $fonction; ?></span>
+									<?php if($fonction!=''){ ?>
+										<span class="fonction"><?php echo $fonction; ?></span>
+									<?php } ?>
 								<?php } ?>
 							</li>
 						<?php } ?>
@@ -160,7 +162,7 @@ get_header(); ?>
 							<?php
 							foreach ($chercheur_categories as $chercheur) {?>
 								<li class="membre">
-									<!-- IF CONTENT : URL -->
+									<!-- IF CONTENT : open_in_popup -->
 									<?php if($chercheur->post_content != ''){ ?>
 										<div id="<?php echo $chercheur->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($chercheur->ID); ?>">
 											<div class="nom_complet"><?php echo $chercheur->post_title; ?></div>
@@ -171,7 +173,9 @@ get_header(); ?>
 									<?php } else{ ?>
 										<span class="nom_complet"><?php echo $chercheur->post_title; ?></span><br>
 										<?php $fonction = get_post_meta($chercheur->ID, 'wpcf-fonction-chercheur', true);?>
-										<span class="fonction"><?php echo $fonction; ?></span>
+										<?php if($fonction!=''){ ?>
+											<span class="fonction"><?php echo $fonction; ?></span>
+										<?php } ?>
 									<?php } ?>
 								</li>
 							<?php
