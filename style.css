@@ -1800,6 +1800,13 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	box-shadow: 0 0 3px 0 rgba(0,0,0,0.50), 0 0 7px 0 rgba(0,0,0,0.50);
 }
 
+.home .loadMore{
+	box-shadow: inset 0 0 6px 0 rgba(255, 255, 255, 0.50), 0 0 6px 0 rgba(255, 255, 255, 0.50), inset 0 0 2px 0 #FFFFFF , 0 0 2px 0 #FFFFFF;
+}
+.parent-la-recherche .loadMore{
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.40), inset 0 0 7px rgba(0, 0, 0, 0.40), 0 0 3px rgba(0, 0, 0, 0.40), 0 0 7px rgba(0, 0, 0, 0.40);
+}
+
 
 
 
