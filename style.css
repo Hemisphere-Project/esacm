@@ -674,9 +674,9 @@ a:hover, a:active {
     font-weight: normal !important;
 }
 
-/*#english_link_wrapper a {
+#english_link_wrapper .sub-menu a {
     font-weight: normal !important;
-}*/
+}
 #english_link_wrapper .current-menu-item > a, #english_link_wrapper .current-menu-ancestor > a{
     font-weight: bold !important;
 }
