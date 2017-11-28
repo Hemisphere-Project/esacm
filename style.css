@@ -1251,9 +1251,7 @@ body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results
 .parent-admissions .entry-content ul li::before{
 	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-.parent-admissions .entry-content ul li::before{
-	margin-bottom:0;
-}
+/*classe additionelle .admission-bref rajoutée sur les blocs de texte de la page 'en bref'*/
 .parent-admissions .admission-bref p{
 	margin-bottom:0;
 }
@@ -1307,6 +1305,10 @@ body.parent-international, .parent-international #submenu_wrapper, body.parent-e
 }
 .parent-international .searchform input, .parent-english .searchform input {
 	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(255, 155, 98, 0.7);
+}
+/* Puces */
+.parent-international .entry-content ul li::before, .parent-international .entry-content ul li::before{
+	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 
