@@ -1251,6 +1251,12 @@ body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results
 .parent-admissions .entry-content ul li::before{
 	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
+.parent-admissions .entry-content ul li::before{
+	margin-bottom:0;
+}
+.parent-admissions .admission-bref p{
+	margin-bottom:0;
+}
 
 
 /*LA RECHERCHE SECTION GREY BACKGROUND*/
