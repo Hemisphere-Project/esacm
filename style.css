@@ -405,7 +405,7 @@ p, .actuExcerpt{
 	-ms-hyphenate-limit-chars: 6 3 3;
 	hyphenate-limit-chars: 6 3 3;
 }
-.text_popup p{
+.text_popup p, .vc-exergue{
 	text-align: center;
 }
 
