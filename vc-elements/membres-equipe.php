@@ -3,7 +3,7 @@
 Shortcode pour afficher les membres de l'équipe
 */
 function shortcode_membres_equipe( $atts ){
-  	
+
   	//GET ADMINISTRATION MEMBERS
 	$args =	array(
 		'post_type'=>'membre-equipe',
@@ -57,19 +57,39 @@ function shortcode_membres_equipe( $atts ){
 		'order' => 'ASC'
 	);
 	$assistants = get_posts($args);
-  	
+
 	$template = '<div class="columns_wrapper typo_epsilon equipe">';
 		$template .= '<div class="half_column first_column">';
 			$template .= '<ul id="membres_administration" class="membres_equipe">';
-				foreach($membres_administration as $membre){ 
+				foreach($membres_administration as $membre){
 					$template .= '<li class="membre">';
-						$template .= '<span class="nom_complet">'.$membre->post_title.'</span>';
-						$fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
-						if($fonction != ''){
-						$template .= '</br><span class="fonction">'.$fonction.'</span>';
-						}	
 
-						$template .= '</br></br>';
+            if($membre->post_content != ''){
+              $template .= '<div id="'.$membre->ID.'" class="link_professeur open_in_popup" href="'.get_permalink($membre->ID).'">';
+                $template .= '<div class="nom_complet">'.$membre->post_title.'</div>';
+                $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+                if($fonction != ''){
+                $template .='<div class="fonction">'.$fonction.'</div>';
+                }
+              $template .='</div>';
+
+           } else{
+              $template .= '<span class="nom_complet">'.$membre->post_title.'</span>';
+              $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+              if($fonction != ''){
+              $template .= '</br><span class="fonction">'.$fonction.'</span>';
+               }
+              $template .= '</br>';
+           }
+            $template .= '</br>';
+						// $template .= '<span class="nom_complet">'.$membre->post_title.'</span>';
+						// $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
+						// if($fonction != ''){
+						// $template .= '</br><span class="fonction">'.$fonction.'</span>';
+						// }
+            //
+						// $template .= '</br></br>';
+
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
@@ -122,7 +142,7 @@ function shortcode_membres_equipe( $atts ){
 			$template .= '</ul>';
 		$template .= '</div>';
 	$template .= '</div>';
-		
+
 	return $template;
 }
 add_shortcode( 'membres_equipe', 'shortcode_membres_equipe' );
