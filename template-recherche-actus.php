@@ -114,7 +114,7 @@ get_header(); ?>
 				<div class="wpb_column vc_column_container vc_col-sm-6">
 					<div class="vc_column-inner ">
 						<div class="wpb_wrapper">
-						        <div class="vc-lienpagesuivante-wrap typo_beta" "="">
+						        <div class="vc-lienpagesuivante-wrap typo_beta">
 								<a class="vc-lienpagesuivante" href="<?php echo get_permalink(97); //Page appels à candidature ?>">→&nbsp;appels à candidature</a>
 							</div>
 						</div>
