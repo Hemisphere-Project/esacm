@@ -68,7 +68,7 @@ get_header(); ?>
 			?>
 
 			<!-- ///////////////////  AXES  //////////////// -->
-			<div class="spacer"></div>
+			<div class="spacer shadowedBox"></div>
 			<div class="typo_gamma littleTitle">Les axes de recherche</div>
 
 			<div class="postsTable">
