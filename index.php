@@ -118,7 +118,7 @@ get_header(); ?>
 
  			endwhile; ?>
 		</div>
-			<div class="loadMore shadowedBox typo_beta" >
+			<div class="loadMore typo_beta" >
 				<div class="notWaiting">→ voir plus d'actualités</div>
 				<div class="loader waiting" style='display:none'>
 				  <p>-----------------------------</p>
