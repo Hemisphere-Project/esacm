@@ -25,7 +25,7 @@ function shortcode_membres_equipe_recherche( $atts ){
 						$template .= '<div id="'.$membre->ID.'" class="link_professeur open_in_popup" href="'.get_permalink($membre->ID).'">';
 						$template .= '<div class="nom_complet">'.$membre->post_title.'</div>';
 						$fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);
-						$template .= 'div class="fonction">'.$fonction.'</div>';
+						$template .= '<div class="fonction">'.$fonction.'</div>';
 						$template .= '</div>';
 					} else{
 					// NO CONTENT : TXT
