@@ -65,7 +65,7 @@ $(function() {
 
     // DISAPPEAR ALL (CLICK MENU OR ACTU)
     $('.actu,.filterDiv').click(function(){
-      
+
         $('.popup').fadeOut(150,function(){
           $('.popup').remove();
           $(".actuImage").removeClass('grey');

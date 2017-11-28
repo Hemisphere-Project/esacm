@@ -34,11 +34,12 @@ get_header(); ?>
 	while ( $loop->have_posts() ) : $loop->the_post();
 		$picture=types_render_field( "picture");
 		$text=types_render_field( "text", array( ) );
+    $color=types_render_field( "text-popup-color", array( ) );
 		if($picture){ $post_type='image_popup'; }
 		if(!$picture && $text){ $post_type='text_popup'; }
 
-		if($post_type=='image_popup'){?> <div class="popup image_popup"><?php echo types_render_field( "picture");?> </div> <?php }
- 		elseif($post_type=='text_popup'){?> <div class="popup text_popup typo_beta"><?php echo types_render_field( "text");?> </div> <?php } ?>
+		if($post_type=='image_popup'){?> <div class="popup image_popup"><?php echo $picture; ?> </div> <?php }
+ 		elseif($post_type=='text_popup'){?> <div style="color:<?php echo $color;?>" class="popup text_popup typo_beta" > <?php echo $text;?> </div> <?php } ?>
 
 	 <?php endwhile; ?>
  </div>
