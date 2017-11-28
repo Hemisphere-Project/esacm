@@ -2123,6 +2123,15 @@ filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.5)) drop-shadow(0 0 7px rgba(25
     display: inline-block;
     margin-right: 10px;
 }
+
+/* PUCES */
+.parent-ecole .entry-content ul li::before, .parent-etudes .entry-content ul li::before, .parent-la-recherche .entry-content ul li::before {
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+ul.membres_equipe li::before {
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+
 ul.membres_equipe li::before {
 	content: "⦁";
 	font-feature-settings: "kern" 1, "ss01" 1;
