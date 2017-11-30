@@ -1195,7 +1195,7 @@ body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-e
 	background-color: white;
 	color: black;
 }
-.parent-ecole .title, .parent-etudes .title, .parent-ecole .vc-exergue, .parent-etudes .vc-exergue{
+.parent-ecole .title, .parent-etudes .title, .parent-ecole .vc-exergue, .parent-etudes .vc-exergue, .parent-ecole .vc-lienpagesuivante, .parent-etudes .vc-lienpagesuivante{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
 .parent-ecole #post_overlay, .parent-ecole #post_overlay_content, .single-membre-equipe #post_overlay, .single-membre-equipe #post_overlay_content {
