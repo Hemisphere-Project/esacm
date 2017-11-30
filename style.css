@@ -631,9 +631,9 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 
-/*a {
-    color: black;
-}*/
+a {
+  color: black;
+}
 a:focus {
 	outline: none;
 }
