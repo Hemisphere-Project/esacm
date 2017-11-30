@@ -1166,6 +1166,9 @@ body.home, body.single-actu, body.single-annonce {
 body.home a, body.single-actu a, body.single-annonce a {
 	color: white;
 }
+body .actuOpenedContent a{
+	color: black;
+}
 .vc_separator .vc_sep_holder .vc_sep_line {
 	background-color: black;
 }
@@ -1200,6 +1203,9 @@ body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-e
 }
 .parent-ecole #post_overlay, .parent-ecole #post_overlay_content, .single-membre-equipe #post_overlay, .single-membre-equipe #post_overlay_content {
 	background-color: #393939;
+	color: white;
+}
+.parent-ecole #post_overlay_content a, .single-membre-equipe #post_overlay_content a {
 	color: white;
 }
 .parent-ecole .actuOpenedTitle, .single-membre-equipe .actuOpenedTitle {
@@ -1277,6 +1283,9 @@ body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-pro
 }
 .parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content, .single-programme #post_overlay, .single-programme #post_overlay_content {
 	background-color: #393939;
+	color: white;
+}
+.parent-la-recherche #post_overlay_content a, .single-axe #post_overlay_content a, .single-programme #post_overlay_content a{
 	color: white;
 }
 .parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle, .single-programme .actuOpenedTitle {
@@ -2298,6 +2307,7 @@ ul.membres_equipe li.titre-categorie::before {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+  box-shadow: inset 0 0 2px, 0 0 2px;
 }
 .nextButton a{
 	text-decoration: none;
