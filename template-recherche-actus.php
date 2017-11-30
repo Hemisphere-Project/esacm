@@ -22,11 +22,9 @@ get_header(); ?>
 			</div>
 
 			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
+			// while ( have_posts() ) : the_post();
+			// 	get_template_part( 'template-parts/content', 'page' );
+			// endwhile; // End of the loop.
 			?>
 
 			<!-- ////////////////////////////////////////////// -->
@@ -34,6 +32,8 @@ get_header(); ?>
 			<!-- ////////////////////////////////////////////// -->
 
 			<section class="actus">
+
+				<div class="title typo_alpha">ÉVÈNEMENTS &amp; PUBLICATIONS </div>
 
 			<!-- /////////////////// FILTRES  //////////////// -->
 
