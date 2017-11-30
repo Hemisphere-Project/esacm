@@ -39,7 +39,7 @@ get_header(); ?>
 		if(!$picture && $text){ $post_type='text_popup'; }
 
 		if($post_type=='image_popup'){?> <div class="popup image_popup"><?php echo $picture; ?> </div> <?php }
- 		elseif($post_type=='text_popup'){?> <div style="color:<?php echo $color;?>" class="popup text_popup typo_beta" > <?php echo $text;?> </div> <?php } ?>
+ 		elseif($post_type=='text_popup'){?> <div class="popup text_popup typo_beta" style="color:<?php echo $color;?>; border-color:<?php echo $color;?>; box-shadow:0 0 8px 0 <?php echo $color;?>;" > <?php echo $color.' '.$text;?> </div> <?php } ?>
 
 	 <?php endwhile; ?>
  </div>
