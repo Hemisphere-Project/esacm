@@ -13,7 +13,7 @@
 	 <div id="post_overlay_content">
 	 	<h1 class="actuOpenedTitle typo_alpha"><?php echo get_the_title(); ?></h1>
 		<div class="actuOpenedSubtitle typo_beta"><?php echo get_post_meta($post->ID, 'wpcf-fonction-recherche', true); ?></div>
-		<div class="actuOpenedContent typo_beta">
+		<div class="actuOpenedContent typo_beta entry-content">
 			<?php the_content(); ?>
 		</div>
 
