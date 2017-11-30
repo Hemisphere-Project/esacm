@@ -294,7 +294,7 @@ $(function() {
              //
              $('.postsTable #'+firstId).nextAll().fadeOut(0);
              $('.postsTable #'+firstId).nextAll().css('visibility', 'visible');
-             $('.postsTable #'+firstId).nextAll().fadeIn(200);
+             $('.postsTable #'+firstId).nextAll().fadeIn(400);
            }
            //  MASONRY RELOAD
            $(".postsTable").masonry('reloadItems');
