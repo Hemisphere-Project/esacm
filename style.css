@@ -1600,10 +1600,9 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }
 .actuImage {
 	margin-bottom:10px;
-	/*-webkit-transition:-webkit-filter .2s ease-in-out;*/
 }
-.grey {
-	-webkit-filter: grayscale(1);
+.grey{
+	/*-webkit-filter: grayscale(100%);*/
  	filter: grayscale(100%);
 }
 .actus{
