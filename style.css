@@ -1242,7 +1242,7 @@ body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results
 .parent-admissions .vc_separator .vc_sep_holder .vc_sep_line {
 	box-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-.parent-admissions .vc-lienencadre{
+.parent-admissions .vc-lienencadre, .parent-admissions .vc-lienpagesuivante{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(113, 255, 191, 1);
 	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(113, 255, 191, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(113, 255, 191, 0.7);
 }
@@ -1270,33 +1270,38 @@ body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results
 
 
 /*LA RECHERCHE SECTION GREY BACKGROUND*/
-body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-programme {
+body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-programme,  .single-membre-chercheur,  .single-membre-equipe-rech {
 	background-color: #AFAFAF;
 	color: black;
 }
-.parent-la-recherche .title{
+.parent-la-recherche .title, .single-membre-equipe-rech .title, .single-membre-chercheur .title{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.40), inset 0 0 7px rgba(0, 0, 0, 0.40), 0 0 3px rgba(0, 0, 0, 0.40), 0 0 7px rgba(0, 0, 0, 0.40);
 }
 .parent-la-recherche .vc-exergue{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-.parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content, .single-programme #post_overlay, .single-programme #post_overlay_content {
+.parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content, .single-programme #post_overlay, .single-programme #post_overlay_content, .single-membre-equipe-rech #post_overlay, .single-membre-equipe-rech #post_overlay_content, .single-membre-chercheur #post_overlay, .single-membre-chercheur #post_overlay_content {
 	background-color: #393939;
 	color: white;
 }
+
 .parent-la-recherche #post_overlay_content a, .single-axe #post_overlay_content a, .single-programme #post_overlay_content a{
 	color: white;
 }
-.parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle, .single-programme .actuOpenedTitle {
+.parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle, .single-programme .actuOpenedTitle, .single-membre-chercheur .actuOpenedTitle, .single-membre-equipe-rech .actuOpenedTitle {
 	border-color: white;
 }
-.parent-la-recherche #post_overlay_close, .single-axe #post_overlay_close, .single-programme #post_overlay_close {
+.parent-la-recherche #post_overlay_close, .single-axe #post_overlay_close, .single-programme #post_overlay_close{
 	background-image: url('img/croix-blanche-fermeture.svg');
 }
 
+
+
+/*.single-membre-equipe-rech .WHAT, .single-membre-chercheur .WHAT*/
+
 /*INTERNATIONAL SECTION YELLOW BACKGROUND*/
-body.parent-international, .parent-international #submenu_wrapper, body.parent-english, .parent-english #submenu_wrapper {
+body.parent-international, .parent-international #submenu_wrapper, body .parent-english, .parent-english #submenu_wrapper {
 	background-color: #FFFCD9;
 	color: black;
 }
@@ -1313,6 +1318,10 @@ body.parent-international, .parent-international #submenu_wrapper, body.parent-e
 .parent-international .vc-lienencadre, .parent-english .vc-lienencadre{
 	box-shadow: 0 0 3px 0 #FF9B62;
 	text-shadow: 0 0 3px #FF9B62;
+}
+.parent-international .vc-lienpagesuivante, .parent-english .vc-lienpagesuivante{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 155, 98, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(255, 155, 98, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(255, 155, 98, 0.7);
 }
 .parent-international #submenu_wrapper > a.current, .parent-international #submenu_wrapper > a:active, .parent-international #submenu_wrapper > a:hover,.parent-english #submenu_wrapper > a.current, .parent-english #submenu_wrapper > a:active, .parent-english #submenu_wrapper > a:hover{
 	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
@@ -1339,6 +1348,10 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 	background-color: #393939;
 	color: white;
 }
+.single-diplome .menu a, .single-diplome .site-footer a{
+	color: white;
+}
+
 .parent-diplomes #post_overlay, .parent-diplomes #post_overlay_content, .single-diplome #post_overlay, .single-diplome #post_overlay_content, , .single-diplome-expo #post_overlay, .single-diplome-expo #post_overlay_content {
 	background-color: #393939;
 	color: white;
@@ -1380,6 +1393,10 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 .parent-ateliers-publics .vc-lienencadre, .parent-le-protolab .vc-lienencadre, .parent-education-artistique .vc-lienencadre{
 	box-shadow: 0 0 3px 0 #008BC2;
 	text-shadow: 0 0 3px #008BC2;
+}
+.parent-ateliers-publics .vc-lienpagesuivante, .parent-le-protolab .vc-lienpagesuivante, .parent-education-artistique .vc-lienpagesuivante{
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.8);
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(0, 139, 194, 0.6), 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.6);
 }
 .parent-ateliers-publics .shadowed, .parent-le-protolab .shadowed, .parent-education-artistique .shadowed {
     text-shadow: 0 0 7px #008BC2;
