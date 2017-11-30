@@ -1297,7 +1297,7 @@ body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-pro
 }
 
 /*INTERNATIONAL SECTION YELLOW BACKGROUND*/
-body.parent-international, .parent-international #submenu_wrapper, body .parent-english, .parent-english #submenu_wrapper {
+body.parent-international, .parent-international #submenu_wrapper, .parent-english, .parent-english #submenu_wrapper {
 	background-color: #FFFCD9;
 	color: black;
 }
