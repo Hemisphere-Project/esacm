@@ -1197,7 +1197,7 @@ body.home .searchform .search-submit {
 }
 
 /*ECOLE & ETUDES SECTION WHITE BACKGROUND*/
-body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-etudes #submenu_wrapper {
+body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-etudes #submenu_wrapper, body.single-membre-equipe {
 	background-color: white;
 	color: black;
 }
