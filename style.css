@@ -415,10 +415,10 @@ p, .actuExcerpt{
 /*Bug: apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow
 bug disparait si on passe par le popup*/
 .actuImage img, .diplomeImage img{
-	/*transition: filter .2s ease-in-out;*/
+	/*transition: filter .15s ease-in-out;*/
 }
 #esacm_logo_wrapper img{
-	transition: filter .15s ease-in-out;
+	/*transition: filter .15s ease-in-out;*/
 }
 
 /*TRANSITIONS DES TEXT SHADOWS*/
@@ -1666,24 +1666,24 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }*/
 /*Inutile, cf 'LINKS HOVER'*/
 
-.actu img:hover{
-	/*-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
-	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));*/
-}
+/*.actu img:hover{
+	-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}*/
 .parent-la-recherche .actu:hover, .single-programme .actu:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-.parent-la-recherche .actu:hover,  .single-programme .actu:hover img{
+/*.parent-la-recherche .actu:hover,  .single-programme .actu:hover img{
 	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
 	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
-}
+}*/
 .parent-le-protolab .actu:hover {
 	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-.parent-le-protolab .actu:hover img{
+/*.parent-le-protolab .actu:hover img{
 	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
 	filter: drop-shadow(0 0 4px rgba(0, 139, 194, 1));
-}
+}*/
 
 
 /*		  Annonces Hovers     */
@@ -1716,14 +1716,14 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 .parent-la-recherche .actuTitle:hover,.parent-la-recherche .actuExcerpt:hover, .parent-la-recherche .actuOpen:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-.parent-la-recherche .post:hover img{
+/*.parent-la-recherche .post:hover img{
 	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
 	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
-}
-.parent-la-recherche .programmeItem:hover img{
+}*/
+/*.parent-la-recherche .programmeItem:hover img{
 	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
 	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
-}
+}*/
 
 .loadMore{
 	cursor: pointer;
