@@ -418,21 +418,21 @@ bug disparait si on passe par le popup*/
 	/*transition: filter .2s ease-in-out;*/
 }
 #esacm_logo_wrapper img{
-	/*transition: filter .2s ease-in-out;*/
+	transition: filter .15s ease-in-out;
 }
 
 /*TRANSITIONS DES TEXT SHADOWS*/
 .actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle, .link_professeur{
-	transition: text-shadow .3s ease-in-out;
+	transition: text-shadow .15s ease-in-out;
 }
 .menu-item a, .site-footer a{
-	transition: text-shadow .3s ease-in-out;
+	transition: text-shadow .15s ease-in-out;
 }
 #submenu_wrapper a{
-	transition: text-shadow .3s ease-in-out;
+	transition: text-shadow .15s ease-in-out;
 }
 .entry-content a{
-	transition: text-shadow .3s ease-in-out;
+	transition: text-shadow .15s ease-in-out;
 }
 
 
@@ -1660,10 +1660,13 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }
 
 /*		  Actus Hovers        */
-.actu:hover {
+
+/*.actu:hover {
 	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
-}
-.actu:hover img{
+}*/
+/*Inutile, cf 'LINKS HOVER'*/
+
+.actu img:hover{
 	-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
 	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
 }
