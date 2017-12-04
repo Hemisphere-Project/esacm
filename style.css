@@ -1192,6 +1192,9 @@ body.home .searchform .search-submit {
 	color: transparent;
 	background-image: url('img/loupe-recherche-blanche.svg');
 }
+.home .shadowedBox, .parent-diplomes .shadowedBox{
+	box-shadow: 0 0 3px 0 rgba(255,255,255,0.5), 0 0 7px 0 rgba(255,255,255,0.5);
+}
 
 /*ECOLE & ETUDES SECTION WHITE BACKGROUND*/
 body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-etudes #submenu_wrapper {
