@@ -1667,8 +1667,8 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 /*Inutile, cf 'LINKS HOVER'*/
 
 .actu img:hover{
-	-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
-	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+	/*-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));*/
 }
 .parent-la-recherche .actu:hover, .single-programme .actu:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
