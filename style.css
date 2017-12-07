@@ -2641,7 +2641,7 @@ color: rgba(255,255,255,0.5);
     padding-top: 20px;
 }
 
-#english_link_wrapper, #other_links_wrapper{
+#english_link_wrapper br, #other_links_wrapper br{
 	display: none;
 }
 
