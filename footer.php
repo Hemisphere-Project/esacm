@@ -29,7 +29,7 @@
 		<div class="spacer shadowedBox"></div>
 		<div class="site-info">
 			<div class="site-info-colonne typo_alpha">
-				ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE
+				<a class="" title="ESACM" href="<?php echo site_url(); ?>">ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE</a>
 			</div>
 			<div class="site-info-colonne typo_epsilon">
 				25 rue Kessler</br>
@@ -37,14 +37,14 @@
 				04 73 17 36 10</br>
 				<a href="mailto:esa@esacm.fr">esa@esacm.fr</a>
 			</div>
-			<div class="site-info-colonne typo_epsilon">
+			<div class="site-info-colonne footer-links typo_epsilon">
 				<a href="<?php echo get_permalink(get_page_by_title('infos pratiques'));?>">infos pratiques</a></br>
 				<a href="<?php echo get_permalink(get_page_by_title('newsletter'));?>">newsletter</a></br>
 				<a target="_blank" href="https://www.facebook.com/esacm.clermont/">facebook</a></br>
 				<a target="_blank" href="https://www.instagram.com/esacm_clermont/">instagram</a></br>
 				<a target="_blank" href="https://twitter.com/esacm_clermont">twitter</a></br>
 			</div>
-			<div class="site-info-colonne typo_epsilon">
+			<div class="site-info-colonne footer-links typo_epsilon">
 				<a href="<?php echo get_permalink(get_page_by_title('mentions légales'));?>">mentions légales</a></br>
 				<a href="<?php echo get_permalink(get_page_by_title('recrutement'));?>">recrutement</a></br>
 				<a href="<?php echo get_permalink(get_page_by_title('appels d’offre et marchés publics'));?>">appels d’offre &amp; marchés publics</a></br>

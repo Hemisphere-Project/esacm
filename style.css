@@ -417,7 +417,7 @@ p{
 
 /*TRANSITIONS DES SURVOLS --> */
 /*TRANSITIONS DES TEXT SHADOWS*/
-.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle, .link_professeur{
+.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle, .link_professeur, .programmeTitle{
 	transition: text-shadow .15s ease-in-out;
 }
 .menu-item a, .site-footer a{
@@ -2023,25 +2023,25 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	LINKS HOVER
 --------------------------------------------------------------*/
 
-.home .site-footer a:hover,.home .site-content a:hover, .parent-diplomes .site-footer a:hover,.parent-diplomes .site-content a:hover {
+.home .footer-links a:hover,.home .site-content a:hover, .parent-diplomes .site-footer a:hover,.parent-diplomes .site-content a:hover {
 	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
 }
-.parent-ecole .site-footer a:hover, .parent-ecole .site-content a:hover{
+.parent-ecole .footer-links a:hover, .parent-ecole .site-content a:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-.parent-etudes .site-footer a:hover, .parent-etudes .site-content a:hover{
+.parent-etudes .footer-links a:hover, .parent-etudes .site-content a:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-.parent-admissions .site-footer a:hover, .parent-admissions .site-content a:hover{
+.parent-admissions .footer-links a:hover, .parent-admissions .site-content a:hover{
 	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-.parent-la-recherche .site-footer a:hover, .parent-la-recherche .site-content a:hover{
+.parent-la-recherche .footer-links a:hover, .parent-la-recherche .site-content a:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
-.parent-english .site-footer a:hover,.parent-english .site-content a:hover, .parent-international .site-footer a:hover,  .parent-international .site-content a:hover {
+.parent-english .footer-links a:hover,.parent-english .site-content a:hover, .parent-international .footer-links a:hover,  .parent-international .site-content a:hover {
 	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-.parent-ateliers-publics .site-footer a:hover,.parent-ateliers-publics .site-content a:hover, .parent-education-artistique .site-footer a:hover, .parent-education-artistique .site-content a:hover, .parent-le-protolab .site-footer a:hover, .parent-le-protolab .site-content a:hover {
+.parent-ateliers-publics .footer-links a:hover,.parent-ateliers-publics .site-content a:hover, .parent-education-artistique .footer-links a:hover, .parent-education-artistique .site-content a:hover, .parent-le-protolab .footer-links a:hover, .parent-le-protolab .site-content a:hover {
 	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -2642,6 +2642,10 @@ color: rgba(255,255,255,0.5);
 }
 /*SMARTPHONE*/
 @media only screen and (max-width:600px){
+
+.filterTitle, .filterList{
+	display:none;
+}
 
 .loadMore {
 	width: 100%;

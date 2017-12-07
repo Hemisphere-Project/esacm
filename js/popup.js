@@ -3,13 +3,11 @@ $(function() {
   /////////////////////////////////////////////////////
   ////////////////// POPUP HOMEPAGE ///////////////////
   /////////////////////////////////////////////////////
-  //TO DO: ne pas launchPopup() en mode smartphone
-  //TO DO: ne pas launchPopup() qd on arrive depuis le menu actualités (esacm.fr/#actu)
-  //TO DO: une fois que c'est intégré, changer la classe '.actuImage' par la bonne
 
   // STARTER
   $(window).on("load", function() {
-    if(window.location.hash.substring(1)!='actu'){
+    var windowWidth = $(window).width();
+    if((window.location.hash.substring(1)!='actu')&&(windowWidth>600)){
       launchPopup();
     }
   });
