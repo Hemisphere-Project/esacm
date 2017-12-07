@@ -390,7 +390,7 @@ big {
 	font-smoothing: antialiased;
 }
 
-p, .actuExcerpt{
+p{
 	text-align: justify;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -408,19 +408,14 @@ p, .actuExcerpt{
 .text_popup p, .vc-exergue{
 	text-align: center;
 }
-
-/*TRANSITIONS DES SURVOLS*/
-
-/*TRANSITIONS DES IMAGES*/
-/*Bug: apparition d'une 2e scrollbar pendant l'animation du filtre drop-shadow
-bug disparait si on passe par le popup*/
-.actuImage img, .diplomeImage img{
-	/*transition: filter .15s ease-in-out;*/
-}
-#esacm_logo_wrapper img{
-	/*transition: filter .15s ease-in-out;*/
+.actuExcerpt p{
+	text-align: left;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
 }
 
+/*TRANSITIONS DES SURVOLS --> */
 /*TRANSITIONS DES TEXT SHADOWS*/
 .actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle, .link_professeur{
 	transition: text-shadow .15s ease-in-out;

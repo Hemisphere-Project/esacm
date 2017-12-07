@@ -78,7 +78,7 @@ get_header(); ?>
 				<?php
 				$args = array(
 					'post_type' => array('actu', 'annonce'),
-				 	'posts_per_page'=> 5,
+				 	'posts_per_page'=> 10,
 					'category_name'=> $category_Name
 				);
 				$loop = new WP_Query( $args );
