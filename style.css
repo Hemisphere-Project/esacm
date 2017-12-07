@@ -2184,10 +2184,14 @@ filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.5)) drop-shadow(0 0 7px rgba(25
     list-style: inside none none;
 }
 
+.entry-content ul li {
+    padding-left: 35px;
+}
 .entry-content ul li::before {
     content: "⦁";
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-left: -35px;
 }
 
 ul.membres_equipe li::before {
