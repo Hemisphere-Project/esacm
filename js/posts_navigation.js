@@ -139,22 +139,18 @@ $(function() {
 
     // ONCE EVERY IMG LOADED
     $('#post_overlay_content').imagesLoaded().then(function(){
-
       // APPLY CAROUSEL
       launchCarousel();
-
       // WRAPPER FOR VIDEO embeds (vimeo, youtube)
       $('iframe').wrap('<div class="videoWrapper" />');
       // WRAPPER FOR SOUNDCLOUD
        $("iframe[src*='soundcloud']").parent().removeClass('videoWrapper').addClass('audioWrapper');
-
        // IMAGE ORIENTATION
        $("#post_overlay_content img").each(function(index,div) {
          var h = $(div).height(); var w = $(div).width();
         //  console.log(w+'  '+h);
          if(w<h){ $(div).css('width', '50%');}
        });
-
        // DISPLAY CONTENT
        $("#post_overlay_content").css('visibility', 'visible');
        $("#post_overlay_content").fadeOut(0).fadeIn(200);
@@ -213,6 +209,7 @@ $(function() {
   ////////////////  FLICKITY CAROUSEL /////////////////
   /////////////////////////////////////////////////////
   function launchCarousel(){
+
 
     var $gallery = $('.gallery').flickity({
       // options
