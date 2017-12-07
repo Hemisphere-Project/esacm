@@ -29,13 +29,9 @@
 		<div class="spacer shadowedBox"></div>
 		<div class="site-info">
 			<div class="site-info-colonne typo_alpha">
-<<<<<<< HEAD
-				<a href="<?php echo site_url(); ?>" class="footer_lien_accueil">
+				<a href="<?php echo site_url(); ?>" title="ESACM" class="footer_lien_accueil">
 					ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE
 				</a>
-=======
-				<a class="" title="ESACM" href="<?php echo site_url(); ?>">ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE</a>
->>>>>>> f4030e9e7efc12adafb82fffc88d55150506d565
 			</div>
 			<div class="site-info-colonne typo_epsilon">
 				25 rue Kessler</br>
