@@ -2018,6 +2018,11 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	width:100%;
 	border:1px solid;
 }
+.footer_retour_link_wrapper{
+    display: inline-block;
+    width: 100%;
+}
+
 
 .footer_lien_accueil{
 	text-decoration: none;
