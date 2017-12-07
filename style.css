@@ -408,7 +408,7 @@ p{
 .text_popup p, .vc-exergue{
 	text-align: center;
 }
-.actuExcerpt p{
+.actuExcerpt p, .no_justify p{
 	text-align: left;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
