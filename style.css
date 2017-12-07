@@ -2454,6 +2454,7 @@ text-decoration: underline;
 	width:20%;
 	margin-bottom: 30px;
 	margin-right:4%;
+	text-decoration: none;
 }
 .programmeTitle{
 	text-align: left;
