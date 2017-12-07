@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Template part for displaying posts
@@ -59,7 +60,7 @@
 	}
 	?>
 	<!-- //////////////////// LOOP  ////////////////// -->
-	 <div class="postsTable">
+	<div class="postsTable">
 		 <div class="grid-sizer"></div>
 		 <div class="gutter-sizer"></div>
 
@@ -83,13 +84,15 @@
 			 get_template_part( 'single-actu-and-annonce');
 
 		 endwhile; ?>
-	 </div>
+	</div>
 
-	 <div class="spacer shadowedBox"></div>
+	<div class="spacer shadowedBox"></div>
 
-	 <div class="nextButton shadowedBox typo_beta" >
-		 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Axes et programmes' ) ) ); ?>">← Retour à la liste des programmes</a>
-	 </div>
+	<div>
+		 <div class="nextButton shadowedBox typo_beta" >
+			 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Axes et programmes' ) ) ); ?>">← Retour à la liste des programmes</a>
+		 </div>
+	</div>
 
 
 	<footer class="entry-footer">
