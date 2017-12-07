@@ -164,7 +164,6 @@ get_header(); ?>
 					<h3>ASSISTANTS D'ENSEIGNEMENT</h3>
 					<ul id="assistants" class="membres_equipe">
 						<?php foreach($assistants as $membre){ ?>
-							
 							<!-- CONTENT -->
 							<?php if($membre->post_content != ''){ ?>
 								<li class="membre has_related_post">
