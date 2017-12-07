@@ -146,9 +146,8 @@ $(function() {
       // WRAPPER FOR SOUNDCLOUD
        $("iframe[src*='soundcloud']").parent().removeClass('videoWrapper').addClass('audioWrapper');
        // IMAGE ORIENTATION
-       $("#post_overlay_content img").each(function(index,div) {
+       $("#post_overlay_content img, .gallery img").each(function(index,div) {
          var h = $(div).height(); var w = $(div).width();
-        //  console.log(w+'  '+h);
          if(w<h){ $(div).css('width', '50%');}
        });
        // DISPLAY CONTENT
