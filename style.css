@@ -2438,6 +2438,9 @@ text-decoration: underline;
 .chercheursList .fonction{
 	font-style: italic;
 }
+#chercheurs_accordeon .anneeContent .categoryContent {
+    margin-bottom: 25px;
+}
 /*-------Axes et programmes---------*/
 
 .programmesTable{
