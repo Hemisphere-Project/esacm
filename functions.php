@@ -289,7 +289,7 @@ function ajaxLoadMoreFunction() {
 	$timeB4 = get_the_time( 'U', $firstId );
 
 	$args = array(
-    'posts_per_page' => 5,
+    'posts_per_page' => 6,
     'post_type' => array('actu', 'annonce'),
     'date_query' => array(
         'before' => date( 'c' , $timeB4 )
