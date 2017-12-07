@@ -132,9 +132,9 @@ get_header(); ?>
 					<h3>PROFESSEURS</h3>
 					<ul id="membres_administration" class="membres_equipe">
 						<?php foreach($professeurs as $membre){ ?>
-							<li class="membre">
-								<!-- CONTENT -->
-								<?php if($membre->post_content != ''){ ?>
+							<!-- CONTENT -->
+							<?php if($membre->post_content != ''){ ?>
+								<li class="membre has_related_post">
 									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
 										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
 										<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
@@ -142,17 +142,21 @@ get_header(); ?>
 										<div class="fonction"><?php echo $fonction; ?></div>
 										<?php }	?>
 									</div>
-								<!-- NO CONTENT -->
-								<?php } else{ ?>
+									</br>
+								</li>
+							<!-- NO CONTENT -->
+							<?php } else{ ?>
+								<li class="membre">
 									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
 									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
 									if($fonction != ''){?>
 									</br><span class="fonction"><?php echo $fonction; ?></span>
 									<?php }	?>
-								</br>
-								<?php } ?>
-								</br>
-							</li>
+									</br>
+									</br>
+								</li>
+							<?php } ?>
+							
 						<?php } ?>
 					</ul>
 					</br>
@@ -160,9 +164,10 @@ get_header(); ?>
 					<h3>ASSISTANTS D'ENSEIGNEMENT</h3>
 					<ul id="assistants" class="membres_equipe">
 						<?php foreach($assistants as $membre){ ?>
-							<li class="membre">
-								<!-- CONTENT -->
-								<?php if($membre->post_content != ''){ ?>
+							
+							<!-- CONTENT -->
+							<?php if($membre->post_content != ''){ ?>
+								<li class="membre has_related_post">
 									<div id="<?php echo $membre->ID; ?>" class="link_professeur open_in_popup" href="<?php echo get_permalink($membre->ID); ?>">
 										<div class="nom_complet"><?php echo $membre->post_title; ?></div>
 										<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
@@ -170,17 +175,21 @@ get_header(); ?>
 										<div class="fonction"><?php echo $fonction; ?></div>
 										<?php }	?>
 									</div>
-								<!-- NO CONTENT -->
-								<?php } else{ ?>
+									</br>
+								</li>
+							<!-- NO CONTENT -->
+							<?php } else{ ?>
+								<li class="membre">
 									<span class="nom_complet"><?php echo $membre->post_title; ?></span>
 									<?php $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
 									if($fonction != ''){?>
 									</br><span class="fonction"><?php echo $fonction; ?></span>
 									<?php }	?>
-								</br>
-								<?php } ?>
-								</br>
-							</li>
+									</br>
+									</br>
+								</li>
+							<?php } ?>
+							
 						<?php } ?>
 					</ul>
 				</div>
