@@ -29,7 +29,9 @@
 		<div class="spacer shadowedBox"></div>
 		<div class="site-info">
 			<div class="site-info-colonne typo_alpha">
-				ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE
+				<a href="<?php echo site_url(); ?>" class="footer_lien_accueil">
+					ÉCOLE</br>SUPÉRIEURE</br>D’ART</br>DE CLERMONT</br>MÉTROPOLE
+				</a>
 			</div>
 			<div class="site-info-colonne typo_epsilon">
 				25 rue Kessler</br>
