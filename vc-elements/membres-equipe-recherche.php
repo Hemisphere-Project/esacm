@@ -19,9 +19,10 @@ function shortcode_membres_equipe_recherche( $atts ){
 		$template .= '<div class="">';
 			$template .= '<ul id="" class="membres_equipe membres_equipe_recherche">';
 				foreach($membres_equipe_recherche as $membre){
-					$template .= '<li class="membre">';
+					
 					// IF CONTENT : open_in_popup
 					if($membre->post_content != ''){
+						$template .= '<li class="membre has_related_post">';
 						$template .= '<div id="'.$membre->ID.'" class="link_professeur open_in_popup" href="'.get_permalink($membre->ID).'">';
 						$template .= '<div class="nom_complet">'.$membre->post_title.'</div>';
 						$fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);
@@ -29,6 +30,7 @@ function shortcode_membres_equipe_recherche( $atts ){
 						$template .= '</div>';
 					} else{
 					// NO CONTENT : TXT
+						$template .= '<li class="membre">';
 						$template .= '<span class="nom_complet">'.$membre->post_title.'</span></br>';
 						$fonction = get_post_meta($membre->ID, 'wpcf-fonction-recherche', true);
 						if($fonction != ''){
