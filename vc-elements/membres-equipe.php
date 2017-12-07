@@ -63,9 +63,9 @@ function shortcode_membres_equipe( $atts ){
 			$template .= '<ul id="membres_administration" class="membres_equipe">';
 				foreach($membres_administration as $membre){
           // LI MEMBRE
-					$template .= '<li class="membre">';
             // Membre with content
             if($membre->post_content != ''){
+              $template .= '<li class="membre has_related_post">';
               $template .= '<div id="'.$membre->ID.'" class="link_professeur open_in_popup" href="'.get_permalink($membre->ID).'">';
                 $template .= '<div class="nom_complet">'.$membre->post_title.'</div>';
                 $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
@@ -75,6 +75,7 @@ function shortcode_membres_equipe( $atts ){
               $template .='</div>';
             // Membre No content
            } else{
+              $template .= '<li class="membre">';
               $template .= '<span class="nom_complet">'.$membre->post_title.'</span>';
               $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
               if($fonction != ''){
@@ -103,9 +104,10 @@ function shortcode_membres_equipe( $atts ){
 			$template .= '<ul id="membres_administration" class="membres_equipe">';
 				foreach($professeurs as $membre){
           // LI MEMBRE
-					$template .= '<li class="membre">';
+					
           // Membre with content
           if($membre->post_content != ''){
+            $template .= '<li class="membre has_related_post">';
             $template .= '<div id="'.$membre->ID.'" class="link_professeur open_in_popup" href="'.get_permalink($membre->ID).'">';
               $template .= '<div class="nom_complet">'.$membre->post_title.'</div>';
               $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
@@ -115,6 +117,7 @@ function shortcode_membres_equipe( $atts ){
             $template .='</div>';
             // Membre No content
          } else{
+            $template .= '<li class="membre">';
             $template .= '<span class="nom_complet">'.$membre->post_title.'</span>';
             $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
             if($fonction != ''){
@@ -132,9 +135,9 @@ function shortcode_membres_equipe( $atts ){
 			$template .= '<ul id="assistants" class="membres_equipe">';
 				foreach($assistants as $membre){
           // LI MEMBRE
-					$template .= '<li class="membre">';
           // Membre With Content
           if($membre->post_content != ''){
+            $template .= '<li class="membre has_related_post">';
             $template .= '<div id="'.$membre->ID.'" class="link_professeur open_in_popup" href="'.get_permalink($membre->ID).'">';
               $template .= '<div class="nom_complet">'.$membre->post_title.'</div>';
               $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
@@ -144,6 +147,7 @@ function shortcode_membres_equipe( $atts ){
             $template .='</div>';
           // Membre No content
          } else{
+            $template .= '<li class="membre">';
             $template .= '<span class="nom_complet">'.$membre->post_title.'</span>';
             $fonction = get_post_meta($membre->ID, 'wpcf-fonction', true);
             if($fonction != ''){
