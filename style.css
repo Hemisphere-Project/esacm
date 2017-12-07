@@ -2202,7 +2202,7 @@ ul.membres_equipe li::before {
 	vertical-align: bottom;
 	margin-left: -30px;
 }
-ul.membres_equipe li:hover::before {
+ul.membres_equipe li.has_related_post:hover::before {
     content: "⦁";
     font-feature-settings: "ss00";
 }
