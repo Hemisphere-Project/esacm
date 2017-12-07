@@ -2644,6 +2644,9 @@ color: rgba(255,255,255,0.5);
 #english_link_wrapper br, #other_links_wrapper br{
 	display: none;
 }
+#english_link_wrapper > div > ul > li > a, #other_links_wrapper > div > ul > li > a{
+	font-weight: bold;
+}
 
 
 }
