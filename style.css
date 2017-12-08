@@ -1918,6 +1918,10 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	margin-top: 40px;
 }
 
+.single-actu .spacer, .single-membre-equipe .spacer, .single-membre-chercheur .spacer, .single-membre-equipe-rech .spacer {
+    display: none;
+}
+
 /*--------------------------------------------------------------
  	VIDEO & AUDIO WRAPPERS
 --------------------------------------------------------------*/
