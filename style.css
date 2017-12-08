@@ -385,7 +385,7 @@ big {
   background: #EDEDED; /* Gecko Browsers */
 }
 
-.home, .parent-diplomes{
+.home, .parent-diplomes, .single-actu, .single-diplome, .single-diplome-expo{
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
@@ -1342,7 +1342,7 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 	background-color: #393939;
 	color: white;
 }
-.single-diplome .menu a, .single-diplome .site-footer a{
+.single-diplome .menu a, .single-diplome .site-footer a, .single-diplome-expo .menu a, .single-diplome-expo .site-footer a{
 	color: white;
 }
 
@@ -1918,7 +1918,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	margin-top: 40px;
 }
 
-.single-actu .spacer, .single-membre-equipe .spacer, .single-membre-chercheur .spacer, .single-membre-equipe-rech .spacer {
+.single-actu .spacer, .single-membre-equipe .spacer, .single-membre-chercheur .spacer, .single-membre-equipe-rech .spacer, .single-diplome .spacer, .single-diplome-expo .spacer {
     display: none;
 }
 
