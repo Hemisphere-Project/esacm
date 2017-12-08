@@ -16,6 +16,6 @@
 		<div class="actuOpenedContent typo_beta entry-content">
 			<?php the_content(); ?>
 		</div>
-
+	 </div>
 </div><!-- #post-<?php the_ID(); ?> -->
 <a id="false_popup_overlay_under" href="<?php echo get_permalink(89); //Page La coopérative de recherche ?>"></a>

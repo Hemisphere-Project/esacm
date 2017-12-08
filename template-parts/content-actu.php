@@ -6,7 +6,6 @@
  *
  * @package hmsphr
  */
-
 ?>
 
 <div id="post_overlay" style="top: 25px; display: block; visibility: visible;">
