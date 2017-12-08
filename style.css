@@ -385,7 +385,7 @@ big {
   background: #EDEDED; /* Gecko Browsers */
 }
 
-.home, .parent-diplomes{
+.home, .parent-diplomes, .single-actu, .single-diplome{
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
