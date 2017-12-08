@@ -2527,8 +2527,9 @@ text-decoration: underline;
 	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
 }
 .diplomeContainer:hover img{
-	/*-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
-	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));*/
+	-webkit-filter: drop-shadow(0 0 4px rgba(255, 0, 0, 1));
+	filter: drop-shadow(0 0 4px rgba(255, 0, 0, 1));
+
 }
 
 /*-------Texte deroulable-----------*/
