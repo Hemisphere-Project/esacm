@@ -59,6 +59,33 @@ $(function() {
 
   }
 
+  /////////////////////////////////////////////////////
+  /////////////////  VISITED LINKS  ///////////////////
+  /////////////////////////////////////////////////////
+
+  // adds class .visited to every link that has been already visited
+  // https://nevyan.blogspot.fr/2013/07/mark-visited-links-using-javascript-and.html
+
+  check_visited_links();
+
+  function check_visited_links(){
+  var visited_links = JSON.parse(localStorage.getItem('visited_links')) || [];
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+      var that = links[i];
+      that.onclick = function () {
+          var clicked_url = this.href;
+          if (visited_links.indexOf(clicked_url)==-1) {
+              visited_links.push(clicked_url);
+              localStorage.setItem('visited_links', JSON.stringify(visited_links));
+          }
+      }
+      if (visited_links.indexOf(that.href)!== -1) {
+          that.parentNode.className += ' visited';
+      }
+  }
+  }
+
 
 
 

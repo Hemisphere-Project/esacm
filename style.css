@@ -2110,14 +2110,22 @@ header .logo a{
   margin-right: 10px;
 }
 .sub-menu .current_page_item a:before {
-  content: "☒";
+  content: "☒" !important;
   display: inline-block;
   margin-right: 10px;
 }
 
-.sub-menu a:visited:before {
+/*Visited: Change content of before: Not authorized*/
+/*.sub-menu a:visited:before {
   content: "☑︎" !important;
+}*/
+
+/*Solved by adding class .visited to visited links (see pages_navigation.js)*/
+.sub-menu .visited a:before{
+content: "☑︎";
 }
+
+
 
 /*MENU HOVER FOR ALL COLORS*/
 .menu .menu-item a:hover, #menu-bottom-menu a:hover, #menu-english-menu a:hover {
