@@ -2398,6 +2398,7 @@ ul.membres_equipe li.titre-categorie::before {
 	top: 10px;
 	right: 10px;
 	position: fixed;
+	z-index:10;
 }
 
 /*--------------------------------------------------------------
