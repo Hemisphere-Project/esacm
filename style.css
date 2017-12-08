@@ -2076,7 +2076,7 @@ header .logo a{
 	text-decoration: none;
 }
 
-.home #site-navigation {
+.home #site-navigation, .single-actu #site-navigation {
     margin-top: 58px;
 }
 
