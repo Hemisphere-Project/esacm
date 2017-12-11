@@ -68,7 +68,7 @@ get_header(); ?>
 			?>
 
 			<!-- ///////////////////  AXES  //////////////// -->
-			<div class="spacer"></div>
+			<div class="spacer shadowedBox"></div>
 			<div class="typo_gamma littleTitle">Les axes de recherche</div>
 
 			<div class="postsTable">
@@ -131,8 +131,8 @@ get_header(); ?>
 				<div class="wpb_column vc_column_container vc_col-sm-6">
 					<div class="vc_column-inner ">
 						<div class="wpb_wrapper">
-						        <div class="vc-lienpagesuivante-wrap typo_beta" "="">
-								<a class="vc-lienpagesuivante" href="<?php echo get_permalink(94); //Page évènements et publications ?>">→&nbsp;évènements et publications</a>
+						        <div class="vc-lienpagesuivante-wrap typo_beta">
+								<a class="vc-lienpagesuivante" href="<?php echo get_permalink(94);?>">→&nbsp;évènements et publications</a>
 							</div>
 						</div>
 					</div>

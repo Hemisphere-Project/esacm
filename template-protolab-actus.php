@@ -73,7 +73,7 @@ get_header(); ?>
 					 <?php
 					  $args = array(
 					 	 'post_type' => array('actu', 'annonce'),
-					 	 'posts_per_page'=> 5,
+					 	 'posts_per_page'=> 10,
 						 'category_name'=> $category_Name
 					 	);
 					  $loop = new WP_Query( $args );
@@ -83,7 +83,7 @@ get_header(); ?>
 
 			 			endwhile; ?>
 					</div>
-						<div class="loadMore shadowedBox typo_beta" >
+						<div class="loadMore typo_beta" >
 							<div class="notWaiting">→ voir plus d'actualités</div>
 							<div class="loader waiting" style='display:none'>
 							  <p>-----------------------------</p>

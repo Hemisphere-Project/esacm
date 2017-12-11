@@ -45,7 +45,7 @@ $(function() {
 
     if(postIsLoading==false){
       postIsLoading=true;
-      $("body,.post").css("cursor", "progress");
+      $("body,.post,.diplomeContainer").css("cursor", "progress");
       $.ajax({
         url: ajaxurl,
         type: 'post',
@@ -76,33 +76,15 @@ $(function() {
           //ADD PREVIOUS URL TO CLOSE BUTTON ATTRIBUTES
           $("#post_overlay_close").attr('previous_url', previous_url);
 
+          // MEDIA GESTION
           mediaGestion();
-          // // APPLY CAROUSEL ONCE IMG LOADED
-          // $('#post_overlay_content').imagesLoaded().then(function(){
-          //   launchCarousel();
-          // });
-          //
-          // // APPLY CAROUSEL
-          // // launchCarousel();
-          // // RESIZE once gallery is loaded - sinon bug de positions et d'affichage de flickity
-          // // $('.gallery').fadeOut(0).fadeIn(500,function(){$('.gallery').flickity('resize');});
-          //
-          // // WRAPPER FOR VIDEO embeds (vimeo, youtube)
-          // $('iframe').wrap('<div class="videoWrapper" />');
-          // // WRAPPER FOR SOUNDCLOUD
-          //  $("iframe[src*='soundcloud']").parent().removeClass('videoWrapper').addClass('audioWrapper');
-          //
-          // // IMAGE ORIENTATION
-          // $("#post_overlay_content img").load(function() {
-          //   var h = $(this).height(); var w = $(this).width();
-          //   if(w<h){ $(this).css('width', '50%');}
-          // });
-          //
+
           // DISPLAY CONTENT
           $("#post_overlay, #post_overlay_under").fadeIn(200,function(){
             postIsLoading = false;
             $("body").css("cursor", "default");
             $(".post").css("cursor", "pointer");
+            $(".diplomeContainer").css("cursor", "pointer");
           });
         }
       });
@@ -157,22 +139,17 @@ $(function() {
 
     // ONCE EVERY IMG LOADED
     $('#post_overlay_content').imagesLoaded().then(function(){
-
       // APPLY CAROUSEL
       launchCarousel();
-
       // WRAPPER FOR VIDEO embeds (vimeo, youtube)
       $('iframe').wrap('<div class="videoWrapper" />');
       // WRAPPER FOR SOUNDCLOUD
        $("iframe[src*='soundcloud']").parent().removeClass('videoWrapper').addClass('audioWrapper');
-
        // IMAGE ORIENTATION
-       $("#post_overlay_content img").each(function(index,div) {
+       $("#post_overlay_content img, .gallery img").each(function(index,div) {
          var h = $(div).height(); var w = $(div).width();
-        //  console.log(w+'  '+h);
          if(w<h){ $(div).css('width', '50%');}
        });
-
        // DISPLAY CONTENT
        $("#post_overlay_content").css('visibility', 'visible');
        $("#post_overlay_content").fadeOut(0).fadeIn(200);
@@ -231,6 +208,7 @@ $(function() {
   ////////////////  FLICKITY CAROUSEL /////////////////
   /////////////////////////////////////////////////////
   function launchCarousel(){
+
 
     var $gallery = $('.gallery').flickity({
       // options
@@ -312,7 +290,7 @@ $(function() {
              //
              $('.postsTable #'+firstId).nextAll().fadeOut(0);
              $('.postsTable #'+firstId).nextAll().css('visibility', 'visible');
-             $('.postsTable #'+firstId).nextAll().fadeIn(200);
+             $('.postsTable #'+firstId).nextAll().fadeIn(400);
            }
            //  MASONRY RELOAD
            $(".postsTable").masonry('reloadItems');

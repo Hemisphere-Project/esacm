@@ -22,11 +22,9 @@ get_header(); ?>
 			</div>
 
 			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
+			// while ( have_posts() ) : the_post();
+			// 	get_template_part( 'template-parts/content', 'page' );
+			// endwhile; // End of the loop.
 			?>
 
 			<!-- ////////////////////////////////////////////// -->
@@ -34,6 +32,8 @@ get_header(); ?>
 			<!-- ////////////////////////////////////////////// -->
 
 			<section class="actus">
+
+				<div class="title typo_alpha">ÉVÈNEMENTS &amp; PUBLICATIONS </div>
 
 			<!-- /////////////////// FILTRES  //////////////// -->
 
@@ -78,7 +78,7 @@ get_header(); ?>
 				<?php
 				$args = array(
 					'post_type' => array('actu', 'annonce'),
-				 	'posts_per_page'=> 5,
+				 	'posts_per_page'=> 10,
 					'category_name'=> $category_Name
 				);
 				$loop = new WP_Query( $args );
@@ -86,7 +86,7 @@ get_header(); ?>
 					get_template_part( 'single-actu-and-annonce');
 	 			endwhile; ?>
 				</div>
-				<div class="loadMore shadowedBox typo_beta" >
+				<div class="loadMore typo_beta" >
 					<div class="notWaiting">→ voir plus d'actualités</div>
 					<div class="loader waiting" style='display:none'>
 						<p>-----------------------------</p>
@@ -114,7 +114,7 @@ get_header(); ?>
 				<div class="wpb_column vc_column_container vc_col-sm-6">
 					<div class="vc_column-inner ">
 						<div class="wpb_wrapper">
-						        <div class="vc-lienpagesuivante-wrap typo_beta" "="">
+						        <div class="vc-lienpagesuivante-wrap typo_beta">
 								<a class="vc-lienpagesuivante" href="<?php echo get_permalink(97); //Page appels à candidature ?>">→&nbsp;appels à candidature</a>
 							</div>
 						</div>

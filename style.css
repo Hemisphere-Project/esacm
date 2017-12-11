@@ -385,6 +385,52 @@ big {
   background: #EDEDED; /* Gecko Browsers */
 }
 
+.home, .parent-diplomes, .single-actu, .single-diplome, .single-diplome-expo{
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+p{
+	text-align: justify;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	-webkit-hyphenate-limit-before: 3;
+	hyphenate-limit-before: 3;
+	-webkit-hyphenate-limit-lines: 3;
+	hyphenate-limit-lines: 3;
+	-webkit-hyphenate-limit-after: 3;
+	hyphenate-limit-after: 3;
+	-moz-hyphenate-limit-chars: 6 3 3;
+	-ms-hyphenate-limit-chars: 6 3 3;
+	hyphenate-limit-chars: 6 3 3;
+}
+.text_popup p, .vc-exergue{
+	text-align: center;
+}
+.actuExcerpt p, .no_justify p{
+	text-align: left;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+}
+
+/*TRANSITIONS DES SURVOLS --> */
+/*TRANSITIONS DES TEXT SHADOWS*/
+.actuTitle,.actuSubtitle, .actuExcerpt, .actuOpen, .filterDiv, .diplomeTitle, .link_professeur, .programmeTitle{
+	transition: text-shadow .15s ease-in-out;
+}
+.menu-item a, .site-footer a{
+	transition: text-shadow .15s ease-in-out;
+}
+#submenu_wrapper a{
+	transition: text-shadow .15s ease-in-out;
+}
+.entry-content a{
+	transition: text-shadow .15s ease-in-out;
+}
+
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -418,7 +464,8 @@ hr {
 .vc_separator .vc_sep_holder .vc_sep_line {
 	height: 2px !important;
 	top: 0 !important;
-	box-shadow: 0 0 3px 0;
+	/*box-shadow: 0 0 3px 0;*/
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.50), 0 0 7px 0 rgba(0,0,0,0.50);
 	border-top: 0px !important;
 }
 .vc_separator {
@@ -580,7 +627,7 @@ textarea {
 --------------------------------------------------------------*/
 
 a {
-    color: black;
+  color: black;
 }
 a:focus {
 	outline: none;
@@ -625,6 +672,17 @@ a:hover, a:active {
 #other_links_wrapper .sub-menu .current-menu-item > a, #other_links_wrapper .sub-menu .current-menu-ancestor > a{
     font-weight: normal !important;
 }
+
+#english_link_wrapper .sub-menu a {
+    font-weight: normal !important;
+}
+#english_link_wrapper .current-menu-item > a, #english_link_wrapper .current-menu-ancestor > a{
+    font-weight: bold !important;
+}
+#english_link_wrapper .sub-menu .current-menu-item > a, #english_link_wrapper .sub-menu .current-menu-ancestor > a{
+    font-weight: normal !important;
+}
+
 
 /* Small menu. */
 .menu-toggle,
@@ -951,8 +1009,8 @@ object {
 	margin-bottom: 10px;
 }
 #submenu_wrapper {
-  width: 68.5%;
-	margin-left:-3px;
+  width: 68.7%;
+	margin-left:-4px;
 }
 #sidebar_fixed_wrapper{
 	position: fixed;
@@ -1103,6 +1161,9 @@ body.home, body.single-actu, body.single-annonce {
 body.home a, body.single-actu a, body.single-annonce a {
 	color: white;
 }
+body .actuOpenedContent a{
+	color: black;
+}
 .vc_separator .vc_sep_holder .vc_sep_line {
 	background-color: black;
 }
@@ -1121,20 +1182,28 @@ body.home a, body.single-actu a, body.single-annonce a {
 body.home .searchform input {
 	border-color: white;
 	box-shadow: inset 0 0 3px 0 rgba(255,255,255,0.5), inset 0 0 7px 0 rgba(255,255,255,0.5);
-	color: white;
 }
 body.home .searchform .search-submit {
 	color: transparent;
 	background-image: url('img/loupe-recherche-blanche.svg');
 }
+.home .shadowedBox, .parent-diplomes .shadowedBox{
+	box-shadow: 0 0 3px 0 rgba(255,255,255,0.5), 0 0 7px 0 rgba(255,255,255,0.5);
+}
 
 /*ECOLE & ETUDES SECTION WHITE BACKGROUND*/
-body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-etudes #submenu_wrapper {
+body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-etudes #submenu_wrapper, body.single-membre-equipe {
 	background-color: white;
 	color: black;
 }
+.parent-ecole .title, .parent-etudes .title, .parent-ecole .vc-exergue, .parent-etudes .vc-exergue, .parent-ecole .vc-lienpagesuivante, .parent-etudes .vc-lienpagesuivante{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
 .parent-ecole #post_overlay, .parent-ecole #post_overlay_content, .single-membre-equipe #post_overlay, .single-membre-equipe #post_overlay_content {
 	background-color: #393939;
+	color: white;
+}
+.parent-ecole #post_overlay_content a, .single-membre-equipe #post_overlay_content a {
 	color: white;
 }
 .parent-ecole .actuOpenedTitle, .single-membre-equipe .actuOpenedTitle {
@@ -1146,6 +1215,14 @@ body.parent-ecole, .parent-ecole #submenu_wrapper, body.parent-etudes, .parent-e
 .parent-ecole .vc_separator .vc_sep_holder .vc_sep_line {
 	background-color: black;
 }
+.parent-ecole #submenu_wrapper > a.current, .parent-ecole #submenu_wrapper > a:active, .parent-ecole #submenu_wrapper > a:hover, .parent-etudes #submenu_wrapper > a.current, .parent-etudes #submenu_wrapper > a:active, .parent-etudes #submenu_wrapper > a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+/* Puces */
+.parent-ecole .entry-content ul li::before, .parent-etudes .entry-content ul li::before, .parent-la-recherche .entry-content ul li::before, ul.membres_equipe li::before {
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+
 
 
 /*ADMISSIONS SECTION & SEARCH RESULTS : GREEN BACKGROUND*/
@@ -1153,16 +1230,19 @@ body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results
 	background-color: #DDFFF0;
 	color: black;
 }
-.parent-admissions .title {
-	box-shadow: inset 0 0 3px #71FFBF, 0 0 3px #71FFBF;
-	text-shadow: 0 0 3px #71FFBF;
+.parent-admissions .title{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(113, 255, 191, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(113, 255, 191, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(113, 255, 191, 0.7);
+}
+.parent-admissions .vc-exergue{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(113, 255, 191, 1);
 }
 .parent-admissions .vc_separator .vc_sep_holder .vc_sep_line {
-	box-shadow: 0 0 3px 0 #71FFBF;
+	box-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-.parent-admissions .vc-lienencadre{
-	box-shadow: 0 0 3px 0 #71FFBF;
-	text-shadow: 0 0 3px #71FFBF;
+.parent-admissions .vc-lienencadre, .parent-admissions .vc-lienpagesuivante{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(113, 255, 191, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(113, 255, 191, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(113, 255, 191, 0.7);
 }
 .parent-admissions .shadowed{
 	text-shadow: 0 0 7px #71FFBF;
@@ -1172,41 +1252,73 @@ body.parent-admissions, .parent-admissions #submenu_wrapper, body.search-results
     box-shadow: inset 0 0 4px #71FFBF, 0 0 4px #71FFBF;
 }
 .parent-admissions .searchform input {
-	box-shadow: inset 0 0 3px 0 #71FFBF, inset 0 0 7px 0 #71FFBF;
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(113, 255, 191, 0.7);
+}
+.parent-admissions #submenu_wrapper > a.current, .parent-admissions #submenu_wrapper > a:active, .parent-admissions #submenu_wrapper > a:hover{
+	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+/* Puces */
+.parent-admissions .entry-content ul li::before{
+	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+/*classe additionelle .admission-bref rajoutée sur les blocs de texte de la page 'en bref'*/
+.parent-admissions .admission-bref p{
+	margin-bottom:0;
 }
 
 
 /*LA RECHERCHE SECTION GREY BACKGROUND*/
-body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-programme {
+body.parent-la-recherche, .parent-la-recherche #submenu_wrapper, body.single-programme,  .single-membre-chercheur,  .single-membre-equipe-rech {
 	background-color: #AFAFAF;
 	color: black;
 }
-.parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content, .single-programme #post_overlay, .single-programme #post_overlay_content {
+.parent-la-recherche .title, .single-membre-equipe-rech .title, .single-membre-chercheur .title{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.40), inset 0 0 7px rgba(0, 0, 0, 0.40), 0 0 3px rgba(0, 0, 0, 0.40), 0 0 7px rgba(0, 0, 0, 0.40);
+}
+.parent-la-recherche .vc-exergue{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-la-recherche #post_overlay, .parent-la-recherche #post_overlay_content, .single-axe #post_overlay, .single-axe #post_overlay_content, .single-programme #post_overlay, .single-programme #post_overlay_content, .single-membre-equipe-rech #post_overlay, .single-membre-equipe-rech #post_overlay_content, .single-membre-chercheur #post_overlay, .single-membre-chercheur #post_overlay_content {
 	background-color: #393939;
 	color: white;
 }
-.parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle, .single-programme .actuOpenedTitle {
+
+.parent-la-recherche #post_overlay_content a, .single-axe #post_overlay_content a, .single-programme #post_overlay_content a{
+	color: white;
+}
+.parent-la-recherche .actuOpenedTitle, .single-axe .actuOpenedTitle, .single-programme .actuOpenedTitle, .single-membre-chercheur .actuOpenedTitle, .single-membre-equipe-rech .actuOpenedTitle {
 	border-color: white;
 }
-.parent-la-recherche #post_overlay_close, .single-axe #post_overlay_close, .single-programme #post_overlay_close {
+.parent-la-recherche #post_overlay_close, .single-axe #post_overlay_close, .single-programme #post_overlay_close{
 	background-image: url('img/croix-blanche-fermeture.svg');
 }
 
 /*INTERNATIONAL SECTION YELLOW BACKGROUND*/
-body.parent-international, .parent-international #submenu_wrapper, body.parent-english, .parent-english #submenu_wrapper {
+body.parent-international, .parent-international #submenu_wrapper, .parent-english, .parent-english #submenu_wrapper {
 	background-color: #FFFCD9;
 	color: black;
 }
-.parent-international .title, .parent-english .title {
-	box-shadow: inset 0 0 3px #FF9B62, 0 0 3px #FF9B62;
-	text-shadow: 0 0 3px #FF9B62;
+.parent-international .title, .parent-english .title{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 155, 98, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(255, 155, 98, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(255, 155, 98, 0.7);
+}
+.parent-international .vc-exergue, .parent-english .vc-exergue{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 155, 98, 1);
 }
 .parent-international .vc_separator .vc_sep_holder .vc_sep_line, .parent-english .vc_separator .vc_sep_holder .vc_sep_line {
-	box-shadow: 0 0 3px 0 #FF9B62;
+	box-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 .parent-international .vc-lienencadre, .parent-english .vc-lienencadre{
 	box-shadow: 0 0 3px 0 #FF9B62;
 	text-shadow: 0 0 3px #FF9B62;
+}
+.parent-international .vc-lienpagesuivante, .parent-english .vc-lienpagesuivante{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 155, 98, 1);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(255, 155, 98, 0.7), 0 0 3px rgba(0, 0, 0, 0.4), 0 0 6px rgba(255, 155, 98, 0.7);
+}
+.parent-international #submenu_wrapper > a.current, .parent-international #submenu_wrapper > a:active, .parent-international #submenu_wrapper > a:hover,.parent-english #submenu_wrapper > a.current, .parent-english #submenu_wrapper > a:active, .parent-english #submenu_wrapper > a:hover{
+	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 .parent-international .shadowed, .parent-english .shadowed {
     text-shadow: 0 0 7px #FF9B62;
@@ -1216,7 +1328,11 @@ body.parent-international, .parent-international #submenu_wrapper, body.parent-e
     box-shadow: inset 0 0 4px #FF9B62, 0 0 4px #FF9B62;
 }
 .parent-international .searchform input, .parent-english .searchform input {
-	box-shadow: inset 0 0 3px 0 #FF9B62, inset 0 0 7px 0 #FF9B62;
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(255, 155, 98, 0.7);
+}
+/* Puces */
+.parent-international .entry-content ul li::before, .parent-english .entry-content ul li::before{
+	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -1226,11 +1342,15 @@ body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, bod
 	background-color: #393939;
 	color: white;
 }
+.single-diplome .menu a, .single-diplome .site-footer a, .single-diplome-expo .menu a, .single-diplome-expo .site-footer a{
+	color: white;
+}
+
 .parent-diplomes #post_overlay, .parent-diplomes #post_overlay_content, .single-diplome #post_overlay, .single-diplome #post_overlay_content, , .single-diplome-expo #post_overlay, .single-diplome-expo #post_overlay_content {
 	background-color: #393939;
 	color: white;
 }
-.parent-diplomes .page .title, .parent-diplomes .actuOpenedTitle, .single-diplome .actuOpenedTitle, .single-diplome-expo .actuOpenedTitle {
+.parent-diplomes .page .title {
 	border-color: white;
 }
 .parent-diplomes .searchform input {
@@ -1254,33 +1374,50 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 	background-color: white;
 	color: black;
 }
-.parent-ateliers-publics .title, .parent-le-protolab .title, .parent-education-artistique .title {
-	box-shadow: inset 0 0 3px #008BC2, 0 0 3px #008BC2;
-	text-shadow: 0 0 3px #008BC2;
+.parent-ateliers-publics .title, .parent-le-protolab .title, .parent-education-artistique .title{
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.8);
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(0, 139, 194, 0.6), 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.6);
+}
+.parent-ateliers-publics .vc-exergue, .parent-le-protolab .vc-exergue, .parent-education-artistique .vc-exergue {
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.8);
 }
 .parent-ateliers-publics .vc_separator .vc_sep_holder .vc_sep_line, .parent-le-protolab .vc_separator .vc_sep_holder .vc_sep_line, .parent-education-artistique .vc_separator .vc_sep_holder .vc_sep_line {
-	box-shadow: 0 0 3px 0 #008BC2;
+	box-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 .parent-ateliers-publics .vc-lienencadre, .parent-le-protolab .vc-lienencadre, .parent-education-artistique .vc-lienencadre{
 	box-shadow: 0 0 3px 0 #008BC2;
 	text-shadow: 0 0 3px #008BC2;
 }
+.parent-ateliers-publics .vc-lienpagesuivante, .parent-le-protolab .vc-lienpagesuivante, .parent-education-artistique .vc-lienpagesuivante{
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.8);
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(0, 139, 194, 0.6), 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.6);
+}
 .parent-ateliers-publics .shadowed, .parent-le-protolab .shadowed, .parent-education-artistique .shadowed {
     text-shadow: 0 0 7px #008BC2;
 }
-.parent-ateliers-publics .shadowedBox {
+.parent-ateliers-publics .shadowedBox, .parent-education-artistique .shadowedBox, .parent-le-protolab .shadowedBox {
     text-shadow: 0 0 10px #008BC2;
     box-shadow: inset 0 0 4px #008BC2, 0 0 4px #008BC2;
 }
-.parent-ateliers-publics .searchform input, .parent-ateliers-publics .searchform input {
-	box-shadow: inset 0 0 3px 0 #008BC2, inset 0 0 7px 0 #008BC2;
+.parent-ateliers-publics .searchform input, .parent-le-protolab .searchform input, .parent-education-artistique .searchform input{
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 139, 194, 0.7);
+}
+.parent-le-protolab #submenu_wrapper > a.current, .parent-le-protolab #submenu_wrapper > a:active, .parent-le-protolab #submenu_wrapper > a:hover{
+	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.parent-ateliers-publics #submenu_wrapper > a.current, .parent-ateliers-publics #submenu_wrapper > a:active, .parent-ateliers-publics #submenu_wrapper > a:hover{
+	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+/* Puces */
+.parent-ateliers-publics .entry-content ul li::before, .parent-le-protolab .entry-content ul li::before, .parent-education-artistique .entry-content ul li::before{
+	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 
 /*--------------------------------------------------------------
 	TYPOS
 --------------------------------------------------------------*/
-.typo_alpha, .typo_alpha.vc-exergue-wrap p{
+.typo_alpha, .typo_alpha.vc-exergue-text p{
 	font-family: 'Laborantine';
 	font-size: 26px;
 	line-height: 29px;
@@ -1323,7 +1460,7 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 }
 /*DESKTOP*/
 @media only screen and (max-width:1400px){
-	.typo_alpha, .typo_alpha.vc-exergue-wrap p{
+	.typo_alpha, .typo_alpha.vc-exergue-text p{
 		font-family: 'Laborantine';
 		font-size: 23px;
 		line-height: 25px;
@@ -1373,7 +1510,7 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 
 /*TABLET PORTRAIT*/
 @media only screen and (max-width:800px){
-	.typo_alpha, .typo_alpha.vc-exergue-wrap p{
+	.typo_alpha, .typo_alpha.vc-exergue-text p{
 		font-family: 'Laborantine';
 		font-size: 21px;
 		line-height: 24px;
@@ -1386,7 +1523,7 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 }
 /*SMARTPHONE*/
 @media only screen and (max-width:600px){
-	.typo_alpha, .typo_alpha.vc-exergue-wrap p{
+	.typo_alpha, .typo_alpha.vc-exergue-text p{
 		font-family: 'Laborantine';
 		font-size: 19px;
 		line-height: 23px;
@@ -1411,18 +1548,25 @@ a:hover {
 	max-width: 50%;
 	z-index:10;
 }
-.image_popup img{
-	/*box-shadow: 0 0 8px 0 rgba(0,0,0,0.7);*/
+.image_popup img, .text_popup{
 	filter: drop-shadow(0 0 8px rgba(0,0,0,0.7));
 }
+.image_popup img:hover, .text_popup:hover{
+filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.9));
+}
+.image_popup img:active, .text_popup:active{
+filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+}
 .text_popup{
-	font-size: 24px;	font-weight: bold;	line-height: 36px;	text-align: center;
+	font-weight: bold;
+	text-align: center;
 	color: #000000;
-	border: 4px solid #000000;
-	box-shadow: 0 0 8px 0 #000000;
+	border: 4px solid;
+	/*border-color: blue;*/
 	background-color: white;
-	width: 25%;
-	padding: 40px 60px 40px 60px;
+	max-width: 60%;
+	min-width: 18%;
+	padding: 24px 60px 14px 60px;
 }
 
 /*--------------------------------------------------------------
@@ -1438,6 +1582,14 @@ a:hover {
 	text-transform: uppercase;
 	text-shadow: 0 0 3px;
 	box-shadow: inset 0 0 3px, 0 0 3px;
+	letter-spacing: 1.2px
+}
+.home .title, .parent-diplomes .title{
+	box-shadow: inset 0 0 6px 0 rgba(255,255,255,0.50), 0 0 6px 0 rgba(255,255,255,0.50), inset 0 0 2px 0 #FFFFFF , 0 0 2px 0 #FFFFFF;
+	text-shadow: 0 0 2px #FFFFFF, 0 0 6px rgba(255,255,255,0.50);
+}
+.parent-diplomes .vc-exergue{
+	text-shadow: 0 0 2px #FFFFFF, 0 0 6px rgba(255,255,255,0.50);
 }
 .subtitle {
     text-align: center;
@@ -1446,10 +1598,9 @@ a:hover {
 }
 .actuImage {
 	margin-bottom:10px;
-	-webkit-transition:-webkit-filter .2s ease-in-out;
 }
-.grey {
-	-webkit-filter: grayscale(1);
+.grey{
+	/*-webkit-filter: grayscale(100%);*/
  	filter: grayscale(100%);
 }
 .actus{
@@ -1470,11 +1621,9 @@ a:hover {
 	/*display:inline-block;
 	vertical-align: top;*/
 }
-
 .postsTable{
 
 }
-
 /*gutterWidth = ( containerWidth - (nb_of_columns * columnWidth) ) / nb_of_gutters */
 
 .actu{
@@ -1490,7 +1639,7 @@ a:hover {
 	margin:0px;
 }
 .actuOpen{
-	text-decoration: underline;
+	opacity: 0.5;
 }
 
 .annonce{
@@ -1499,10 +1648,77 @@ a:hover {
 }
 .annonceText{
 	margin-bottom: 20px;
+	font-weight: bold;
 }
 .annonceLink{
  text-decoration: none;
 }
+
+/*		  Actus Hovers        */
+
+/*.actu:hover {
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
+}*/
+/*Inutile, cf 'LINKS HOVER'*/
+
+/*.actu img:hover{
+	-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}*/
+.parent-la-recherche .actu:hover, .single-programme .actu:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+/*.parent-la-recherche .actu:hover,  .single-programme .actu:hover img{
+	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+}*/
+.parent-le-protolab .actu:hover {
+	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+/*.parent-le-protolab .actu:hover img{
+	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+	filter: drop-shadow(0 0 4px rgba(0, 139, 194, 1));
+}*/
+
+
+/*		  Annonces Hovers     */
+.annonce, .loadMore{
+	box-shadow: inset 0 0 6px 0 rgba(255, 255, 255, 0.50), 0 0 6px 0 rgba(255, 255, 255, 0.50), inset 0 0 2px 0 #FFFFFF , 0 0 2px 0 #FFFFFF;
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
+}
+.annonce:hover, .loadMore:hover{
+	box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.50), 0 0 8px 0 rgba(255, 255, 255, 0.50), inset 0 0 4px 0 #FFFFFF , 0 0 4px 0 #FFFFFF;
+	text-shadow: 0 0 5px #FFFFFF, 0 0 8px rgba(255, 255, 255, 0.50);
+}
+.parent-la-recherche .annonce, .single-programme .annonce, .parent-la-recherche .loadMore, .single-programme .loadMore{
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.40), inset 0 0 7px rgba(0, 0, 0, 0.40), 0 0 3px rgba(0, 0, 0, 0.40), 0 0 7px rgba(0, 0, 0, 0.40);
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-la-recherche .annonce:hover, .single-programme .annonce:hover, .parent-la-recherche .loadMore:hover, .single-programme .loadMore:hover{
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.40), inset 0 0 8px rgba(0, 0, 0, 0.40), 0 0 4px rgba(0, 0, 0, 0.40), 0 0 7px rgba(0, 0, 0, 0.40);
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.50), 0 0 8px rgba(0, 0, 0, 0.50);
+}
+.parent-le-protolab .annonce, .parent-le-protolab .loadMore {
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(0, 139, 194, 0.6), 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.6);
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.8);
+}
+.parent-le-protolab .annonce:hover, .parent-le-protolab .loadMore:hover {
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(0, 139, 194, 0.6), 0 0 4px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 139, 194, 0.6);
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.4), 0 0 8px rgba(0, 139, 194, 0.8);
+}
+
+/*     Posts axes et programmes Hovers     */
+.parent-la-recherche .actuTitle:hover,.parent-la-recherche .actuExcerpt:hover, .parent-la-recherche .actuOpen:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+/*.parent-la-recherche .post:hover img{
+	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+}*/
+/*.parent-la-recherche .programmeItem:hover img{
+	-webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+}*/
 
 .loadMore{
 	cursor: pointer;
@@ -1537,13 +1753,15 @@ a:hover {
 .filterTitle{
 	margin-top: 32px;
 	font-family: 'DiaRegular';
-	font-style: italic;
 	text-align: center;
+	/*font-style: italic;*/
+	opacity: 0.5;
 }
 .filterList{
 	text-align: center;
-	margin-top: 14px;
+	margin-top: 8px;
 	margin-bottom: 52px;
+  line-height: 25px;
 }
 .filterDiv{
 	display: inline-block;
@@ -1567,13 +1785,28 @@ a:hover {
 .filterText{
 	display: inline;
 }
-.filterText:hover{
-	text-shadow: 0 0 7px;
-	-webkit-transition: text-shadow .5s ease;
-	-moz-transition: text-shadow .5s ease;
-	-o-transition: text-shadow .5s ease;
-	transition: text-shadow .5s ease;
+
+/*Filter Divs hover*/
+.filterDiv:hover{
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
 }
+.filterDiv:active{
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
+}
+.parent-la-recherche .filterDiv:hover{
+	text-shadow: 0 0 3px #000000, 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-la-recherche .filterDiv:active{
+	text-shadow: 0 0 3px #000000, 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-le-protolab .filterDiv:hover{
+	text-shadow: 0 0 3px #008BC2, 0 0 7px rgba(0, 139, 194, 0.50);
+}
+.parent-le-protolab .filterDiv:active{
+	text-shadow: 0 0 3px #008BC2, 0 0 7px rgba(0, 139, 194, 0.50);
+}
+/*-----------------*/
+
 .inline{
 	display: inline;
 }
@@ -1583,7 +1816,7 @@ a:hover {
 
 .shadowedBox{
 	text-shadow: 0 0 10px;
-	box-shadow: inset 0 0 4px, 0 0 4px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.50), 0 0 7px 0 rgba(0,0,0,0.50);
 }
 
 
@@ -1605,9 +1838,8 @@ a:hover {
 	padding: 20px 10% 80px;
 	z-index:11;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
-
 	margin-bottom: 100px;
-
+	cursor:auto;
 }
 #post_overlay_under {
 	/*background-color: blue;*/
@@ -1620,7 +1852,7 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	z-index: 10;
-
+	cursor:pointer;
 	overflow-y: scroll;
 }
 #false_popup_overlay_under{
@@ -1644,13 +1876,14 @@ a:hover {
 	color: #000000;
 	height: 100%;
 }
-#post_overlay_content a{
+/*#post_overlay_content a{
 	background-color: white;
 	color: #000000;
-}
+}*/
 #post_overlay_content p{
 	text-align: justify;
 	text-justify: inter-word;
+	margin-top: 0;
 }
 
 #post_overlay_content img{
@@ -1676,13 +1909,17 @@ a:hover {
 	text-transform: uppercase;
 	box-shadow: inset 0 0 2px, 0 0 2px;
 	text-shadow: 0 0 3px;
-	letter-spacing: 1px;
+	letter-spacing: 1.2px;
 }
 .actuOpenedSubtitle{
 	margin-top: 40px;
 }
 .actuOpenedContent{
 	margin-top: 40px;
+}
+
+.single-actu .spacer, .single-membre-equipe .spacer, .single-membre-chercheur .spacer, .single-membre-equipe-rech .spacer, .single-diplome .spacer, .single-diplome-expo .spacer {
+    display: none;
 }
 
 /*--------------------------------------------------------------
@@ -1756,6 +1993,17 @@ a:hover {
   margin-top: 10px;
 }
 
+/*Réglages pour faire marcher flickity dans visual composer*/
+.gallery-item{
+	width:100%;
+}
+.gallery-item img{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
 
 
 
@@ -1786,6 +2034,42 @@ a:hover {
 	width:100%;
 	border:1px solid;
 }
+.footer_retour_link_wrapper{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.footer_lien_accueil{
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+	LINKS HOVER
+--------------------------------------------------------------*/
+
+.home .footer-links a:hover,.home .site-content a:hover, .parent-diplomes .site-footer a:hover,.parent-diplomes .site-content a:hover {
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
+}
+.parent-ecole .footer-links a:hover, .parent-ecole .site-content a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-etudes .footer-links a:hover, .parent-etudes .site-content a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-admissions .footer-links a:hover, .parent-admissions .site-content a:hover{
+	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.parent-la-recherche .footer-links a:hover, .parent-la-recherche .site-content a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-english .footer-links a:hover,.parent-english .site-content a:hover, .parent-international .footer-links a:hover,  .parent-international .site-content a:hover {
+	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.parent-ateliers-publics .footer-links a:hover,.parent-ateliers-publics .site-content a:hover, .parent-education-artistique .footer-links a:hover, .parent-education-artistique .site-content a:hover, .parent-le-protolab .footer-links a:hover, .parent-le-protolab .site-content a:hover {
+	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
 
 /***************************************************************
 	HEADER & MENU
@@ -1797,7 +2081,7 @@ header .logo a{
 	text-decoration: none;
 }
 
-.home #site-navigation {
+.home #site-navigation, .single-actu #site-navigation {
     margin-top: 58px;
 }
 
@@ -1823,7 +2107,6 @@ header .logo a{
     font-weight: normal;
 }
 .menu .sub-menu a {
-	color: #000000;
 	font-weight: normal;
 }
 .sub-menu a:before {
@@ -1832,14 +2115,50 @@ header .logo a{
   margin-right: 10px;
 }
 .sub-menu .current_page_item a:before {
-  content: "☒";
+  content: "☒" !important;
   display: inline-block;
   margin-right: 10px;
 }
 
-.sub-menu a:visited:before {
+/*Visited: Change content of before: Not authorized*/
+/*.sub-menu a:visited:before {
   content: "☑︎" !important;
+}*/
+
+/*Solved by adding class .visited to visited links (see pages_navigation.js)*/
+.sub-menu .visited a:before{
+content: "☑︎";
 }
+
+
+
+/*MENU HOVER FOR ALL COLORS*/
+.menu .menu-item a:hover, #menu-bottom-menu a:hover, #menu-english-menu a:hover {
+	text-decoration: underline;
+}
+.sub-menu .current_page_item, .sub-menu .menu-item a:hover {
+	text-decoration: none;
+	text-shadow: 0 0 3px;
+}
+.parent-ecole .sub-menu .current_page_item, .parent-ecole .sub-menu a:hover {
+text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-etudes .sub-menu .current_page_item, .parent-etudes .sub-menu a:hover {
+text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-la-recherche .sub-menu .current_page_item, .parent-la-recherche .sub-menu a:hover {
+text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.parent-admissions .sub-menu .current_page_item, .parent-admissions .sub-menu .menu-item a:hover{
+	text-shadow: 0 0 8px rgba(113, 255, 191, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.parent-international .sub-menu .current_page_item, .parent-english .sub-menu .current_page_item, .parent-international .sub-menu .menu-item a:hover, .parent-english .sub-menu .menu-item a:hover{
+	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.parent-le-protolab .sub-menu .current_page_item, .parent-le-protolab .sub-menu .menu-item a:hover{
+	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
+}
+/*-----------*/
 
 
 .sub-menu .current_page_item a{
@@ -1850,6 +2169,31 @@ header .logo a{
 #esacm_logo_wrapper img{
 	margin-top:4px;
 }
+
+
+/*LOGO ROND HOVER*/
+#esacm_logo_wrapper img:hover{
+-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
+filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
+}
+.home #esacm_logo_wrapper img:hover, .parent-diplomes #esacm_logo_wrapper img:hover{
+-webkit-filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
+filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.5)) drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
+}
+.parent-admissions #esacm_logo_wrapper img:hover{
+	-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(113, 255, 191, 0.5));
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(113, 255, 191, 0.5));
+}
+.parent-international #esacm_logo_wrapper img:hover,.parent-english #esacm_logo_wrapper img:hover {
+	-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(255, 155, 98,0.5));
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 7px rgba(255, 155, 98, 0.5));
+}
+.parent-le-protolab #esacm_logo_wrapper img:hover, .parent-education-artistique #esacm_logo_wrapper img:hover, .parent-ateliers-publics #esacm_logo_wrapper img:hover{
+	-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 7px rgba(0, 139, 194, 0.6));
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 7px rgba(0, 139, 194, 0.6));
+}
+
+
 
 
 /*--------------------------------------------------------------
@@ -1868,11 +2212,16 @@ header .logo a{
     list-style: inside none none;
 }
 
+.entry-content ul li {
+    padding-left: 30px;
+}
 .entry-content ul li::before {
     content: "⦁";
     display: inline-block;
     margin-right: 10px;
+    margin-left: -30px;
 }
+
 ul.membres_equipe li::before {
 	content: "⦁";
 	font-feature-settings: "kern" 1, "ss01" 1;
@@ -1883,7 +2232,7 @@ ul.membres_equipe li::before {
 	vertical-align: bottom;
 	margin-left: -30px;
 }
-ul.membres_equipe li:hover::before {
+ul.membres_equipe li.has_related_post:hover::before {
     content: "⦁";
     font-feature-settings: "ss00";
 }
@@ -1931,10 +2280,6 @@ ul.membres_equipe li.titre-categorie::before {
 }
 #submenu_wrapper > a:hover {
 	text-shadow: 0 0 3px;
-	-webkit-transition: text-shadow .1s ease;
-	-moz-transition: text-shadow .1s ease;
-	-o-transition: text-shadow .1s ease;
-	transition: text-shadow .1s ease;
 }
 
 .vc_figure-caption {
@@ -1942,13 +2287,12 @@ ul.membres_equipe li.titre-categorie::before {
 }
 /*EXERGUE*/
 .vc-exergue-wrap{
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
 	text-align: center;
-	padding: 30px 0;
 	margin-bottom: 35px;
 }
-
+.vc-exergue-text{
+	padding: 30px 0;
+}
 .vc-exergue-wrap p{
 	margin-bottom: 0;
 }
@@ -2013,6 +2357,7 @@ ul.membres_equipe li.titre-categorie::before {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+  box-shadow: inset 0 0 2px, 0 0 2px;
 }
 .nextButton a{
 	text-decoration: none;
@@ -2053,6 +2398,7 @@ ul.membres_equipe li.titre-categorie::before {
 	top: 10px;
 	right: 10px;
 	position: fixed;
+	z-index:10;
 }
 
 /*--------------------------------------------------------------
@@ -2069,11 +2415,18 @@ ul.membres_equipe li.titre-categorie::before {
 	display: inline-block;
 	width:100%;
 }
-.membres_equipe_recherche .nom_complet{
- font-weight: bold;
+
+.membres_equipe .open_in_popup .nom_complet{
+text-decoration: underline;
 }
-.membres_equipe_recherche .fonction{
-font-style: italic;
+.link_professeur{
+	cursor:pointer;
+}
+.link_professeur:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
+}
+.fonction{
+	font-style: italic;
 }
 
 .anneeTitle{
@@ -2114,6 +2467,9 @@ font-style: italic;
 .chercheursList .fonction{
 	font-style: italic;
 }
+#chercheurs_accordeon .anneeContent .categoryContent {
+    margin-bottom: 25px;
+}
 /*-------Axes et programmes---------*/
 
 .programmesTable{
@@ -2127,6 +2483,7 @@ font-style: italic;
 	width:20%;
 	margin-bottom: 30px;
 	margin-right:4%;
+	text-decoration: none;
 }
 .programmeTitle{
 	text-align: left;
@@ -2148,6 +2505,7 @@ font-style: italic;
 	width:20%;
 	margin-bottom: 30px;
 	margin-right:4%;
+	text-decoration: none;
 }
 .diplomeItem.expo{
 	width:45%;
@@ -2163,6 +2521,10 @@ font-style: italic;
 }
 .diplomeImage img{
 	width:100%;
+}
+
+.diplomeContainer:hover {
+	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
 }
 
 /*-------Texte deroulable-----------*/
@@ -2198,9 +2560,15 @@ font-style: italic;
     outline:none;
 }
 
-.searchform input::placeholder {
-    opacity: 1;
+.searchform input, .searchform input:focus, .searchform input::placeholder {
+	color: rgba(0,0,0,0.5);
 }
+.home .searchform input,.home .searchform input:focus, .home .searchform input::placeholder, .parent-diplomes .searchform input,.parent-diplomes .searchform input:focus, .parent-diplomes .searchform input::placeholder {
+color: rgba(255,255,255,0.5);
+}
+
+
+
 .searchform .search-submit {
 	color: transparent;
 	background-color: transparent;
@@ -2279,7 +2647,7 @@ font-style: italic;
     z-index: 10;
 }
 
-.parent-ecole .menu-toggle, .parent-admissions .menu-toggle, .parent-la-recherche .menu-toggle, .parent-international .menu-toggle, .parent-ateliers-publics .menu-toggle{
+.parent-ecole .menu-toggle, .parent-admissions .menu-toggle, .parent-la-recherche .menu-toggle, .parent-international .menu-toggle, .parent-ateliers-publics .menu-toggle, .parent-etudes .menu-toggle{
     background-image: url('img/hamburger-black.svg');
 }
 
@@ -2291,19 +2659,30 @@ font-style: italic;
 	width: 100%;
 	margin-top: -16px;
 }
+#esacm_logo_wrapper_mobile a {
+    display: inline-block;
+}
+
 .menu-menu-1-container {
     clear: both;
     padding-top: 20px;
 }
 
-#english_link_wrapper, #other_links_wrapper{
+#english_link_wrapper br, #other_links_wrapper br{
 	display: none;
+}
+#english_link_wrapper > div > ul > li > a, #other_links_wrapper > div > ul > li > a{
+	font-weight: bold !important;
 }
 
 
 }
 /*SMARTPHONE*/
 @media only screen and (max-width:600px){
+
+.filterTitle, .filterList{
+	display:none;
+}
 
 .loadMore {
 	width: 100%;

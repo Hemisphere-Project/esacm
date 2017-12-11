@@ -17,5 +17,5 @@
 		<div class="actuOpenedContent typo_beta entry-content">
 			<?php the_content(); ?>
 		</div>
-
+	 </div>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -193,31 +193,32 @@ add_filter( 'types_information_table', 'remove_types_info_box' );
 	GALERIES
 \*----------------------------------------*/
 
+// Filtre pour rajouter une liste des url des images après une galerie. inutile !
 
-function pw_show_gallery_image_urls( $content ) {
-   global $post;
- 	// Only do this on singular items
- 	if( ! is_singular() )
- 		return $content;
- 	// Make sure the post has a gallery in it
- 	if( ! has_shortcode( $post->post_content, 'gallery' ) )
- 		return $content;
- 	// Retrieve all galleries of this post
- 	$galleries = get_post_galleries_images( $post );
-	$image_list = '<ul>';
-	// Loop through all galleries found
-	foreach( $galleries as $gallery ) {
-		// Loop through each image in each gallery
-		foreach( $gallery as $image ) {
-			$image_list .= '<li>' . $image . '</li>';
-		}
-	}
-	$image_list .= '</ul>';
-	// Append our image list to the content of our post
-	$content .= $image_list;
- 	return $content;
- }
- add_filter( 'the_content', 'pw_show_gallery_image_urls' );
+// function pw_show_gallery_image_urls( $content ) {
+//    global $post;
+//  	// Only do this on singular items
+//  	if( ! is_singular() )
+//  		return $content;
+//  	// Make sure the post has a gallery in it
+//  	if( ! has_shortcode( $post->post_content, 'gallery' ) )
+//  		return $content;
+//  	// Retrieve all galleries of this post
+//  	$galleries = get_post_galleries_images( $post );
+// 	$image_list = '<ul>';
+// 	// Loop through all galleries found
+// 	foreach( $galleries as $gallery ) {
+// 		// Loop through each image in each gallery
+// 		foreach( $gallery as $image ) {
+// 			$image_list .= '<li>' . $image . '</li>';
+// 		}
+// 	}
+// 	$image_list .= '</ul>';
+// 	// Append our image list to the content of our post
+// 	$content .= $image_list;
+//  	return $content;
+//  }
+//  add_filter( 'the_content', 'pw_show_gallery_image_urls' );
 
 
 /*------------------------------------*\
@@ -288,7 +289,7 @@ function ajaxLoadMoreFunction() {
 	$timeB4 = get_the_time( 'U', $firstId );
 
 	$args = array(
-    'posts_per_page' => 5,
+    'posts_per_page' => 6,
     'post_type' => array('actu', 'annonce'),
     'date_query' => array(
         'before' => date( 'c' , $timeB4 )

@@ -3,13 +3,11 @@ $(function() {
   /////////////////////////////////////////////////////
   ////////////////// POPUP HOMEPAGE ///////////////////
   /////////////////////////////////////////////////////
-  //TO DO: ne pas launchPopup() en mode smartphone
-  //TO DO: ne pas launchPopup() qd on arrive depuis le menu actualités (esacm.fr/#actu)
-  //TO DO: une fois que c'est intégré, changer la classe '.actuImage' par la bonne
 
   // STARTER
   $(window).on("load", function() {
-    if(window.location.hash.substring(1)!='actu'){
+    var windowWidth = $(window).width();
+    if((window.location.hash.substring(1)!='actu')&&(windowWidth>600)){
       launchPopup();
     }
   });
@@ -47,7 +45,6 @@ $(function() {
         var moveX = Math.abs(initDragX-event.clientX);
         var moveY = Math.abs(initDragY-event.clientY);
         if((moveX<4)&&(moveY<4)){
-          console.log('tas voulu cliquer mais en fait tas draggé? on sen occupe');
           $(this).click();
         }
       }
@@ -66,11 +63,11 @@ $(function() {
 
     // DISAPPEAR ALL (CLICK MENU OR ACTU)
     $('.actu,.filterDiv').click(function(){
-        
+
         $('.popup').fadeOut(150,function(){
           $('.popup').remove();
           $(".actuImage").removeClass('grey');
-          //window.location.hash = 'actu';  
+          //window.location.hash = 'actu';
         });
     });
 

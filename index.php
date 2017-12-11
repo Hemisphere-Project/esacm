@@ -34,11 +34,12 @@ get_header(); ?>
 	while ( $loop->have_posts() ) : $loop->the_post();
 		$picture=types_render_field( "picture");
 		$text=types_render_field( "text", array( ) );
+    $color=types_render_field( "text-popup-color", array( ) );
 		if($picture){ $post_type='image_popup'; }
 		if(!$picture && $text){ $post_type='text_popup'; }
 
-		if($post_type=='image_popup'){?> <div class="popup image_popup"><?php echo types_render_field( "picture");?> </div> <?php }
- 		elseif($post_type=='text_popup'){?> <div class="popup text_popup"><?php echo types_render_field( "text");?> </div> <?php } ?>
+		if($post_type=='image_popup'){?> <div class="popup image_popup"><?php echo $picture; ?> </div> <?php }
+ 		elseif($post_type=='text_popup'){?> <div class="popup text_popup typo_beta" style="color:<?php echo $color;?>; border-color:<?php echo $color;?>;" > <?php echo $text;?> </div> <?php } ?>
 
 	 <?php endwhile; ?>
  </div>
@@ -108,7 +109,7 @@ get_header(); ?>
 		 <?php
 		  $args = array(
 		 	 'post_type' => array('actu', 'annonce'),
-		 	 'posts_per_page'=> 5,
+		 	 'posts_per_page'=> 10,
 			 'category_name'=> $category_Name
 		 	);
 		  $loop = new WP_Query( $args );
@@ -118,7 +119,7 @@ get_header(); ?>
 
  			endwhile; ?>
 		</div>
-			<div class="loadMore shadowedBox typo_beta" >
+			<div class="loadMore typo_beta" >
 				<div class="notWaiting">→ voir plus d'actualités</div>
 				<div class="loader waiting" style='display:none'>
 				  <p>-----------------------------</p>
