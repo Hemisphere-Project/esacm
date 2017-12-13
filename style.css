@@ -1482,7 +1482,7 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 		line-height: 20px;
 		font-weight: bold;
 	}
-	.typo_epsilon, .entry-content p{
+	.typo_epsilon, .entry-content p, .entry-content li, .typo_epsilon h2{
 		font-family: 'DiaRegular';
 		font-size: 16px;
 		line-height: 20px;
