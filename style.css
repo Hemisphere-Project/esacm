@@ -1338,7 +1338,7 @@ body.parent-international, .parent-international #submenu_wrapper, .parent-engli
 
 
 /*DIPLOMES SECTION DARK GREY BACKGROUND*/
-body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo {
+body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo, .parent-diplomes .actuOpenedContent a{
 	background-color: #393939;
 	color: white;
 }
