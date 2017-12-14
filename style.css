@@ -2229,12 +2229,16 @@ filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.5)) drop-shadow(0 0 7px rgba(25
     margin-right: 10px;
     margin-left: -30px;
 }
+
+.entry-content .liste_checkbox ul li {
+    padding-left: 20px;
+}
 .entry-content .liste_checkbox ul li::before{
 	content: "☑︎";
 	text-shadow: none !important;
 	display: inline-block;
-	margin-right: 5px;
-	margin-left: -30px;
+	margin-right: 6px;
+	margin-left: -20px;
 }
 
 ul.membres_equipe li::before {
