@@ -1338,10 +1338,15 @@ body.parent-international, .parent-international #submenu_wrapper, .parent-engli
 
 
 /*DIPLOMES SECTION DARK GREY BACKGROUND*/
-body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo, .parent-diplomes .actuOpenedContent a{
+body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo{
 	background-color: #393939;
 	color: white;
 }
+.parent-diplomes .actuOpenedContent a{
+	background-color: white;
+	color:black;
+}
+
 .single-diplome .menu a, .single-diplome .site-footer a, .single-diplome-expo .menu a, .single-diplome-expo .site-footer a{
 	color: white;
 }
