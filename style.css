@@ -2057,7 +2057,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 .home .footer-links a:hover,.home .site-content a:hover, .parent-diplomes .site-footer a:hover,.parent-diplomes .site-content a:hover {
 	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
 }
-.parent-diplomes .actuOpenedContent a{
+.parent-diplomes .actuOpenedContent a:hover, .single-diplome .actuOpenedContent a:hover, .single-diplome-expo .actuOpenedContent a:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
 .parent-ecole .footer-links a:hover, .parent-ecole .site-content a:hover{
