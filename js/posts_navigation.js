@@ -215,8 +215,8 @@ $(function() {
       pageDots: false,
       imagesLoaded: true,
       wrapAround: true,
-      setGallerySize: false // calcule la hauteur de la galerie en fonction de l'image la plus haute
-      // arrowShape: {x0: 10,x1: 60, y1: 50,x2: 65, y2: 45,x3: 20}
+      setGallerySize: false, // calcule la hauteur de la galerie en fonction de l'image la plus haute
+      arrowShape: {x0: 10,x1: 60, y1: 50,x2: 65, y2: 45,x3: 20}
     });
 
     $('.flickity-viewport').css('padding-bottom', '62%'); // if setGallerySize: false, on set manuellement le ration de hauteur de la galerie

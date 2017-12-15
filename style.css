@@ -1997,6 +1997,10 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
   margin-top: -17px;
 }
 
+.flickity-prev-next-button .arrow {
+  fill: #fff !important;
+}
+
 /*Réglages pour faire marcher flickity dans visual composer*/
 .gallery-item{
 	width:100%;
