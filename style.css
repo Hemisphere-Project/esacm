@@ -1989,12 +1989,12 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	text-align:center;
 	width:100%;
 	min-height:22px;
-  margin-top: 10px;
+  margin-top: -10px;
 }
 .gallery-status{
 	position:absolute;
 	right:0;
-  margin-top: -17px;
+  margin-top: -37px;
 }
 
 .flickity-prev-next-button .arrow {
