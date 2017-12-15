@@ -1962,43 +1962,31 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
  	GALLERY FLICKITY
 --------------------------------------------------------------*/
 
-/*.gallery{
-  height: 100%;
-	margin-bottom:50px;
+.gallery-item{
+	margin-bottom: 0;
 }
-.gallery-item {
-	display: block;
-	left:auto;
-  height: 100%;
-  width: 100%;
-  max-width: 100% !important;
-}
-
-.gallery-item img {
-	display: flex;
-  justify-content: center;
-}*/
-
-
 .gallery-caption{
 	display:none;
 }
-
 .gallery-mycaption{
 	float:left;
 	text-align:center;
 	width:100%;
 	min-height:22px;
-  margin-top: -10px;
+  margin-top: 2px;
 }
 .gallery-status{
 	position:absolute;
 	right:0;
-  margin-top: -37px;
+  margin-top: -25px;
 }
+
 
 .flickity-prev-next-button .arrow {
   fill: #fff !important;
+}
+.flickity-prev-next-button svg {
+    top: 0% !important;
 }
 
 /*Réglages pour faire marcher flickity dans visual composer*/
