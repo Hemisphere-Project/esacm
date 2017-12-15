@@ -209,8 +209,7 @@ $(function() {
   /////////////////////////////////////////////////////
   function launchCarousel(){
 
-
-    var $gallery = $('.gallery').flickity({
+    var $galleries = $('.gallery').flickity({
       // options
       cellAlign: 'left',
       pageDots: false,
@@ -223,23 +222,31 @@ $(function() {
     $('.flickity-viewport').css('padding-bottom', '62%'); // if setGallerySize: false, on set manuellement le ration de hauteur de la galerie
 
     // LEGEND
-    $('.gallery').append('<div class="gallery-mycaption typo_zeta">My caption</div><div class="gallery-status typo_zeta"></div>');
-    var $galleryStatus = $('.gallery-status');
-    var $galleryMyCaption = $('.gallery-mycaption');
-    var flkty = $gallery.data('flickity');
-    function updateStatus() {
-      // number
-      var cellNumber = flkty.selectedIndex + 1;
-      $galleryStatus.text( cellNumber + '/' + flkty.slides.length );
-      // Caption
-      var captionText = $(flkty.selectedElement).children('.gallery-caption').text();
-      $galleryMyCaption.fadeOut(100,function(){
-        $galleryMyCaption.text(captionText);
-        $galleryMyCaption.fadeIn(100)
-      });
-    }
-    // updateStatus();
-    $gallery.on( 'select.flickity', updateStatus );
+    $('.gallery').each(function(index,gallery){
+      // Add divs
+      var $gallery = $(gallery);
+      $gallery.append('<div class="gallery-mycaption typo_zeta">My caption</div><br><div class="gallery-status typo_zeta"></div><br>');
+      // identify divs
+      var $galleryStatus = $gallery.children('.gallery-status');
+      var $galleryMyCaption = $gallery.children('.gallery-mycaption');
+      var flkty = $gallery.data('flickity');
+      //update status
+      function updateStatus() {
+        // number
+        var cellNumber = flkty.selectedIndex + 1;
+        $galleryStatus.text( cellNumber + '/' + flkty.slides.length );
+        // Caption
+        var captionText = $(flkty.selectedElement).children('.gallery-caption').text();
+        $galleryMyCaption.fadeOut(100,function(){
+          $galleryMyCaption.text(captionText);
+          $galleryMyCaption.fadeIn(100)
+        });
+      }
+      // updateStatus();
+      $gallery.on( 'select.flickity', updateStatus );
+    });
+
+
 
   }
 

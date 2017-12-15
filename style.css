@@ -1988,14 +1988,13 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	float:left;
 	text-align:center;
 	width:100%;
-	min-height:22px; /* if caption empty, la caption a une hauteur -> le texte en dessous ne remonte pas */
+	min-height:22px;
   margin-top: 10px;
-
 }
 .gallery-status{
 	position:absolute;
 	right:0;
-  margin-top: 10px;
+  margin-top: -17px;
 }
 
 /*Réglages pour faire marcher flickity dans visual composer*/
