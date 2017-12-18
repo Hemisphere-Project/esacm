@@ -128,7 +128,6 @@ function hmsphr_scripts() {
 	}
 
 	// register jQuery UI
-	// wp_enqueue_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'), '1.12.1');
 	wp_enqueue_script('jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'), '1.12.1');
 	// deregister default jQuery included with Wordpress (il marche pas..???)
 	wp_deregister_script( 'jquery' );
