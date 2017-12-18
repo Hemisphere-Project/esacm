@@ -102,7 +102,7 @@
 		<?php 
 		$obj = new Vc_Frontend_Editor();
 		$show_button = $obj->showButton($post->ID);
-		echo $show_button;
+		echo 'zzzzz'.$show_button;
 		?>
 
 	</footer><!-- .entry-footer -->
