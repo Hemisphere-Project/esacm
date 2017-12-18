@@ -84,7 +84,10 @@
 			 get_template_part( 'single-actu-and-annonce');
 			 hmsphr_entry_footer();
 
-		 endwhile; ?>
+		 endwhile; 
+		 wp_reset_query();
+		 ?>
+		 
 	</div>
 
 	<div class="spacer shadowedBox"></div>
