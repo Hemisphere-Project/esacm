@@ -2200,6 +2200,9 @@ filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.5)) drop-shadow(0 0 7px rgba(25
 .page .title{
 	border-color: black;
 }
+.parent-actus .title{
+	border-color: white;
+}
 
 .entry-content .wpb_wrapper p {
     margin-top: 0;
