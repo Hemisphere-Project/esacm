@@ -660,7 +660,6 @@ a:hover, a:active {
 }
 
 .main-navigation a, #english_link_wrapper a, #other_links_wrapper a {
-	display: block;
 	text-decoration: none;
 }
 #other_links_wrapper a {
