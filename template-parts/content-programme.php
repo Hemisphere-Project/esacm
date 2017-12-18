@@ -82,7 +82,6 @@
 		 while ( $loop->have_posts() ) : $loop->the_post();
 
 			 get_template_part( 'single-actu-and-annonce');
-			 hmsphr_entry_footer();
 
 		 endwhile; 
 		 wp_reset_query();
