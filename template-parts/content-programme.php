@@ -100,12 +100,5 @@
 
 	<footer class="entry-footer">
 		<?php hmsphr_entry_footer(); ?>
-		
-		<?php 
-		$obj = new Vc_Frontend_Editor();
-		$show_button = $obj->showButton($post->ID);
-		echo 'zzzzz'.$show_button;
-		?>
-
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
