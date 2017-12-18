@@ -82,6 +82,7 @@
 		 while ( $loop->have_posts() ) : $loop->the_post();
 
 			 get_template_part( 'single-actu-and-annonce');
+			 hmsphr_entry_footer();
 
 		 endwhile; ?>
 	</div>
@@ -97,6 +98,12 @@
 
 	<footer class="entry-footer">
 		<?php hmsphr_entry_footer(); ?>
+		
+		<?php 
+		$obj = new Vc_Frontend_Editor();
+		$show_button = $obj->showButton($post->ID);
+		echo $show_button;
+		?>
 
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
