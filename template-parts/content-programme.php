@@ -34,7 +34,7 @@
 	</div><!-- .entry-content -->
 
 
-	<h2 class="entry-title title typo_alpha">événements liés au programme</h2>
+	<h2 class="entry-title title typo_alpha">événements et publications liés au programme</h2>
 
 	<br>
 

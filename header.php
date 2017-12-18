@@ -40,7 +40,7 @@
 				<div id="esacm_logo_wrapper_mobile" class="only_mobile">
 					<a href="<?php echo site_url(); ?>">
 						<?php $classes = get_body_class(); ?>
-						<?php if( is_home()||(in_array("parent-diplomes", $classes))||(in_array("single-actu", $classes))||(in_array("single-diplome", $classes)) ){?>
+						<?php if( is_home()||(in_array("parent-diplomes", $classes))||(in_array("single-actu", $classes))||(in_array("single-diplome", $classes))||(in_array("single-diplome-expo", $classes)) ){?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
 						<?php } else{ ?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">
@@ -69,7 +69,7 @@
 				<div id="esacm_logo_wrapper" class="not_mobile">
 					<a href="<?php echo site_url(); ?>">
 						<?php $classes = get_body_class(); ?>
-						<?php if( is_home()||(in_array("parent-diplomes", $classes))||(in_array("single-actu", $classes))||(in_array("single-diplome", $classes)) ){?>
+						<?php if( is_home()||(in_array("parent-diplomes", $classes))||(in_array("single-actu", $classes))||(in_array("single-diplome", $classes))||(in_array("single-diplome-expo", $classes)) ){?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-blanc.svg">
 						<?php } else{ ?>
 						<img alt="Logo ESACM" src="<?php echo get_stylesheet_directory_uri();?>/img/logo-ESACM-noir.svg">

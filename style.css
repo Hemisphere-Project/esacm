@@ -1338,10 +1338,15 @@ body.parent-international, .parent-international #submenu_wrapper, .parent-engli
 
 
 /*DIPLOMES SECTION DARK GREY BACKGROUND*/
-body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo {
+body.parent-diplomes, .parent-diplomes #submenu_wrapper, .parent-diplomes a, body.single-diplome, body.single-diplome-expo{
 	background-color: #393939;
 	color: white;
 }
+.parent-diplomes .actuOpenedContent a{
+	background-color: white;
+	color:black;
+}
+
 .single-diplome .menu a, .single-diplome .site-footer a, .single-diplome-expo .menu a, .single-diplome-expo .site-footer a{
 	color: white;
 }
@@ -1482,7 +1487,7 @@ body.parent-ateliers-publics, .parent-ateliers-publics #submenu_wrapper, .parent
 		line-height: 20px;
 		font-weight: bold;
 	}
-	.typo_epsilon, .entry-content p{
+	.typo_epsilon, .entry-content p, .entry-content li, .typo_epsilon h2{
 		font-family: 'DiaRegular';
 		font-size: 16px;
 		line-height: 20px;
@@ -1957,40 +1962,31 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
  	GALLERY FLICKITY
 --------------------------------------------------------------*/
 
-/*.gallery{
-  height: 100%;
-	margin-bottom:50px;
+.gallery-item{
+	margin-bottom: 0;
 }
-.gallery-item {
-	display: block;
-	left:auto;
-  height: 100%;
-  width: 100%;
-  max-width: 100% !important;
-}
-
-.gallery-item img {
-	display: flex;
-  justify-content: center;
-}*/
-
-
 .gallery-caption{
 	display:none;
 }
-
 .gallery-mycaption{
 	float:left;
 	text-align:center;
 	width:100%;
-	min-height:22px; /* if caption empty, la caption a une hauteur -> le texte en dessous ne remonte pas */
-  margin-top: 10px;
-
+	min-height:22px;
+  margin-top: 2px;
 }
 .gallery-status{
 	position:absolute;
 	right:0;
-  margin-top: 10px;
+  margin-top: -25px;
+}
+
+
+.flickity-prev-next-button .arrow {
+  fill: #fff !important;
+}
+.flickity-prev-next-button svg {
+    top: 0% !important;
 }
 
 /*Réglages pour faire marcher flickity dans visual composer*/
@@ -2051,6 +2047,9 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 
 .home .footer-links a:hover,.home .site-content a:hover, .parent-diplomes .site-footer a:hover,.parent-diplomes .site-content a:hover {
 	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
+}
+.parent-diplomes .actuOpenedContent a:hover, .single-diplome .actuOpenedContent a:hover, .single-diplome-expo .actuOpenedContent a:hover{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 }
 .parent-ecole .footer-links a:hover, .parent-ecole .site-content a:hover{
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
@@ -2155,7 +2154,7 @@ text-shadow: 0 0 3px rgba(0, 0, 0, 0.50), 0 0 7px rgba(0, 0, 0, 0.50);
 .parent-international .sub-menu .current_page_item, .parent-english .sub-menu .current_page_item, .parent-international .sub-menu .menu-item a:hover, .parent-english .sub-menu .menu-item a:hover{
 	text-shadow: 0 0 8px rgba(255, 155, 98, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
-.parent-le-protolab .sub-menu .current_page_item, .parent-le-protolab .sub-menu .menu-item a:hover{
+.parent-le-protolab .sub-menu .current_page_item, .parent-le-protolab .sub-menu .menu-item a:hover,.parent-education-artistique .sub-menu .current_page_item, .parent-education-artistique .sub-menu .menu-item a:hover{
 	text-shadow: 0 0 8px rgba(0, 139, 194, 1), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 /*-----------*/
@@ -2220,6 +2219,17 @@ filter: drop-shadow(0 0 3px rgba(255, 255, 255,0.5)) drop-shadow(0 0 7px rgba(25
     display: inline-block;
     margin-right: 10px;
     margin-left: -30px;
+}
+
+.entry-content .liste_checkbox ul li {
+    padding-left: 20px;
+}
+.entry-content .liste_checkbox ul li::before{
+	content: "☑︎";
+	text-shadow: none !important;
+	display: inline-block;
+	margin-right: 6px;
+	margin-left: -20px;
 }
 
 ul.membres_equipe li::before {
@@ -2398,6 +2408,7 @@ ul.membres_equipe li.titre-categorie::before {
 	top: 10px;
 	right: 10px;
 	position: fixed;
+	z-index:10;
 }
 
 /*--------------------------------------------------------------
@@ -2524,10 +2535,6 @@ text-decoration: underline;
 
 .diplomeContainer:hover {
 	text-shadow: 0 0 3px #FFFFFF, 0 0 7px rgba(255, 255, 255, 0.50);
-}
-.diplomeContainer:hover img{
-	-webkit-filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
-	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
 }
 
 /*-------Texte deroulable-----------*/
