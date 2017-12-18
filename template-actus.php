@@ -38,7 +38,8 @@
 
   		 <?php
 
-       $tags = explode(",", $_GET["tag"]);
+       $tag=$_GET["tag"];
+       if($tag){$tags = explode(",", $tag);}
 
        if($tags){
           $args = array(
