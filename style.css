@@ -2575,7 +2575,7 @@ text-decoration: underline;
 .searchform input, .searchform input:focus, .searchform input::placeholder {
 	color: rgba(0,0,0,0.5);
 }
-.home .searchform input,.home .searchform input:focus, .home .searchform input::placeholder, .parent-diplomes .searchform input,.parent-diplomes .searchform input:focus, .parent-diplomes .searchform input::placeholder, .parent-actus .searchform input::placeholder{
+.home .searchform input,.home .searchform input:focus, .home .searchform input::placeholder, .parent-diplomes .searchform input,.parent-diplomes .searchform input:focus, .parent-diplomes .searchform input::placeholder, .parent-actus .searchform input,.parent-actus .searchform input:focus, .parent-actus .searchform input::placeholder{
 color: rgba(255,255,255,0.5);
 }
 
