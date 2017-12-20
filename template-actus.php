@@ -26,9 +26,45 @@
    <!-- /////////////////// ACTU LOOP //////////////// -->
    <!-- ////////////////////////////////////////////// -->
 
-  	 <section class="actus">
+   <?php
 
-  		 <div class="title typo_alpha">ÉVÈNEMENTS &amp; ACTUALITÉS </div>
+    $tag=$_GET["tag"];
+    $tags = explode(",", $tag);
+
+    // Name List for title
+    $tagsNames=array();
+    foreach ($tags as $slug) {
+      $term = get_term_by('slug', $slug, 'post_keyword');
+      if ($term){
+        $name = $term->name;
+        array_push($tagsNames, $name);
+      }
+    }
+
+    // Args for Query
+    if(!empty($tagsNames)){
+       $args = array(
+        'post_type' => array('actu', 'annonce'),
+        'posts_per_page'=> -1,
+        'tax_query' => array(
+          array(
+              'taxonomy' => 'post_keyword',
+              'field' => 'slug',
+              'terms' => $tags
+          )
+        )
+       );
+     }else if(empty($tagsNames)){
+       $args = array(
+        'post_type' => array('actu', 'annonce'),
+        'posts_per_page'=> -1
+       );
+     }
+
+     ?>
+
+  	 <section class="actus">
+  		 <div class="title typo_alpha"><?php if(!empty($tagsNames)){echo implode(', ', $tagsNames);}else{echo 'évènements et actualités';} ?></div>
 
 
    <!-- //////////////////// LOOP  ////////////////// -->
@@ -36,30 +72,8 @@
   			<div class="grid-sizer"></div>
   			<div class="gutter-sizer"></div>
 
-  		 <?php
-
-       $tag=$_GET["tag"];
-       if($tag){$tags = explode(",", $tag);}
-
-       if($tags){
-          $args = array(
-           'post_type' => array('actu', 'annonce'),
-           'posts_per_page'=> -1,
-           'tax_query' => array(
-             array(
-                 'taxonomy' => 'post_keyword',
-                 'field' => 'slug',
-                 'terms' => $tags
-             )
-           )
-          );
-        }else{
-          $args = array(
-           'post_type' => array('actu', 'annonce'),
-           'posts_per_page'=> -1
-          );
-        }
-
+        <?php
+        
   		  $loop = new WP_Query( $args );
   		  while ( $loop->have_posts() ) : $loop->the_post();
 
