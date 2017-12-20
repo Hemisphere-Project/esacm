@@ -45,7 +45,7 @@ $(function() {
 
     if(postIsLoading==false){
       postIsLoading=true;
-      $("body,.post,.diplomeContainer").css("cursor", "progress");
+      $("body,.post,.diplomeContainer,.open_in_popup").css("cursor", "progress");
       $.ajax({
         url: ajaxurl,
         type: 'post',
@@ -84,7 +84,7 @@ $(function() {
             postIsLoading = false;
             $("body").css("cursor", "default");
             $(".post").css("cursor", "pointer");
-            $(".diplomeContainer").css("cursor", "pointer");
+            $(".diplomeContainer, .open_in_popup").css("cursor", "pointer");
           });
         }
       });
