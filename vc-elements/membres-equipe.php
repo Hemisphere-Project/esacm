@@ -68,8 +68,6 @@ function shortcode_membres_equipe( $atts ){
 	$membres_techniciens = get_posts($args);
 
 
-
-
 	$template = '<div class="columns_wrapper typo_epsilon equipe">';
 		$template .= '<div class="half_column first_column">';
 
@@ -101,8 +99,6 @@ function shortcode_membres_equipe( $atts ){
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
-			$template .= '</br>';
-
 
 			$template .= '<h3>BIBLIOTHÈQUE</h3>';
 			$template .= '<ul id="membres_bibliotheque" class="membres_equipe">';
@@ -132,8 +128,6 @@ function shortcode_membres_equipe( $atts ){
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
-			$template .= '</br>';
-
 
 			$template .= '<h3>ADMINISTRATION</h3>';
 			$template .= '<ul id="membres_administration" class="membres_equipe">';
@@ -163,10 +157,8 @@ function shortcode_membres_equipe( $atts ){
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
-			$template .= '</br>';
 
-
-			$template .= '<h3>BATIMENT</h3>';
+			$template .= '<h3>BÂTIMENT</h3>';
 			$template .= '<ul id="membres_batiment" class="membres_equipe">';
 				foreach($membres_batiment as $membre){
 					// LI MEMBRE
@@ -194,7 +186,6 @@ function shortcode_membres_equipe( $atts ){
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
-			$template .= '</br>';
 
 		$template .= '</div>';
 
@@ -228,8 +219,6 @@ function shortcode_membres_equipe( $atts ){
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
-			$template .= '</br>';
-
 
 			$template .= '<h3>ASSISTANTS D\'ENSEIGNEMENT</h3>';
 			$template .= '<ul id="membres_assistants" class="membres_equipe">';
@@ -259,8 +248,6 @@ function shortcode_membres_equipe( $atts ){
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
-			$template .= '</br>';
-
 
 			$template .= '<h3>TECHNICIENS</h3>';
 			$template .= '<ul id="membres_techniciens" class="membres_equipe">';
@@ -290,8 +277,6 @@ function shortcode_membres_equipe( $atts ){
 					$template .= '</li>';
 				}
 			$template .= '</ul>';
-			$template .= '</br>';
-
 
 		$template .= '</div>';
 	$template .= '</div>';
