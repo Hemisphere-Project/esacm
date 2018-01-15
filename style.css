@@ -1549,7 +1549,6 @@ a:hover {
 .popup{
 	position:fixed;
 	visibility:hidden;
-	max-width: 80%;
 	z-index:10;
 	cursor:pointer;
 }
@@ -1561,6 +1560,13 @@ filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.9));
 }
 .image_popup img:active, .text_popup:active{
 filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+}
+
+.image_popup{
+	max-width: 80%;
+}
+.image_popup img{
+	width: 100%;
 }
 .text_popup{
 	font-weight: bold;

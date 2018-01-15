@@ -30,12 +30,18 @@ $(function() {
         var newLeft = Math.abs(randomIntFromInterval(w*0.10,w-thisWidth-w*0.05));
         var newTop = Math.abs(randomIntFromInterval(h*0.05,h-thisHeight-h*0.05)); //si une img est + haute que la hauteur, elle ne se retrouve pas à un top <0
         $(div).css({top:newTop, left:newLeft});
+        $(div).css({width:thisWidth});// re-set width, cause bug de width non définie & image qui diminue sa taille quand on drag vers la droite
+        // console.log('image width '+thisWidth);
+        // console.log('window width '+w);
+        // console.log((w*0.10)+' < '+newLeft+' < '+(w-thisWidth-w*0.05));
       });
     }
 
     // DRAGGABLE FANCY QUI EVITE LES MINI DRAG
     var initDragX, initDragY;
-    $(".popup").draggable({
+    $(".popup").draggable(
+      // {containment: "window"},
+      {
       start: function(event, ui){
        initDragX = event.clientX;
        initDragY = event.clientY;
