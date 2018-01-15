@@ -173,6 +173,7 @@ $(function() {
 
     keywordSelected = $(this).attr("slug").trim();
     $(".post").fadeOut(200).promise().done(function(){
+    // $.when($(".post").fadeOut(200)).then(function() { // autre technique pour avoir qu'un seul callback
       $('.post').each(function(index,div){
         var keywords = $(div).attr('keywords').split(" ");
         // Remove doublons
@@ -183,8 +184,11 @@ $(function() {
           if(keyword==keywordSelected){ $(div).css('visibility','visible'); $(div).fadeIn(200); }
         });
         if(keywordSelected=='all'){  $('.post').css('visibility','visible'); $('.post').fadeIn(200); }
-        launchMasonry();
       });
+      launchMasonry();
+      // LOAD MORE SI PEU DE POSTS AFFICHÉS
+      var postDisplayed = $(".post:visible").length;
+      if (postDisplayed<5) {$('.loadMore').click();}
     });
   });
 
@@ -255,7 +259,7 @@ $(function() {
   ////////////////////  LOAD MORE /////////////////////
   /////////////////////////////////////////////////////
   $('.loadMore').click(function(){
-    // GET ID OF FIRST POST IN THE DOM
+    // GET ID OF LAST POST IN THE DOM
     var firstId = $(".post").last().attr('id');
     // STYLE LOAD BUTTON
     $('.loadMore .notWaiting').fadeOut(100,function(){ $('.loadMore .waiting').fadeIn(100); });
@@ -272,11 +276,10 @@ $(function() {
         $(".postsTable").append(result);
         // DO ONCE EVERYTHING IS LOADED
         $('.postsTable #'+firstId).nextAll().imagesLoaded().then(function(){
+          // Style Load Button
+          $('.loadMore .waiting').fadeOut(100,function(){ $('.loadMore .notWaiting').fadeIn(100);});
           // SHOW SELECTION OR ALL
            if(keywordSelected!='all'){
-             // Style Load Button
-             $('.loadMore .waiting').fadeOut(100,function(){ $('.loadMore .notWaiting').fadeIn(100);});
-             //
              $('.postsTable #'+firstId).nextAll().fadeOut(0);
              $('.postsTable #'+firstId).nextAll().each(function(index,div){
                var keywords = $(div).attr('keywords').split(" ");
@@ -293,9 +296,6 @@ $(function() {
                });
              });
            }else if(keywordSelected=='all'){
-             // Style Load Button
-             $('.loadMore .waiting').fadeOut(100,function(){ $('.loadMore .notWaiting').fadeIn(100);});
-             //
              $('.postsTable #'+firstId).nextAll().fadeOut(0);
              $('.postsTable #'+firstId).nextAll().css('visibility', 'visible');
              $('.postsTable #'+firstId).nextAll().fadeIn(400);
