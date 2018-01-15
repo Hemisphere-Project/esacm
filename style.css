@@ -1977,9 +1977,8 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 }
 .gallery-status{
 	position: absolute;
-	display: inline;
 	right: 0;
-	margin-top: 0px;
+	margin-top: 2px;
 }
 
 

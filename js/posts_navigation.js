@@ -226,7 +226,7 @@ $(function() {
     $('.gallery').each(function(index,gallery){
       // Add divs
       var $gallery = $(gallery);
-      $gallery.append('<div class="gallery-mycaption typo_zeta">My caption</div><br><div class="gallery-status typo_zeta"></div><br>');
+      $gallery.append('<div class="gallery-mycaption typo_zeta">My caption</div><div class="gallery-status typo_zeta"></div><br><br>');
       // identify divs
       var $galleryStatus = $gallery.children('.gallery-status');
       var $galleryMyCaption = $gallery.children('.gallery-mycaption');
