@@ -28,7 +28,7 @@ $(function() {
         var thisWidth = $(div).outerWidth(true);
         var thisHeight = $(div).outerHeight(true);
         var newLeft = Math.abs(randomIntFromInterval(w*0.10,w-thisWidth-w*0.05));
-        var newTop = Math.abs(randomIntFromInterval(h*0.05,h-thisHeight-h*0.1)); //si une img est + haute que la hauteur, elle ne se retrouve pas à un top <0
+        var newTop = Math.abs(randomIntFromInterval(h*0.05,h-thisHeight-h*0.05)); //si une img est + haute que la hauteur, elle ne se retrouve pas à un top <0
         $(div).css({top:newTop, left:newLeft});
       });
     }
