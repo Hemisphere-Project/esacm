@@ -37,8 +37,8 @@ $(function() {
     // URLS
     previous_url = $(location).attr('href');
     var postId = $(div).attr("id");
-    console.info(previous_url);
-    console.info(postLink);
+    // console.info(previous_url);
+    // console.info(postLink);
     if(previous_url!=postLink){
     	history.pushState({id: postId, open_in_popup: true}, '', postLink);
     }
@@ -115,7 +115,7 @@ $(function() {
 	var location = document.location;
 	// state
 	var state = e.state;
-	console.log('state: '+state);
+	// console.log('state: '+state);
 	if(state != null && state.open_in_popup){
 		$("a[href='" + location + "']").click();
 	}
