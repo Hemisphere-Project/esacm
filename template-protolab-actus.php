@@ -43,7 +43,7 @@ get_header(); ?>
 						 $args = array('post_type' => array('configuration'),'posts_per_page'=> -1,);
 						 $loop = new WP_Query($args);
 						 while ( $loop->have_posts() ) : $loop->the_post();
-						 if(get_the_title()=="recherche_config"){
+						 if(get_the_title()=="protolab_config"){
 							 $keyword_list = wp_get_post_terms($post->ID, 'post_keyword', array("fields" => "all"));
 							 foreach ($keyword_list as $keyword) {
 								// if($keyword->parent==0){ // N'affiche pas ceux qui ont un parent
