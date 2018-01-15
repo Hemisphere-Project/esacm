@@ -1970,15 +1970,16 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 .gallery-mycaption{
 	float:left;
 	text-align:center;
-	width: 96%;
-  margin-left: 1%;
+	width: 95%;
+  margin-left: 2%;
 	min-height:22px;
   margin-top: 2px;
 }
 .gallery-status{
-	position:absolute;
-	right:0;
-  margin-top: -25px;
+	position: absolute;
+	display: inline;
+	right: 0;
+	margin-top: 0px;
 }
 
 
