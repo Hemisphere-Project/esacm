@@ -40,13 +40,22 @@ if($post_type=='actu'){ ?>
 
 <!-- /////////////////// ANNONCES  //////////////// -->
 
+<?php $url = types_render_field("annonce_url", array("output"=>"raw")); ?>
+
 <a class="post annonce" id="<?php the_ID(); ?>" permalink="<?php echo get_post_permalink(); ?>"
 	keywords="<?php foreach ($keyword_list as $keyword) { echo ($keyword->slug.' '); if($keyword->parent!=0){ $parent=get_term_by('id', $keyword->parent,'post_keyword'); echo $parent->slug.' ';}}?>"
-	href=<?php echo types_render_field("annonce_url", array("output"=>"raw")); ?>
-	target=<?php if(strpos(types_render_field("annonce_url", array("output"=>"raw")), 'esacm')==false){ echo "_blank"; }else{ echo "_self"; } ?>
-	>
+	href=<?php echo $url; ?>
+	target=<?php if(strpos($url, 'esacm')==false){ echo "_blank"; }else{ echo "_self"; } ?>
+	<?php  if ($url==""): ?>
+		style="pointer-events: none; cursor: default;"
+	<?php  endif; ?>
+>
+
 	<div class="annonceText typo_beta"><?php echo types_render_field("annonce_description"); ?></div>
-	<div class="annonceLink" >→ lire l'annonce </div>
+	<?php  if ($url!=""): ?>
+		<div class="annonceLink" >→ lire l'annonce </div>
+	<?php  endif; ?>
+
 </a>
 
 <?php } ?>

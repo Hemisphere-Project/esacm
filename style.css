@@ -1659,11 +1659,11 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	padding: 15px 25px 24px 19px;
 }
 .annonceText{
-	margin-bottom: 20px;
 	font-weight: bold;
 }
 .annonceLink{
- text-decoration: none;
+	margin-top:20px;
+	text-decoration: none;
 }
 
 /*		  Actus Hovers        */
