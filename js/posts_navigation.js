@@ -156,11 +156,71 @@ $(function() {
     });
   }
 
+  /////////////////////////////////////////////////////
+  ///////////////// AUTO LOAD MORE ////////////////////
+  /////////////////////////////////////////////////////
+
+  // Fonction différente du load more button (qui charge indifférement 10+ posts et qui affiche ceux qui ont la bonne catégorie ).
+  // Une fois qu'un keyword est sélectionné, et que les posts correspondants sont affichés en JS (see 'Keyword Sort' section),
+  // si il y a mois de 5 (ou 10?) posts affichés on autoLoadMore:
+  // On fait une requête Ajax des posts ayant ce même keyword
+  // ils arrivent wrappés dans une <div class="temporaryAdded">
+  // on les unwrap et on leur ajoute la classe 'temporaryAddedPost'
+  // Quand on change de filtre keyword ils seront supprimés (ce qui évite des conflits d'ordre de date de post)
+  // ces posts sont donc temporaires, affichés pour un filtre uniquement.
+
+  function autoLoadMore(keyword){
+
+    // GET ID OF LAST VISIBLE POST
+    var firstId = $(".post:visible").last().attr('id');
+    console.log(firstId);
+
+    // AJAX FUNCTION TO GET MORE POSTS
+    $.ajax({
+      url: ajaxurl,
+      type: 'post',
+      data: {
+        action: 'ajaxAutoLoadMore',
+        firstId: firstId,
+        category: category_Name,
+        keyword: keyword
+      },
+      success: function( result ) {
+        $(".postsTable").append(result);
+        // REMOVE WRAPPER OF NEW POSTS AND ADD CLASS TO TEMPORARY POSTS
+        $('.temporaryAdded').children('.post').addClass('temporaryAddedPost').unwrap();
+
+        // DO ONCE EVERYTHING IS LOADED
+        $('.temporaryAddedPost').imagesLoaded().then(function(){
+          // Show
+          $('.temporaryAddedPost').each(function(index,div){
+            $(div).fadeOut(0);
+            $(div).css('visibility', 'visible');
+            $(div).fadeIn(200);
+          });
+           //  MASONRY RELOAD
+           $(".postsTable").masonry('reloadItems');
+           $(".postsTable").masonry('layout');
+
+         });;
+
+        // OPEN IN POPUP STYLE
+        $('.temporaryAddedPost').click(function(event){
+          if($(this).hasClass('open_in_popup')){
+            event.preventDefault();
+            var that = this;
+            openInPopup(that);
+          }
+        });
+
+      } // end success
+    }); // end ajax
+
+  }
 
   /////////////////////////////////////////////////////
   /////////////////// KEYWORD SORT ////////////////////
   /////////////////////////////////////////////////////
-
 
   $(".filterDiv").click(function(){
     //style
@@ -170,6 +230,8 @@ $(function() {
     $(this).children('.filterText').addClass('shadowed');
     // $(this).children('.filterCircle').html('●');
     $(this).children('.filterCircle').addClass('active_filter');
+
+    $('.temporaryAddedPost').remove();
 
     keywordSelected = $(this).attr("slug").trim();
     $(".post").fadeOut(200).promise().done(function(){
@@ -188,7 +250,8 @@ $(function() {
       launchMasonry();
       // LOAD MORE SI PEU DE POSTS AFFICHÉS
       var postDisplayed = $(".post:visible").length;
-      if (postDisplayed<5) {$('.loadMore').click();}
+      // if (postDisplayed<5) {$('.loadMore').click();}
+      if (postDisplayed<5) { autoLoadMore(keywordSelected);}
     });
   });
 

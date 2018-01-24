@@ -289,7 +289,7 @@ function ajaxLoadMoreFunction() {
 	$timeB4 = get_the_time( 'U', $firstId );
 
 	$args = array(
-    'posts_per_page' => 6,
+    'posts_per_page' => 10,
     'post_type' => array('actu', 'annonce'),
     'date_query' => array(
         'before' => date( 'c' , $timeB4 )
@@ -298,16 +298,54 @@ function ajaxLoadMoreFunction() {
 	);
 
 	$ajax_query = new WP_Query($args);
-
   if ( $ajax_query->have_posts() ) : while ( $ajax_query->have_posts() ) : $ajax_query->the_post();
-
     get_template_part( 'single-actu-and-annonce');
-
   endwhile;
   endif;
 
   die();
 }
+
+/*------------------------------------*\
+	GET MORE POSTS WITH A KEYWORD
+\*------------------------------------*/
+
+add_action('wp_ajax_nopriv_ajaxAutoLoadMore', 'ajaxAutoLoadMoreFunction');
+add_action('wp_ajax_ajaxAutoLoadMore', 'ajaxAutoLoadMoreFunction');
+
+function ajaxAutoLoadMoreFunction() {
+
+	$firstId = $_POST['firstId'];
+	$category = $_POST['category'];
+	$keyword = $_POST['keyword'];
+	$timeB4 = get_the_time( 'U', $firstId );
+
+	$args = array(
+    'posts_per_page' => 10,
+    'post_type' => array('actu', 'annonce'),
+    'date_query' => array( 'before' => date( 'c' , $timeB4 ) ),
+		'category_name'=> $category,
+		'tax_query' => array(
+			array(
+					'taxonomy' => 'post_keyword',
+					'field' => 'slug',
+					'terms' => $keyword
+			)
+		)
+	);
+
+	$ajax_query = new WP_Query($args);
+
+  if ( $ajax_query->have_posts() ) : while ( $ajax_query->have_posts() ) : $ajax_query->the_post();
+		?><div class="temporaryAdded"><?php
+    get_template_part( 'single-actu-and-annonce');
+		?></div><?php
+  endwhile;
+  endif;
+
+  die();
+}
+
 
 /*----------------------------------------*\
 	          EDITOR
