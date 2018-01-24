@@ -49,7 +49,7 @@
 			<div class="site-info-colonne footer-links typo_epsilon">
 				<a href="<?php echo get_permalink(get_page_by_title('mentions légales'));?>">mentions légales</a></br>
 				<a href="<?php echo get_permalink(get_page_by_title('recrutement'));?>">recrutement</a></br>
-				<a href="<?php echo get_permalink(get_page_by_title('appels d’offre et marchés publics'));?>">appels d’offre &amp; marchés publics</a></br>
+				<a href="<?php echo get_permalink(get_page_by_title('marchés publics'));?>">marchés publics</a></br>
 				<a href="<?php echo get_permalink(get_page_by_title('instances'));?>">instances</a></br>
 			</div>
 		</div>
