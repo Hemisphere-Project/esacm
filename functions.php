@@ -276,13 +276,15 @@ function ajaxLoadFunction() {
   	die();
 }
 /*------------------------------------*\
-	GET MORE POSTS
+	GET MORE POSTS: PERMANENT
 \*------------------------------------*/
+// Chargement des posts lorsqu'aucun filtre n'est sélectionné
+// On prend 10 posts plus ancien que le dernier affiché dans le DOM
 
-add_action('wp_ajax_nopriv_ajaxLoadMore', 'ajaxLoadMoreFunction');
-add_action('wp_ajax_ajaxLoadMore', 'ajaxLoadMoreFunction');
+add_action('wp_ajax_nopriv_ajax_LoadPermanentPosts', 'ajax_LoadPermanentPosts_Function');
+add_action('wp_ajax_ajax_LoadPermanentPosts', 'ajax_LoadPermanentPosts_Function');
 
-function ajaxLoadMoreFunction() {
+function ajax_LoadPermanentPosts_Function() {
 
 	$firstId = $_POST['firstId'];
 	$category = $_POST['category'];
@@ -307,13 +309,16 @@ function ajaxLoadMoreFunction() {
 }
 
 /*------------------------------------*\
-	GET MORE POSTS WITH A KEYWORD
+	GET MORE POSTS: TEMPORARY
 \*------------------------------------*/
+// Chargement des posts avec un mot clé sélectionné
+// On prend 10 posts plus ancien que le dernier affiché dans le DO & ayant le mot clé voulu
+// Dans un soucis de pouvoir les distinguer des permanents, whaque post est wrappé dans une <div class="temporaryAdded">
 
-add_action('wp_ajax_nopriv_ajaxAutoLoadMore', 'ajaxAutoLoadMoreFunction');
-add_action('wp_ajax_ajaxAutoLoadMore', 'ajaxAutoLoadMoreFunction');
+add_action('wp_ajax_nopriv_ajax_LoadTemporaryPosts', 'ajax_LoadTemporaryPosts_Function');
+add_action('wp_ajax_ajax_LoadTemporaryPosts', 'ajax_LoadTemporaryPosts_Function');
 
-function ajaxAutoLoadMoreFunction() {
+function ajax_LoadTemporaryPosts_Function() {
 
 	$firstId = $_POST['firstId'];
 	$category = $_POST['category'];

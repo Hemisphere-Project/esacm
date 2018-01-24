@@ -157,30 +157,68 @@ $(function() {
   }
 
   /////////////////////////////////////////////////////
-  ///////////////// AUTO LOAD MORE ////////////////////
+  //////////////// LOAD PERMANENT POSTS ///////////////
   /////////////////////////////////////////////////////
 
-  // Fonction différente du load more button (qui charge indifférement 10+ posts et qui affiche ceux qui ont la bonne catégorie ).
-  // Une fois qu'un keyword est sélectionné, et que les posts correspondants sont affichés en JS (see 'Keyword Sort' section),
-  // si il y a mois de 5 (ou 10?) posts affichés on autoLoadMore:
-  // On fait une requête Ajax des posts ayant ce même keyword
-  // ils arrivent wrappés dans une <div class="temporaryAdded">
-  // on les unwrap et on leur ajoute la classe 'temporaryAddedPost'
-  // Quand on change de filtre keyword ils seront supprimés (ce qui évite des conflits d'ordre de date de post)
-  // ces posts sont donc temporaires, affichés pour un filtre uniquement.
+  function loadPermanentPosts(){
 
-  function autoLoadMore(keyword){
+    // GET ID OF LAST POST IN THE DOM
+    var firstId = $(".post").last().attr('id');
+    // AJAX FUNCTION TO GET MORE POSTS
+    $.ajax({
+      url: ajaxurl,
+      type: 'post',
+      data: {
+        action: 'ajax_LoadPermanentPosts',
+        firstId: firstId,
+        category: category_Name
+      },
+      success: function( result ) {
+        $(".postsTable").append(result);
+
+        // DO ONCE EVERYTHING IS LOADED
+        $('.postsTable #'+firstId).nextAll().imagesLoaded().then(function(){
+          // Style Load Button NORMAL
+          $('.loadMore .waiting').fadeOut(100,function(){ $('.loadMore .notWaiting').fadeIn(100);});
+          // SHOW ALL
+          $('.postsTable #'+firstId).nextAll().fadeOut(0);
+          $('.postsTable #'+firstId).nextAll().css('visibility', 'visible');
+          $('.postsTable #'+firstId).nextAll().fadeIn(400);
+          //  MASONRY RELOAD
+          $(".postsTable").masonry('reloadItems');
+          $(".postsTable").masonry('layout');
+
+         });;
+
+        // OPEN IN POPUP STYLE
+        $('.postsTable #'+firstId).nextAll().click(function(event){
+          if($(this).hasClass('open_in_popup')){
+            event.preventDefault();
+            var that = this;
+            openInPopup(that);
+          }
+        });
+      } // end success
+    }); // end ajax
+
+  }
+
+
+  /////////////////////////////////////////////////////
+  //////////////// LOAD TEMPORARY POSTS ///////////////
+  /////////////////////////////////////////////////////
+
+  function loadTemporaryPosts(keyword){
 
     // GET ID OF LAST VISIBLE POST
     var firstId = $(".post:visible").last().attr('id');
-    console.log(firstId);
 
     // AJAX FUNCTION TO GET MORE POSTS
     $.ajax({
       url: ajaxurl,
       type: 'post',
       data: {
-        action: 'ajaxAutoLoadMore',
+        action: 'ajax_LoadTemporaryPosts',
         firstId: firstId,
         category: category_Name,
         keyword: keyword
@@ -189,6 +227,8 @@ $(function() {
         $(".postsTable").append(result);
         // REMOVE WRAPPER OF NEW POSTS AND ADD CLASS TO TEMPORARY POSTS
         $('.temporaryAdded').children('.post').addClass('temporaryAddedPost').unwrap();
+        // Style Load Button NORMAL
+        $('.loadMore .waiting').fadeOut(100,function(){ $('.loadMore .notWaiting').fadeIn(100);});
 
         // DO ONCE EVERYTHING IS LOADED
         $('.temporaryAddedPost').imagesLoaded().then(function(){
@@ -217,6 +257,40 @@ $(function() {
     }); // end ajax
 
   }
+
+  /////////////////////////////////////////////////////
+  ////////////////////  LOAD MORE /////////////////////
+  /////////////////////////////////////////////////////
+
+  // FONCTIONNEMENT DU LOAD MORE
+  //
+  // keywordSelected == 'all'
+  // loadPermanentPosts
+  // On ajoute 10 posts à la suite de ceux affichés, toutes catégories confondues.
+  // Ces posts ne seront pas supprimés du DOM
+  //
+  // keywordSelected == 'anything'
+  // loadTemporaryPosts
+  // On ajoute 10 posts à la suite de ceux affichés, qui ont le bon mot clé
+  // Ils sont repérés comme 'temporaryAdded' (ils arrivent wrappés dans une div temporaire qui permet de les repérer, puis on les unwrappe)
+  // à chaque changement de filtre keyword ils seront supprimés (ce qui évite des conflits d'ordre de date de post)
+  // ces posts sont donc temporaires, affichés pour un filtre uniquement.
+
+  $('.loadMore').click(function(){
+
+    // Style Load Button WAIT
+    $('.loadMore .notWaiting').fadeOut(100,function(){ $('.loadMore .waiting').fadeIn(100); });
+    // Load Permanent or temporary posts
+    if(keywordSelected!='all'){
+      loadTemporaryPosts(keywordSelected);
+    }else{
+      loadPermanentPosts();
+    }
+
+  });
+
+
+
 
   /////////////////////////////////////////////////////
   /////////////////// KEYWORD SORT ////////////////////
@@ -251,7 +325,10 @@ $(function() {
       // LOAD MORE SI PEU DE POSTS AFFICHÉS
       var postDisplayed = $(".post:visible").length;
       // if (postDisplayed<5) {$('.loadMore').click();}
-      if (postDisplayed<5) { autoLoadMore(keywordSelected);}
+      if (postDisplayed<5) {
+        // Style Load Button WAIT
+        $('.loadMore .notWaiting').fadeOut(100,function(){ $('.loadMore .waiting').fadeIn(100); });
+        loadTemporaryPosts(keywordSelected);}
     });
   });
 
@@ -314,73 +391,9 @@ $(function() {
       $gallery.on( 'select.flickity', updateStatus );
     });
 
-
-
   }
 
-  /////////////////////////////////////////////////////
-  ////////////////////  LOAD MORE /////////////////////
-  /////////////////////////////////////////////////////
-  $('.loadMore').click(function(){
-    // GET ID OF LAST POST IN THE DOM
-    var firstId = $(".post").last().attr('id');
-    // STYLE LOAD BUTTON
-    $('.loadMore .notWaiting').fadeOut(100,function(){ $('.loadMore .waiting').fadeIn(100); });
-    // AJAX FUNCTION TO GET MORE POSTS
-    $.ajax({
-      url: ajaxurl,
-      type: 'post',
-      data: {
-        action: 'ajaxLoadMore',
-        firstId: firstId,
-        category: category_Name
-      },
-      success: function( result ) {
-        $(".postsTable").append(result);
-        // DO ONCE EVERYTHING IS LOADED
-        $('.postsTable #'+firstId).nextAll().imagesLoaded().then(function(){
-          // Style Load Button
-          $('.loadMore .waiting').fadeOut(100,function(){ $('.loadMore .notWaiting').fadeIn(100);});
-          // SHOW SELECTION OR ALL
-           if(keywordSelected!='all'){
-             $('.postsTable #'+firstId).nextAll().fadeOut(0);
-             $('.postsTable #'+firstId).nextAll().each(function(index,div){
-               var keywords = $(div).attr('keywords').split(" ");
-               // Remove doublons
-               var keywordsNoDoubles =[];
-               $.each(keywords, function(i, k) { if ($.inArray(k, keywordsNoDoubles) == -1) keywordsNoDoubles.push(k); });
-               // check and show
-               $.each(keywordsNoDoubles,function(index,keyword){
-                 if(keyword==keywordSelected){
-                   $(div).fadeOut(0);
-                   $(div).css('visibility', 'visible');
-                   $(div).fadeIn(200);
-                 }
-               });
-             });
-           }else if(keywordSelected=='all'){
-             $('.postsTable #'+firstId).nextAll().fadeOut(0);
-             $('.postsTable #'+firstId).nextAll().css('visibility', 'visible');
-             $('.postsTable #'+firstId).nextAll().fadeIn(400);
-           }
-           //  MASONRY RELOAD
-           $(".postsTable").masonry('reloadItems');
-           $(".postsTable").masonry('layout');
-         });;
 
-
-        // OPEN IN POPUP STYLE
-        $('.postsTable #'+firstId).nextAll().click(function(event){
-          if($(this).hasClass('open_in_popup')){
-            event.preventDefault();
-            var that = this;
-            openInPopup(that);
-          }
-        });
-      } // end success
-    }); // end ajax
-
-  });
 
   /////////////////////////////////////////////////////
   /// JQUERY AJAX WAIT UNTIL ALL IMAGES ARE LOADED ////
