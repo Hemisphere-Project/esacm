@@ -263,14 +263,17 @@ $(function() {
   /////////////////////////////////////////////////////
 
   // FONCTIONNEMENT DU LOAD MORE
-  //
+
   // keywordSelected == 'all'
-  // loadPermanentPosts
-  // On ajoute 10 posts à la suite de ceux affichés, toutes catégories confondues.
+  // ------> loadPermanentPosts
+  // On ajoute 10 posts à la suite de ceux affichés (chargé à l'accueil), toutes catégories confondues.
   // Ces posts ne seront pas supprimés du DOM
+  // Quand on sélecionne n'importe quel filtre, on supprime du DOM tous les posts temporaires
+
   //
   // keywordSelected == 'anything'
-  // loadTemporaryPosts
+  // On filtre parmi les posts permanents. Si moins de 5 sont affichés
+  // ------> loadTemporaryPosts
   // On ajoute 10 posts à la suite de ceux affichés, qui ont le bon mot clé
   // Ils sont repérés comme 'temporaryAdded' (ils arrivent wrappés dans une div temporaire qui permet de les repérer, puis on les unwrappe)
   // à chaque changement de filtre keyword ils seront supprimés (ce qui évite des conflits d'ordre de date de post)
