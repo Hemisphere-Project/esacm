@@ -1128,6 +1128,9 @@ object {
 	.site-info-colonne{
 		width:50%;
 	}
+	.site-info-colonne-logo{
+		width:50%;
+	}
 	.half_column{
 		width: 100%;
 	}
@@ -2033,6 +2036,10 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
 	width: 25%;
 	float: left;
 }
+.site-info-colonne-logo{
+	width: 20%;
+	float: left;
+}
 
 .spacer{
 	width:100%;
@@ -2712,6 +2719,11 @@ color: rgba(255,255,255,0.5);
     margin-bottom: 0;
 }
 .site-info-colonne {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+}
+.site-info-colonne-logo {
 	width: 100%;
 	float: left;
 	margin-bottom: 15px;
