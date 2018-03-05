@@ -79,7 +79,7 @@ get_header(); ?>
 					<a class="post open_in_popup" id="<?php echo $axe->ID?>" href="<?php echo get_permalink($axe->ID); ?>">
 						<div class="actuImage"><?php echo get_the_post_thumbnail($axe->ID) ; ?></div>
 						<div class="actuTitle typo_delta"><?php echo $axe->post_title ; ?></div>
-						<div class="actuExcerpt typo_epsilon"><?php echo get_post_meta($axe->ID, 'wpcf-axe_extrait')[0]; ?></div>
+						<div class="actuExcerpt typo_epsilon"><?php echo get_post_meta($axe->ID, 'wpcf-axe_extrait', true); ?></div>
 						<div class="actuOpen typo_epsilon">en savoir plus → </div>
 					</a>
 				<?php } ?>
